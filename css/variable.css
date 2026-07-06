@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Design Tokens – from Figma "Design Components Version A"
+   ========================================================================== */
+:root {
+  /* Farben */
+  --color-bg: #0e1521;
+  --color-bg-alt: #101827;
+  --color-text: #ffffff;
+  --color-text-muted: #b4b8c2;
+
+  --color-accent-green: #63e34d;
+  --color-accent-purple: #9747ff;
+  --color-accent-cyan: #4dd0e1;
+
+  --color-success: #63e34d;
+  --color-error: #ff4d6d;
+
+  --color-border: #2a3446;
+
+  /* Typografie */
+  --font-main: 'Poppins', sans-serif;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Misc */
+  --radius: 8px;
+  --transition: 0.2s ease;
+}

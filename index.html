@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curtis Nguyen-Wellmann – Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variable.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header container">
+    <div class="header__logo">Curtis</div>
+    <nav class="header__nav">
+      <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <button id="lang-toggle">DE</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <p>I am</p>
+    <h1>Curtis Nguyen-Wellmann</h1>
+    <p>FRONTEND DEVELOPER</p>
+    <a href="#contact" class="btn btn--primary">Let's talk!</a>
+  </section>
+
+  <!-- About me -->
+  <section id="about" class="section container">
+    <h2 class="section__title">About me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section container">
+    <h2 class="section__title">My skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>TypeScript <span class="badge">in progress</span></li>
+      <li>Angular <span class="badge">in progress</span></li>
+      <li>Git</li>
+      <li>REST-API</li>
+      <li>Scrum</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section container">
+    <h2 class="section__title">Portfolio</h2>
+
+    <article class="project-card">
+      <h3>Join</h3>
+      <p>Kanban Task-Management mit Drag & Drop, Kategorien und Kontaktverwaltung.</p>
+      <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
+      <a href="#" class="btn btn--primary" aria-disabled="true">Live test (folgt)</a>
+      <a href="https://github.com/Curtis-GH/Join-Management" class="btn btn--secondary" target="_blank" rel="noopener">Github</a>
+    </article>
+
+    <article class="project-card">
+      <h3>El Pollo Loco</h3>
+      <p>Jump'n'Run-Spiel mit Charakter Pepe, Gegnern und Endboss.</p>
+      <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>
+      <a href="#" class="btn btn--primary" aria-disabled="true">Live test (folgt)</a>
+      <a href="https://github.com/Curtis-GH/El_Pollo_loco" class="btn btn--secondary" target="_blank" rel="noopener">Github</a>
+    </article>
+
+  </section>
+
+  <!-- References -->
+  <section id="references" class="section container">
+    <h2 class="section__title">References</h2>
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <h2 class="section__title">Contact</h2>
+    <form id="contact-form" novalidate>
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your name" required>
+        <span class="form-group__error">Your name is required</span>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your email" required>
+        <span class="form-group__error">Your email is required</span>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <span class="form-group__error">Your message is empty</span>
+      </div>
+      <div class="form-group form-group--checkbox">
+        <input type="checkbox" id="privacy" name="privacy" required>
+        <label for="privacy">I've read the privacy policy and agree to the processing of my data as outlined.</label>
+      </div>
+      <button type="submit" class="btn btn--primary" disabled>Send message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <div class="footer__logo">Curtis</div>
+    <p>&copy; Curtis Nguyen-Wellmann 2026</p>
+    <nav class="footer__legal">
+      <a href="legal/privacy/legal-notice.html">Legal notice</a>
+      <a href="legal/privacy/privacy-policy.html">Privacy policy</a>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
