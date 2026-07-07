@@ -14,20 +14,21 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header container">
-    <div class="header__logo">Curtis</div>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-      </ul>
-    </nav>
-    <div class="header__actions">
-      <button id="lang-toggle">DE</button>
-    </div>
-  </header>
+ <!-- Header -->
+<header class="header container">
+  <div class="header__logo">Curt<span class="accent">i</span>s</div>
+  <nav class="header__nav">
+    <ul>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+  </nav>
+  <div class="header__lang">
+    <button class="lang-btn" data-lang="de">DE</button>
+    <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
+  </div>
+</header>
 
   <!-- Hero -->
   <section class="hero container">
@@ -35,6 +36,17 @@
     <h1>Curtis Nguyen-Wellmann</h1>
     <p>FRONTEND DEVELOPER</p>
     <a href="#contact" class="btn btn--primary">Let's talk!</a>
+    <div class="hero__socials">
+      <a href="https://github.com/Curtis-GH" target="_blank" rel="noopener">
+        <img src="icons/social/social_github.png" alt="Github">
+      </a>
+      <a href="mailto:placeholder@example.com">
+        <img src="icons/social/social_email.png" alt="Email">
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        <img src="icons/social/social_linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
   </section>
 
   <!-- About me -->
@@ -47,14 +59,14 @@
   <section id="skills" class="section container">
     <h2 class="section__title">My skills</h2>
     <ul class="skills-list">
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>TypeScript <span class="badge">in progress</span></li>
-      <li>Angular <span class="badge">in progress</span></li>
-      <li>Git</li>
-      <li>REST-API</li>
-      <li>Scrum</li>
+      <li><img src="icons/skills-frontend/skill-html.png" alt="HTML"> HTML</li>
+      <li><img src="icons/skills-frontend/skill-css.png" alt="CSS"> CSS</li>
+      <li><img src="icons/skills-frontend/skill-javascript.png" alt="JavaScript"> JavaScript</li>
+      <li><img src="icons/skills-frontend/skill-typescript.png" alt="TypeScript"> TypeScript <span class="badge">in progress</span></li>
+      <li><img src="icons/skills-frontend/skill-angular.png" alt="Angular"> Angular <span class="badge">in progress</span></li>
+      <li><img src="icons/skills-frontend/skill-git.png" alt="Git"> Git</li>
+      <li><img src="icons/skills-frontend/skill-api.png" alt="REST-API"> REST-API</li>
+      <li><img src="icons/skills-frontend/skill-scrum.png" alt="Scrum"> Scrum</li>
     </ul>
   </section>
 
@@ -63,6 +75,7 @@
     <h2 class="section__title">Portfolio</h2>
 
     <article class="project-card">
+      <img src="icons/projects/project-join.png" alt="Join Preview" class="project-card__preview">
       <h3>Join</h3>
       <p>Kanban Task-Management mit Drag & Drop, Kategorien und Kontaktverwaltung.</p>
       <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
@@ -71,6 +84,7 @@
     </article>
 
     <article class="project-card">
+      <img src="icons/projects/project-el-pollo-loco.png" alt="El Pollo Loco Preview" class="project-card__preview">
       <h3>El Pollo Loco</h3>
       <p>Jump'n'Run-Spiel mit Charakter Pepe, Gegnern und Endboss.</p>
       <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>

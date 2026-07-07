@@ -1,8 +1,6 @@
-/* ==========================================================================
-   Design Tokens – from Figma "Design Components Version A"
-   ========================================================================== */
+
 :root {
-  /* Farben */
+  /* Colors */
   --color-bg: #0e1521;
   --color-bg-alt: #101827;
   --color-text: #ffffff;
@@ -17,7 +15,7 @@
 
   --color-border: #2a3446;
 
-  /* Typografie */
+  /* Typography */
   --font-main: 'Poppins', sans-serif;
 
   --fs-h1: 3rem;

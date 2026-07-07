@@ -1,6 +1,66 @@
-/* ==========================================================================
-   Layout / Sections – Base Structure
-   ========================================================================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-sm);
+  gap: var(--space-lg);
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__nav a {
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.header__nav a:hover {
+  color: var(--color-accent-green);
+  text-shadow: 0 0 8px var(--color-accent-green);
+}
+
+
+.header__logo {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+}
+
+.header__logo .accent {
+  color: var(--color-accent-green);
+}
+
+.header__nav ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* Language buttons */
+.header__lang {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.lang-btn {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--color-accent-green);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-text);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.lang-btn--active {
+  background-color: var(--color-accent-green);
+  color: #06120a;
+  border-color: var(--color-accent-green);
+}
+
+.lang-btn:not(.lang-btn--active):hover {
+  color: var(--color-accent-purple);
+  text-shadow: 0 0 8px var(--color-accent-purple);
+}
 
 .container {
   max-width: 1200px;
@@ -95,6 +155,38 @@
   color: var(--color-error);
   font-size: var(--fs-small);
   margin-top: var(--space-xs);
+}
+
+/* Hero Socials */
+.hero__socials {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.hero__socials img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Skills list icons */
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.skills-list img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Project preview image */
+.project-card__preview {
+  width: 100%;
+  max-width: 400px;
+  object-fit: contain;
+  margin-bottom: var(--space-sm);
 }
 
 /* Footer */
