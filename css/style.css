@@ -13,6 +13,7 @@
 .header__nav ul {
   display: flex;
   gap: var(--space-md);
+  font-size: 28px;
 }
 
 .header__nav a {
@@ -25,7 +26,7 @@
 }
 
 .header__logo {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -62,7 +63,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin-inline: auto;
   padding-inline: var(--space-md);
 }
@@ -82,7 +83,7 @@
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
   background-size: 400px, 180px;
-  margin-bottom: 40px;
+  margin-bottom: -40px;
 }
 
 .hero__content {
@@ -108,7 +109,7 @@
 }
 
 .hero__text h1 {
-  font-size: 3.5rem;
+  font-size: 65px;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -122,8 +123,8 @@
 
 .hero__role {
   color: var(--color-accent-purple);
-  font-size: 3.5rem;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -133,13 +134,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 120px;
 }
 
 .hero__scroll {
   writing-mode: vertical-rl;
   color: var(--color-text-muted);
-  font-size: var(--fs-small);
+  font-size: 20px;
 }
 
 .hero__socials {
@@ -166,7 +167,7 @@
 }
 
 .section__title {
-  font-size: var(--fs-h2);
+  font-size: 90px;
   margin-bottom: var(--space-md);
 }
 
@@ -251,4 +252,71 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* About me */
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.about__grid {
+  display: flex;
+  align-items: center;
+  gap: 135px;
+}
+
+.about__text {
+  max-width: 560px;
+  position: relative;
+  z-index: 1;
+}
+
+.about__intro {
+  margin-bottom: var(--space-sm);
+}
+
+.about__points {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.about__points img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.about__photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 460px;
+  max-width: none;
+}
+
+.about__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  max-width: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about__photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  object-fit: contain;
 }
