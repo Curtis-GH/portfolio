@@ -1,5 +1,4 @@
-
-/* Header*/
+/* Header */
 .header {
   display: flex;
   align-items: center;
@@ -11,6 +10,11 @@
   margin-left: auto;
 }
 
+.header__nav ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
 .header__nav a {
   transition: color var(--transition), text-shadow var(--transition);
 }
@@ -20,25 +24,13 @@
   text-shadow: 0 0 8px var(--color-accent-green);
 }
 
-
 .header__logo {
-  font-size: 50px;
+  font-size: 28px;
   font-weight: 600;
 }
 
-.header__nav ul {
-  display: flex;
-  gap: var(--space-md);
-}
-
-
 .header__logo .accent {
   color: var(--color-accent-green);
-}
-
-.header__nav ul {
-  display: flex;
-  gap: var(--space-md);
 }
 
 /* Language buttons */
@@ -70,81 +62,71 @@
 }
 
 .container {
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: var(--space-md);
-    font-size: 20px;
-    gap: 70px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
 }
-
-
-
-/* Header-End*/
+/* Header-End */
 
 /* Hero */
-
 .hero {
-  min-height:70vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  
+  overflow: hidden;
+  background-image:
+    url("../icons/decorative/shadow-purple-about.png"),
+    url("../icons/decorative/shadow-cyan-hero.png.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+  background-size: contain, contain;
 }
 
 .hero__content {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
-}
-
-.hero__photo-wrap {
-  position: relative;
-  flex-shrink: 0;
-  width: 400px;
-}
-
-.hero__glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 160%;
-  max-width: none;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero__photo {
   position: relative;
   z-index: 1;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
 }
 
 .hero__text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  font-size: 25px;
-  
+  align-items: center
+}
+
+.hero__heading-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero__text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .hero__eyebrow {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: var(--fs-h3);
-  color: var(--color-text-muted);
-  align-self: center;
+  font-size: 50px;
+  color: #fff;
 }
 
 .hero__role {
-    color: var(--color-accent-purple);
-    font-size: 60px;
-    font-weight: 600;
-    padding-bottom: 40px;
+  color: var(--color-accent-purple);
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 
 .hero__footer {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -157,7 +139,6 @@
   font-size: var(--fs-small);
 }
 
-/* Hero Socials */
 .hero__socials {
   display: flex;
   align-items: center;
@@ -197,7 +178,7 @@
 
 .btn--primary {
   background-color: var(--color-accent-green);
-  color:  #fff;
+  color: #fff;
 }
 
 .btn--secondary {
@@ -237,18 +218,6 @@
   color: var(--color-error);
   font-size: var(--fs-small);
   margin-top: var(--space-xs);
-}
-
-/* Hero Socials */
-.hero__socials {
-  display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
-}
-
-.hero__socials img {
-  width: 32px;
-  height: 32px;
 }
 
 /* Skills list icons */
