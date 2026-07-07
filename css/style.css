@@ -1,9 +1,10 @@
+
+/* Header*/
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-block: var(--space-sm);
-  gap: var(--space-lg);
 }
 
 .header__nav {
@@ -21,9 +22,15 @@
 
 
 .header__logo {
-  font-size: var(--fs-h3);
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 600;
 }
+
+.header__nav ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
 
 .header__logo .accent {
   color: var(--color-accent-green);
@@ -63,36 +70,110 @@
 }
 
 .container {
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: var(--space-md);
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--space-md);
+    font-size: 20px;
+    gap: 70px;
 }
 
-/* Header */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-block: var(--space-sm);
-}
 
-.header__logo {
-  font-size: var(--fs-h3);
-  font-weight: 700;
-}
 
-.header__nav ul {
-  display: flex;
-  gap: var(--space-md);
-}
+/* Header-End*/
 
 /* Hero */
+
 .hero {
-  min-height: 100vh;
+  min-height:70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  
 }
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.hero__photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 320px;
+}
+
+.hero__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160%;
+  max-width: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 25px;
+  
+}
+
+.hero__eyebrow {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: var(--fs-h3);
+  color: var(--color-text-muted);
+  align-self: center;
+}
+
+.hero__role {
+  color: var(--color-accent-purple);
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.hero__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-xl);
+}
+
+.hero__scroll {
+  writing-mode: vertical-rl;
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+}
+
+/* Hero Socials */
+.hero__socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero__socials img {
+  width: 32px;
+  height: 32px;
+}
+
+.hero__email {
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+  margin-left: var(--space-xs);
+}
+/* Hero-End */
 
 /* Generic Section */
 .section {
