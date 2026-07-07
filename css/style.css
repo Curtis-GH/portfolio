@@ -7,7 +7,7 @@
 }
 
 .header__nav {
-  margin-left: auto;
+  margin-left: 600px;
 }
 
 .header__nav ul {
@@ -70,7 +70,7 @@
 
 /* Hero */
 .hero {
-  min-height: 70vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,9 +94,10 @@
 }
 
 .hero__text {
-  display: flex;
-  flex-direction: column;
-  align-items: center
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
 }
 
 .hero__heading-row {
@@ -122,6 +123,7 @@
   color: var(--color-accent-purple);
   font-size: 3.5rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .hero__footer {
@@ -179,6 +181,7 @@
 .btn--primary {
   background-color: var(--color-accent-green);
   color: #fff;
+  margin-top: 50px;
 }
 
 .btn--secondary {
