@@ -70,7 +70,7 @@
 
 /* Hero */
 .hero {
-  min-height: 30vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +81,8 @@
     url("../icons/decorative/shadow-cyan-hero.png.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
-  background-size: contain, contain;
+  background-size: 400px, 180px;
+  margin-bottom: 40px;
 }
 
 .hero__content {
@@ -132,7 +133,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--space-xl);
+  margin-top: 50px;
 }
 
 .hero__scroll {
@@ -181,7 +182,7 @@
 .btn--primary {
   background-color: var(--color-accent-green);
   color: #fff;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .btn--secondary {
