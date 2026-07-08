@@ -17,36 +17,6 @@ function initLanguageToggle() {
 }
 
 /**
- * Main entry point for the portfolio site.
- * Further logic (form validation, etc.) will be added in later phases.
- *
- * @returns {void}
- */
-function init() {
-  initLanguageToggle();
-}
-
-init();
-
-/**
- * Initializes the language toggle buttons in the header.
- * Clicking a button marks it active and removes the active state from its sibling.
- * Does not yet translate content — that logic follows in a later phase.
- *
- * @returns {void}
- */
-function initLanguageToggle() {
-  const buttons = document.querySelectorAll('.lang-btn');
-
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      buttons.forEach((btn) => btn.classList.remove('lang-btn--active'));
-      button.classList.add('lang-btn--active');
-    });
-  });
-}
-
-/**
  * Initializes the testimonial carousel in the References section.
  * Supports navigation via prev/next arrows and clickable dots.
  * Only one slide is visible at a time, toggled via the "is-active" class.
@@ -97,14 +67,120 @@ function initTestimonialCarousel() {
 }
 
 /**
+ * Validates a single form field and toggles its error message.
+ * Uses a real email pattern check for the email field.
+ *
+ * @param {HTMLInputElement|HTMLTextAreaElement} field - The field to validate.
+ * @returns {boolean} True if the field is valid.
+ */
+function validateField(field) {
+  const group = field.closest('.form-group');
+  const error = group ? group.querySelector('.form-group__error') : null;
+  let isValid = true;
+
+  if (field.type === 'checkbox') {
+    isValid = field.checked;
+  } else if (field.type === 'email') {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    isValid = emailPattern.test(field.value.trim());
+  } else {
+    isValid = field.value.trim() !== '';
+  }
+
+  if (error) {
+    error.classList.toggle('is-visible', !isValid);
+  }
+  field.classList.toggle('is-invalid', !isValid);
+
+  return isValid;
+}
+
+/**
+ * Checks whether all required fields of the contact form are valid,
+ * without showing error messages (used to toggle the submit button).
+ *
+ * @param {HTMLFormElement} form - The contact form.
+ * @returns {boolean} True if every required field is valid.
+ */
+function isFormValid(form) {
+  const name = form.querySelector('[name="name"]');
+  const email = form.querySelector('[name="email"]');
+  const message = form.querySelector('[name="message"]');
+  const privacy = form.querySelector('[name="privacy"]');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return (
+    name.value.trim() !== '' &&
+    emailPattern.test(email.value.trim()) &&
+    message.value.trim() !== '' &&
+    privacy.checked
+  );
+}
+
+/**
+ * Initializes the contact form: onBlur validation, submit-button toggle,
+ * and success/error feedback after submit. Validation runs on blur, not on input,
+ * so it does not interrupt typing (US7).
+ *
+ * @returns {void}
+ */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const fields = form.querySelectorAll('input, textarea');
+  const submitBtn = form.querySelector('.contact__submit');
+  const feedback = form.querySelector('.contact__feedback');
+
+  /**
+   * Enables or disables the submit button based on overall form validity.
+   *
+   * @returns {void}
+   */
+  function refreshSubmitState() {
+    submitBtn.disabled = !isFormValid(form);
+  }
+
+  fields.forEach((field) => {
+    field.addEventListener('blur', () => {
+      validateField(field);
+      refreshSubmitState();
+    });
+    field.addEventListener('change', refreshSubmitState);
+    field.addEventListener('input', refreshSubmitState);
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let allValid = true;
+    fields.forEach((field) => {
+      if (!validateField(field)) allValid = false;
+    });
+
+    if (!allValid) {
+      feedback.textContent = 'Please fix the highlighted fields.';
+      feedback.className = 'contact__feedback is-error';
+      return;
+    }
+
+    feedback.textContent = 'Thanks! Your message has been sent.';
+    feedback.className = 'contact__feedback is-success';
+    form.reset();
+    refreshSubmitState();
+  });
+}
+
+/**
  * Main entry point for the portfolio site.
- * Further logic (form validation, etc.) will be added in later phases.
+ * Further logic will be added in later phases.
  *
  * @returns {void}
  */
 function init() {
   initLanguageToggle();
   initTestimonialCarousel();
+  initContactForm();
 }
 
 init();
