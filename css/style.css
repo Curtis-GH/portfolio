@@ -410,3 +410,7 @@
 .accent-purple {
   color: var(--color-accent-purple);
 }
+/* Background color from Skills section to page end */
+.page-bottom {
+  background-color: #141d2f;
+}
