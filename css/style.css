@@ -343,20 +343,23 @@
 /* Skills */
 
 /* Skills section background */
+/* Skills */
 .skills {
-  background-position: top;
+  position: relative;
+  
   background-image: url("../icons/decorative/bg-hero-2.png");
   background-repeat: no-repeat;
- object-fit: cover;
-  
-  
+  background-position: top center;
+  background-size: 100% 160%;
 }
+
 .skills__grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
-  padding-top: 150px;
+  padding-top: 180px;
+  
 }
 
 .skills__icons {
@@ -372,13 +375,18 @@
   align-items: center;
   gap: var(--space-xs);
   text-align: center;
+  
 }
 
 .skill-item img {
   width: 60px;
   height: 60px;
+  transition: transform 0.5s ease;
 }
 
+.skill-item img:hover {
+  transform: translateY(-10px);
+}
 .skill-item span {
   font-weight: 700;
   font-size: var(--fs-small);
