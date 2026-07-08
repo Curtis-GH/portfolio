@@ -274,7 +274,7 @@
 /* About me */
 .about {
   position: relative;
-  overflow: hidden;
+  
 }
 
 .about__grid {
@@ -316,8 +316,9 @@
 .about__photo-wrap {
   position: relative;
   flex-shrink: 0;
-  width: 460px;
+  width: 500px;
   max-width: none;
+  margin-top: 200px;
 }
 
 .about__glow {
@@ -336,4 +337,75 @@
   z-index: 1;
   width: 100%;
   object-fit: contain;
+}
+/* About me End*/
+
+/* Skills */
+
+/* Skills section background */
+.skills {
+  background-position: top;
+  background-image: url("../icons/decorative/bg-hero-2.png");
+  background-repeat: no-repeat;
+  background-size: -120%;
+  
+  
+}
+.skills__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.skills__icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg) var(--space-md);
+  flex-shrink: 0;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.skill-item span {
+  font-weight: 700;
+  font-size: var(--fs-small);
+}
+
+.skills__text {
+  max-width: 480px;
+}
+
+.skills__heading-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.skills__divider {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--color-accent-cyan);
+}
+
+.skills__question {
+  margin-top: var(--space-md);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+}
+
+.accent-purple {
+  color: var(--color-accent-purple);
 }
