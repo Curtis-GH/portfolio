@@ -158,29 +158,48 @@
   </div>
 </section>
 
+  
   <!-- Portfolio -->
-  <section id="portfolio" class="section container">
+   <div class="page-bottom">
+<section id="portfolio" class="section container portfolio">
+  <div class="portfolio__heading-row">
+    <span class="portfolio__divider" aria-hidden="true"></span>
     <h2 class="section__title">Portfolio</h2>
+  </div>
+  <p class="portfolio__subtitle">Explore a selection of my work here – Interact with projects to see my skills in action.</p>
 
+  <div class="portfolio__grid">
     <article class="project-card">
-      <img src="icons/projects/project-join.png" alt="Join Preview" class="project-card__preview">
-      <h3>Join</h3>
-      <p>Kanban Task-Management mit Drag & Drop, Kategorien und Kontaktverwaltung.</p>
-      <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
-      <a href="#" class="btn btn--primary" aria-disabled="true">Live test (folgt)</a>
-      <a href="https://github.com/Curtis-GH/Join-Management" class="btn btn--secondary" target="_blank" rel="noopener">Github</a>
+      <div class="project-card__media">
+        <img src="icons/projects/project-join.png" alt="Join Preview" class="project-card__preview">
+        <div class="project-card__links">
+          <a href="https://github.com/Curtis-GH/Join-Management" class="btn btn--outline" target="_blank" rel="noopener">Github</a>
+          <a href="#" class="btn btn--secondary" aria-disabled="true">Live test</a>
+        </div>
+      </div>
+      <div class="project-card__info">
+        <h3>Join</h3>
+        <p>Kanban task management app with drag &amp; drop, categories, and contact management.</p>
+        <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
+      </div>
     </article>
 
     <article class="project-card">
-      <img src="icons/projects/project-el-pollo-loco.png" alt="El Pollo Loco Preview" class="project-card__preview">
-      <h3>El Pollo Loco</h3>
-      <p>Jump'n'Run-Spiel mit Charakter Pepe, Gegnern und Endboss.</p>
-      <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>
-      <a href="#" class="btn btn--primary" aria-disabled="true">Live test (folgt)</a>
-      <a href="https://github.com/Curtis-GH/El_Pollo_loco" class="btn btn--secondary" target="_blank" rel="noopener">Github</a>
+      <div class="project-card__media">
+        <img src="icons/projects/project-el-pollo-loco.png" alt="El Pollo Loco Preview" class="project-card__preview">
+        <div class="project-card__links">
+          <a href="https://github.com/Curtis-GH/El_Pollo_loco" class="btn btn--outline" target="_blank" rel="noopener">Github</a>
+          <a href="#" class="btn btn--secondary" aria-disabled="true">Live test</a>
+        </div>
+      </div>
+      <div class="project-card__info">
+        <h3>El Pollo Loco</h3>
+        <p>Jump, run and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight the crazy hen.</p>
+        <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>
+      </div>
     </article>
-
-  </section>
+  </div>
+</section>
 
   <!-- References -->
   <section id="references" class="section container">
@@ -223,5 +242,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  </div>
 </body>
 </html>
