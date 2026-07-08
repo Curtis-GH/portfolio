@@ -13,7 +13,7 @@
 .header__nav ul {
   display: flex;
   gap: var(--space-md);
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .header__nav a {
@@ -81,8 +81,8 @@
     url("../icons/decorative/shadow-purple-about.png"),
     url("../icons/decorative/shadow-cyan-hero.png.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: left center, right center;
-  background-size: 400px, 180px;
+  background-position: left top, right top;
+  background-size: 700px, 250px;
   margin-bottom: -40px;
 }
 
@@ -93,6 +93,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-lg);
+  margin: 100px;
 }
 
 .hero__text {
@@ -109,7 +110,7 @@
 }
 
 .hero__text h1 {
-  font-size: 65px;
+  font-size: 80px;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -123,7 +124,7 @@
 
 .hero__role {
   color: var(--color-accent-purple);
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 400;
   margin: 0;
 }
@@ -137,16 +138,12 @@
   margin-top: 120px;
 }
 
-.hero__scroll {
-  writing-mode: vertical-rl;
-  color: var(--color-text-muted);
-  font-size: 20px;
-}
+
 
 .hero__socials {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 40px;
 }
 
 .hero__socials img {
@@ -158,6 +155,25 @@
   color: var(--color-text-muted);
   font-size: var(--fs-small);
   margin-left: var(--space-xs);
+}
+
+.hero__scroll {
+  writing-mode: vertical-rl;
+  color: var(--color-text-muted);
+  font-size: 20px;
+  font-weight: 400;
+}
+.hero__scroll-arrow {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+}
+
+.hero__divider {
+  display: inline-block;
+  width: 90px;
+  height: 3px;
+  background-color: var(--color-accent-green);
+  
 }
 /* Hero-End */
 
@@ -178,6 +194,7 @@
   border-radius: var(--radius);
   font-weight: 500;
   transition: transform var(--transition);
+  font-size:25px;
 }
 
 .btn--primary {
