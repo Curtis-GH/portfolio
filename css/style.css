@@ -177,6 +177,7 @@
   font-size: 22px;
   font-weight: 600;
   padding-right: 50px;
+  pointer-events: none;
 }
 
 .hero_scroll-arrow {
@@ -200,6 +201,7 @@
 
 .section_title {
   font-size: 90px;
+  line-height: 1;
   margin-bottom: var(--space-md);
 }
 
@@ -219,6 +221,11 @@
   background-color: var(--color-accent-green);
   color: #fff;
   margin-top: 60px;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-purple);
+  transform: scale(1.05);
 }
 
 .btn--secondary {
@@ -603,6 +610,10 @@
   text-align: center;
 }
 
+.skill-item--new-row {
+  grid-column-start: 1;
+}
+
 .skill-item img {
   width: 60px;
   height: 60px;
@@ -616,6 +627,25 @@
 .skill-item span {
   font-weight: 700;
   font-size: var(--fs-small);
+}
+.skill-item--tooltip {
+  position: relative;
+}
+
+.skill-item_tooltip {
+  position: absolute;
+  bottom: calc(100% + var(--space-xs));
+  left: 50%;
+  transform: translateX(-50%);
+  width: 196px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+  z-index: 2;
+}
+
+.skill-item--tooltip:hover .skill-item_tooltip {
+  opacity: 1;
 }
 
 .skills_text {
@@ -631,8 +661,9 @@
 
 .skills_divider {
   flex-grow: 1;
-  height: 2px;
+  height: 3px;
   background-color: var(--color-accent-cyan);
+  margin-top: 50px;
 }
 
 .skills_question {
