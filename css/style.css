@@ -118,6 +118,7 @@
   font-weight: 700;
   line-height: 1.1;
 }
+
 .hero_heading-row {
   display: flex;
   align-items: center;
@@ -173,8 +174,9 @@
 .hero_scroll {
   writing-mode: vertical-rl;
   color: var(--color-text-muted);
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 600;
+  padding-right: 50px;
 }
 
 .hero_scroll-arrow {
@@ -534,7 +536,7 @@
 .about_photo-wrap {
   position: relative;
   flex-shrink: 0;
-  width: 500px;
+  width: 600px;
   max-width: none;
   margin-top: 200px;
 }
@@ -562,18 +564,28 @@
 /* ===== SKILLS ===== */
 .skills {
   position: relative;
-  background-image: url("../icons/decorative/bg-hero-2.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% 160%;
+  background-color: #141d2f;
+
+}
+
+.skills_wave {
+  position: absolute;
+  top: -180px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+  
 }
 
 .skills_grid {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
-  padding-top: 180px;
+  padding-top: 0px;
 }
 
 .skills_icons {
