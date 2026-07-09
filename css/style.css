@@ -68,6 +68,7 @@
   margin-inline: auto;
   padding-inline: var(--space-md);
 }
+
 /* ===== END HEADER ===== */
 
 /* ===== HERO ===== */
@@ -86,6 +87,8 @@
   background-size: 700px, 250px;
   margin-bottom: -40px;
 }
+
+
 
 .hero_content {
   position: relative;
@@ -115,12 +118,23 @@
   font-weight: 700;
   line-height: 1.1;
 }
+.hero_heading-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
 
 .hero_eyebrow {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 50px;
+  font-size: 75px;
+  font-weight: 600;
   color: #fff;
+}
+
+.hero_name-block {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero_role {
@@ -174,6 +188,7 @@
   height: 3px;
   background-color: var(--color-accent-green);
 }
+
 /* ===== END HERO ===== */
 
 /* ===== SECTION (SHARED) ===== */
@@ -185,6 +200,7 @@
   font-size: 90px;
   margin-bottom: var(--space-md);
 }
+
 /* ===== END SECTION (SHARED) ===== */
 
 /* ===== BUTTONS ===== */
@@ -211,6 +227,7 @@
 .btn:hover {
   transform: translateY(-2px);
 }
+
 /* ===== END BUTTONS ===== */
 
 /* ===== PORTFOLIO ===== */
@@ -342,6 +359,7 @@
   font-size: var(--fs-small);
   margin-top: var(--space-xs);
 }
+
 /* ===== END PORTFOLIO ===== */
 
 /* ===== CONTACT FORM ===== */
@@ -432,6 +450,7 @@
 .contact_feedback.is-error {
   color: var(--color-error);
 }
+
 /* ===== END CONTACT FORM ===== */
 
 /* ===== FOOTER ===== */
@@ -468,6 +487,7 @@
   width: 28px;
   height: 28px;
 }
+
 /* ===== END FOOTER ===== */
 
 /* ===== ABOUT ===== */
@@ -536,6 +556,7 @@
   width: 100%;
   object-fit: contain;
 }
+
 /* ===== END ABOUT ===== */
 
 /* ===== SKILLS ===== */
@@ -611,6 +632,7 @@
 .accent-purple {
   color: var(--color-accent-purple);
 }
+
 /* ===== END SKILLS ===== */
 
 /* Background color spanning Skills section through page end */
@@ -739,6 +761,7 @@
 .testimonial_dot.is-active {
   background-color: var(--color-accent-cyan);
 }
+
 /* ===== END REFERENCES / TESTIMONIALS ===== */
 
 /* ===== CONTACT ===== */
@@ -813,4 +836,5 @@
   border-radius: 50%;
   color: var(--color-text);
 }
+
 /* ===== END CONTACT ===== */

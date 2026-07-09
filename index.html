@@ -1,322 +1,506 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curtis Nguyen-Wellmann – Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curtis Nguyen-Wellmann – Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/variable.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- Header -->
-  <header class="header container">
-    <div class="header_logo">Curt<span class="accent">i</span>s</div>
-    <nav class="header_nav">
-      <ul>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-      </ul>
-    </nav>
-    <div class="header_lang">
-      <button class="lang-btn" data-lang="de">DE</button>
-      <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero container">
-    <div class="hero_content">
-      <div class="hero_text">
-        <div class="hero_heading-row">
-          <h1>Curtis Nguyen-Wellmann</h1>
-        </div>
-        <p class="hero_role">FRONTEND DEVELOPER</p>
-        <a href="#contact" class="btn btn--primary">Let's talk!</a>
-      </div>
-    </div>
-
-    <div class="hero_footer">
-      <div class="hero_socials">
-        <span class="hero_divider" aria-hidden="true"></span>
-        <a href="https://github.com/Curtis-GH" target="_blank" rel="noopener">
-          <img src="icons/social/social_github.png" alt="Github">
-        </a>
-        <a href="mailto:duycurtis1997@gmail.com">
-          <img src="icons/social/social_email.png" alt="Email">
-        </a>
-        <a href="#" target="_blank" rel="noopener">
-          <img src="icons/social/social_linkedin.png" alt="LinkedIn">
-        </a>
-      </div>
-      <span class="hero_scroll">Scroll down <span class="hero_scroll-arrow">&darr;</span></span>
-    </div>
-  </section>
-
-  <!-- About me -->
-  <section id="about" class="section container about">
-    <div class="about_grid">
-      <div class="about_text">
-        <h2 class="section_title">About me</h2>
-        <p class="about_intro">Hey there, I'm Curtis! I build things for the web because I like watching an idea turn into something people can actually click on. Somewhere between debugging a stubborn CSS bug and shipping a feature that just works, I found the part of coding that keeps me hooked.</p>
-        <p class="about_intro">Let's connect and create something amazing together!</p>
-
-        <ul class="about_points">
-          <li>
-            <img src="icons/about me/location.png" alt="">
-            <p>Based in Leipzig, Germany — open to remote work, hybrid setups, or relocating for the right opportunity.</p>
-          </li>
-          <li>
-            <img src="icons/about me/bulb.png" alt="">
-            <p>Always curious, always learning. New frameworks and tools don't scare me — they're just the next thing to figure out.</p>
-          </li>
-          <li>
-            <img src="icons/about me/puzzle.svg" alt="">
-            <p>I like breaking problems down into small, solvable pieces — analytical thinking, a bit of creativity, and enough persistence to see it through.</p>
-          </li>
+    <link rel="stylesheet" href="css/variable.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header container">
+      <div class="header_logo">Curt<span class="accent">i</span>s</div>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
         </ul>
+      </nav>
+      <div class="header_lang">
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
       </div>
-      <div class="about_photo-wrap">
-        <img src="icons/decorative/shadow-photo.png" alt="" class="about_glow" aria-hidden="true">
-        <img src="icons/placeholder-image.png" alt="Curtis Nguyen-Wellmann" class="about_photo">
+    </header>
+
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero_content">
+        <div class="hero_text">
+          <div class="hero_heading-row">
+            <span class="hero_eyebrow">I am</span>
+            <div class="hero_name-block">
+              <h1>Curtis Nguyen-Wellmann</h1>
+              <p class="hero_role">FRONTEND DEVELOPER</p>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn--primary">Let's talk!</a>
+        </div>
       </div>
+
+      <div class="hero_footer">
+        <div class="hero_socials">
+          <span class="hero_divider" aria-hidden="true"></span>
+          <a href="https://github.com/Curtis-GH" target="_blank" rel="noopener">
+            <img src="icons/social/social_github.png" alt="Github" />
+          </a>
+          <a href="mailto:duycurtis1997@gmail.com">
+            <img src="icons/social/social_email.png" alt="Email" />
+          </a>
+          <a href="#" target="_blank" rel="noopener">
+            <img src="icons/social/social_linkedin.png" alt="LinkedIn" />
+          </a>
+        </div>
+        <span class="hero_scroll"
+          >Scroll down <span class="hero_scroll-arrow">&darr;</span></span
+        >
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section id="about" class="section container about">
+      <div class="about_grid">
+        <div class="about_text">
+          <h2 class="section_title">About me</h2>
+          <p class="about_intro">
+            Hey there, I'm Curtis! I build things for the web because I like
+            watching an idea turn into something people can actually click on.
+            Somewhere between debugging a stubborn CSS bug and shipping a
+            feature that just works, I found the part of coding that keeps me
+            hooked.
+          </p>
+          <p class="about_intro">
+            Let's connect and create something amazing together!
+          </p>
+
+          <ul class="about_points">
+            <li>
+              <img src="icons/about me/location.png" alt="" />
+              <p>
+                Based in Leipzig, Germany — open to remote work, hybrid setups,
+                or relocating for the right opportunity.
+              </p>
+            </li>
+            <li>
+              <img src="icons/about me/bulb.png" alt="" />
+              <p>
+                Always curious, always learning. New frameworks and tools don't
+                scare me — they're just the next thing to figure out.
+              </p>
+            </li>
+            <li>
+              <img src="icons/about me/puzzle.svg" alt="" />
+              <p>
+                I like breaking problems down into small, solvable pieces —
+                analytical thinking, a bit of creativity, and enough persistence
+                to see it through.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="about_photo-wrap">
+          <img
+            src="icons/decorative/shadow-photo.png"
+            alt=""
+            class="about_glow"
+            aria-hidden="true"
+          />
+          <img
+            src="icons/placeholder-image.png"
+            alt="Curtis Nguyen-Wellmann"
+            class="about_photo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container skills">
+      <div class="skills_grid">
+        <div class="skills_icons">
+          <div class="skill-item">
+            <img src="icons/skills-frontend/skill-html.png" alt="HTML" />
+            <span>HTML</span>
+          </div>
+          <div class="skill-item">
+            <img src="icons/skills-frontend/skill-css.png" alt="CSS" />
+            <span>CSS</span>
+          </div>
+          <div class="skill-item">
+            <img
+              src="icons/skills-frontend/skill-javascript.png"
+              alt="JavaScript"
+            />
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <img
+              src="icons/skills-frontend/skill-typescript.png"
+              alt="TypeScript"
+            />
+            <span>TypeScript</span>
+          </div>
+          <div class="skill-item">
+            <img src="icons/skills-frontend/skill-angular.png" alt="Angular" />
+            <span>Angular</span>
+          </div>
+          <div class="skill-item">
+            <img src="icons/frontend/Property 1=Firebase.png" alt="Supabase" />
+            <span>Firebase</span>
+          </div>
+          <div class="skill-item">
+            <img src="icons/skills-frontend/skill-git.png" alt="Git" />
+            <span>Git</span>
+          </div>
+          <div class="skill-item">
+            <img
+              src="icons/skills-frontend/skill-api-BROKEN-reexport.svg"
+              alt="REST-API"
+            />
+            <span>API</span>
+          </div>
+          <div class="skill-item">
+            <img src="icons/skills-frontend/skill-scrum.png" alt="Scrum" />
+            <span>Scrum</span>
+          </div>
+          <div class="skill-item">
+            <img
+              src="icons/skills-frontend/skill-material-design.png"
+              alt="Material Design"
+            />
+            <span>Material design</span>
+          </div>
+
+          <div class="skill-item"></div>
+          <div class="skill-item">
+            <img
+              src="icons/skills-frontend/skill-continually-learning.svg"
+              alt="Continually learning"
+            />
+            <span>Continually learning</span>
+          </div>
+        </div>
+
+        <div class="skills_text">
+          <div class="skills_heading-row">
+            <h2 class="section_title">Skills</h2>
+            <span class="skills_divider" aria-hidden="true"></span>
+          </div>
+          <p>
+            Highlight your experience of working on different projects using
+            different front-end technologies (such as HTML, CSS, JavaScript,
+            etc.) and emphasise your openness to learning and adapting to new
+            technologies.
+          </p>
+          <p>
+            Mention the importance of continuing education to keep up with the
+            rapid changes in web development.
+          </p>
+
+          <h3 class="skills_question">
+            Looking for <span class="accent-purple">another skill</span>?
+          </h3>
+          <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
+
+          <a href="#contact" class="btn btn--primary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-bottom">
+      <!-- Portfolio -->
+      <section id="portfolio" class="section container portfolio">
+        <img
+          src="icons/decorative/portfolio-shadow-blue.png"
+          alt=""
+          class="portfolio_blob portfolio_blob--right"
+          aria-hidden="true"
+        />
+        <img
+          src="icons/decorative/portfolio-shadow-green.png"
+          alt=""
+          class="portfolio_blob portfolio_blob--left"
+          aria-hidden="true"
+        />
+        <div class="portfolio_heading-row">
+          <span class="portfolio_divider" aria-hidden="true"></span>
+          <h2 class="section_title">Portfolio</h2>
+        </div>
+        <p class="portfolio_subtitle">
+          Explore a selection of my work here – Interact with projects to see my
+          skills in action.
+        </p>
+
+        <div class="portfolio_grid">
+          <article class="project-card">
+            <div class="project-card_media">
+              <img
+                src="icons/projects/project-join.png"
+                alt="Join Preview"
+                class="project-card_preview"
+              />
+              <div class="project-card_links">
+                <a
+                  href="https://github.com/Curtis-GH/Join-Management"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+                <a href="#" class="btn btn--secondary" aria-disabled="true"
+                  >Live test</a
+                >
+              </div>
+              <div class="project-card_info">
+                <h3>Join</h3>
+                <p>
+                  Kanban task management app with drag &amp; drop, categories,
+                  and contact management.
+                </p>
+                <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card_media">
+              <img
+                src="icons/projects/project-el-pollo-loco.png"
+                alt="El Pollo Loco Preview"
+                class="project-card_preview"
+              />
+              <div class="project-card_links">
+                <a
+                  href="https://github.com/Curtis-GH/El_Pollo_loco"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+                <a href="#" class="btn btn--secondary" aria-disabled="true"
+                  >Live test</a
+                >
+              </div>
+              <div class="project-card_info">
+                <h3>El Pollo Loco</h3>
+                <p>
+                  Jump, run and throw game based on an object-oriented approach.
+                  Help Pepe find coins and tabasco salsa to fight the crazy hen.
+                </p>
+                <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- References -->
+      <section id="references" class="section container references">
+        <h2 class="section_title">References</h2>
+
+        <div class="testimonial">
+          <img
+            src="icons/decorative/testimonial-icon.png"
+            alt=""
+            class="testimonial_quote-icon"
+            aria-hidden="true"
+          />
+
+          <div class="testimonial_box">
+            <div class="testimonial_slides">
+              <div class="testimonial_slide is-active" data-initials="KM">
+                <p class="testimonial_text">
+                  Working with Curtis was a great experience — clear
+                  communication and a real eye for detail on every task he took
+                  on.
+                </p>
+                <div class="testimonial_author-row">
+                  <span class="testimonial_divider" aria-hidden="true"></span>
+                  <span class="testimonial_author">K.M. - Team Partner</span>
+                </div>
+              </div>
+              <div class="testimonial_slide" data-initials="AE">
+                <p class="testimonial_text">
+                  Curtis is reliable and easy to work with. He picks up new
+                  tools quickly and always keeps the team in the loop.
+                </p>
+                <div class="testimonial_author-row">
+                  <span class="testimonial_divider" aria-hidden="true"></span>
+                  <span class="testimonial_author">A.E. - Team Partner</span>
+                </div>
+              </div>
+              <div class="testimonial_slide" data-initials="LW">
+                <p class="testimonial_text">
+                  A dependable developer with a good sense for clean structure.
+                  Curtis was a pleasure to collaborate with.
+                </p>
+                <div class="testimonial_author-row">
+                  <span class="testimonial_divider" aria-hidden="true"></span>
+                  <span class="testimonial_author">L.W. - Team Partner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial_avatar"></div>
+          <span class="testimonial_avatar-divider" aria-hidden="true"></span>
+        </div>
+
+        <div class="testimonial_nav">
+          <button
+            type="button"
+            class="testimonial_arrow"
+            data-dir="prev"
+            aria-label="Previous testimonial"
+          >
+            &larr;
+          </button>
+          <div class="testimonial_dots">
+            <button
+              type="button"
+              class="testimonial_dot is-active"
+              data-index="0"
+              aria-label="Testimonial 1"
+            ></button>
+            <button
+              type="button"
+              class="testimonial_dot"
+              data-index="1"
+              aria-label="Testimonial 2"
+            ></button>
+            <button
+              type="button"
+              class="testimonial_dot"
+              data-index="2"
+              aria-label="Testimonial 3"
+            ></button>
+          </div>
+          <button
+            type="button"
+            class="testimonial_arrow"
+            data-dir="next"
+            aria-label="Next testimonial"
+          >
+            &rarr;
+          </button>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section container contact">
+        <img
+          src="icons/decorative/contact-shadow.png"
+          alt=""
+          class="contact_shadow"
+          aria-hidden="true"
+        />
+
+        <div class="contact_heading-row">
+          <h2 class="section_title">Contact</h2>
+          <span class="contact_divider" aria-hidden="true"></span>
+        </div>
+
+        <div class="contact_grid">
+          <div class="contact_intro">
+            <div class="contact_intro-heading">
+              <span class="contact_intro-divider" aria-hidden="true"></span>
+              <h3>Got a problem to solve?</h3>
+            </div>
+            <p>
+              Encourage people to contact you and describe what role you are
+              interested in. Show that you will add value to their projects
+              through your work.
+            </p>
+            <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+          </div>
+
+          <form id="contact-form" class="contact_form" novalidate>
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your name" required />
+              <span class="form-group_error">Your name is required</span>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <span class="form-group_error">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Your message"
+                required
+              ></textarea>
+              <span class="form-group_error">Your message is empty</span>
+            </div>
+            <div class="form-group form-group--checkbox">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy"
+                >I've read the
+                <a
+                  href="legal/privacy/privacy-policy.html"
+                  class="contact_policy-link"
+                  >privacy policy</a
+                >
+                and agree to the processing of my data as outlined.</label
+              >
+            </div>
+            <p class="form-group_error form-group_error--submit">
+              Please fill in all fields correctly
+            </p>
+            <button
+              type="submit"
+              class="btn btn--primary contact_submit"
+              disabled
+            >
+              Send message :)
+            </button>
+            <p class="contact_feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <a href="#" class="contact_scroll-top" aria-label="Scroll to top"
+          >&uarr;</a
+        >
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer container">
+        <div class="footer_brand">
+          <div class="footer_logo">Curt<span class="accent">i</span>s</div>
+          <a href="legal/privacy/legal-notice.html" class="footer_legal-link"
+            >Legal notice</a
+          >
+        </div>
+
+        <p class="footer_copy">&copy; Curtis Nguyen-Wellmann 2026</p>
+
+        <div class="footer_socials">
+          <a href="https://github.com/Curtis-GH" target="_blank" rel="noopener">
+            <img src="icons/social/social_github.png" alt="Github" />
+          </a>
+          <a href="mailto:duycurtis1997@gmail.com">
+            <img src="icons/social/social_email.png" alt="Email" />
+          </a>
+          <a href="#" target="_blank" rel="noopener">
+            <img src="icons/social/social_linkedin.png" alt="LinkedIn" />
+          </a>
+        </div>
+      </footer>
     </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section container skills">
-    <div class="skills_grid">
-      <div class="skills_icons">
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-html.png" alt="HTML">
-          <span>HTML</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-css.png" alt="CSS">
-          <span>CSS</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-javascript.png" alt="JavaScript">
-          <span>JavaScript</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-typescript.png" alt="TypeScript">
-          <span>TypeScript</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-angular.png" alt="Angular">
-          <span>Angular</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/frontend/Property 1=Firebase.png" alt="Supabase">
-          <span>Firebase</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-git.png" alt="Git">
-          <span>Git</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-api-BROKEN-reexport.svg" alt="REST-API">
-          <span>API</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-scrum.png" alt="Scrum">
-          <span>Scrum</span>
-        </div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-material-design.png" alt="Material Design">
-          <span>Material design</span>
-        </div>
-
-        <div class="skill-item"></div>
-        <div class="skill-item">
-          <img src="icons/skills-frontend/skill-continually-learning.svg" alt="Continually learning">
-          <span>Continually learning</span>
-        </div>
-      </div>
-
-      <div class="skills_text">
-        <div class="skills_heading-row">
-          <h2 class="section_title">Skills</h2>
-          <span class="skills_divider" aria-hidden="true"></span>
-        </div>
-        <p>Highlight your experience of working on different projects using different front-end technologies (such as HTML, CSS, JavaScript, etc.) and emphasise your openness to learning and adapting to new technologies.</p>
-        <p>Mention the importance of continuing education to keep up with the rapid changes in web development.</p>
-
-        <h3 class="skills_question">Looking for <span class="accent-purple">another skill</span>?</h3>
-        <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
-
-        <a href="#contact" class="btn btn--primary">Get in touch</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="page-bottom">
-    <!-- Portfolio -->
-    <section id="portfolio" class="section container portfolio">
-      <img src="icons/decorative/portfolio-shadow-blue.png" alt="" class="portfolio_blob portfolio_blob--right" aria-hidden="true">
-      <img src="icons/decorative/portfolio-shadow-green.png" alt="" class="portfolio_blob portfolio_blob--left" aria-hidden="true">
-      <div class="portfolio_heading-row">
-        <span class="portfolio_divider" aria-hidden="true"></span>
-        <h2 class="section_title">Portfolio</h2>
-      </div>
-      <p class="portfolio_subtitle">Explore a selection of my work here – Interact with projects to see my skills in action.</p>
-
-      <div class="portfolio_grid">
-        <article class="project-card">
-          <div class="project-card_media">
-            <img src="icons/projects/project-join.png" alt="Join Preview" class="project-card_preview">
-            <div class="project-card_links">
-              <a href="https://github.com/Curtis-GH/Join-Management" class="btn btn--outline" target="_blank" rel="noopener">Github</a>
-              <a href="#" class="btn btn--secondary" aria-disabled="true">Live test</a>
-            </div>
-            <div class="project-card_info">
-              <h3>Join</h3>
-              <p>Kanban task management app with drag &amp; drop, categories, and contact management.</p>
-              <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card_media">
-            <img src="icons/projects/project-el-pollo-loco.png" alt="El Pollo Loco Preview" class="project-card_preview">
-            <div class="project-card_links">
-              <a href="https://github.com/Curtis-GH/El_Pollo_loco" class="btn btn--outline" target="_blank" rel="noopener">Github</a>
-              <a href="#" class="btn btn--secondary" aria-disabled="true">Live test</a>
-            </div>
-            <div class="project-card_info">
-              <h3>El Pollo Loco</h3>
-              <p>Jump, run and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight the crazy hen.</p>
-              <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- References -->
-    <section id="references" class="section container references">
-      <h2 class="section_title">References</h2>
-
-      <div class="testimonial">
-        <img src="icons/decorative/testimonial-icon.png" alt="" class="testimonial_quote-icon" aria-hidden="true">
-
-        <div class="testimonial_box">
-          <div class="testimonial_slides">
-            <div class="testimonial_slide is-active" data-initials="KM">
-              <p class="testimonial_text">Working with Curtis was a great experience — clear communication and a real eye for detail on every task he took on.</p>
-              <div class="testimonial_author-row">
-                <span class="testimonial_divider" aria-hidden="true"></span>
-                <span class="testimonial_author">K.M. - Team Partner</span>
-              </div>
-            </div>
-            <div class="testimonial_slide" data-initials="AE">
-              <p class="testimonial_text">Curtis is reliable and easy to work with. He picks up new tools quickly and always keeps the team in the loop.</p>
-              <div class="testimonial_author-row">
-                <span class="testimonial_divider" aria-hidden="true"></span>
-                <span class="testimonial_author">A.E. - Team Partner</span>
-              </div>
-            </div>
-            <div class="testimonial_slide" data-initials="LW">
-              <p class="testimonial_text">A dependable developer with a good sense for clean structure. Curtis was a pleasure to collaborate with.</p>
-              <div class="testimonial_author-row">
-                <span class="testimonial_divider" aria-hidden="true"></span>
-                <span class="testimonial_author">L.W. - Team Partner</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial_avatar"></div>
-        <span class="testimonial_avatar-divider" aria-hidden="true"></span>
-      </div>
-
-      <div class="testimonial_nav">
-        <button type="button" class="testimonial_arrow" data-dir="prev" aria-label="Previous testimonial">&larr;</button>
-        <div class="testimonial_dots">
-          <button type="button" class="testimonial_dot is-active" data-index="0" aria-label="Testimonial 1"></button>
-          <button type="button" class="testimonial_dot" data-index="1" aria-label="Testimonial 2"></button>
-          <button type="button" class="testimonial_dot" data-index="2" aria-label="Testimonial 3"></button>
-        </div>
-        <button type="button" class="testimonial_arrow" data-dir="next" aria-label="Next testimonial">&rarr;</button>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section container contact">
-      <img src="icons/decorative/contact-shadow.png" alt="" class="contact_shadow" aria-hidden="true">
-
-      <div class="contact_heading-row">
-        <h2 class="section_title">Contact</h2>
-        <span class="contact_divider" aria-hidden="true"></span>
-      </div>
-
-      <div class="contact_grid">
-        <div class="contact_intro">
-          <div class="contact_intro-heading">
-            <span class="contact_intro-divider" aria-hidden="true"></span>
-            <h3>Got a problem to solve?</h3>
-          </div>
-          <p>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</p>
-          <p>Need a Frontend developer? <strong>Contact me!</strong></p>
-        </div>
-
-        <form id="contact-form" class="contact_form" novalidate>
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Your name" required>
-            <span class="form-group_error">Your name is required</span>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Your email" required>
-            <span class="form-group_error">Please enter a valid email</span>
-          </div>
-          <div class="form-group">
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <span class="form-group_error">Your message is empty</span>
-          </div>
-          <div class="form-group form-group--checkbox">
-            <input type="checkbox" id="privacy" name="privacy" required>
-            <label for="privacy">I've read the <a href="legal/privacy/privacy-policy.html" class="contact_policy-link">privacy policy</a> and agree to the processing of my data as outlined.</label>
-          </div>
-          <p class="form-group_error form-group_error--submit">Please fill in all fields correctly</p>
-          <button type="submit" class="btn btn--primary contact_submit" disabled>Send message :)</button>
-          <p class="contact_feedback" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <a href="#" class="contact_scroll-top" aria-label="Scroll to top">&uarr;</a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer container">
-      <div class="footer_brand">
-        <div class="footer_logo">Curt<span class="accent">i</span>s</div>
-        <a href="legal/privacy/legal-notice.html" class="footer_legal-link">Legal notice</a>
-      </div>
-
-      <p class="footer_copy">&copy; Curtis Nguyen-Wellmann 2026</p>
-
-      <div class="footer_socials">
-        <a href="https://github.com/Curtis-GH" target="_blank" rel="noopener">
-          <img src="icons/social/social_github.png" alt="Github">
-        </a>
-        <a href="mailto:duycurtis1997@gmail.com">
-          <img src="icons/social/social_email.png" alt="Email">
-        </a>
-        <a href="#" target="_blank" rel="noopener">
-          <img src="icons/social/social_linkedin.png" alt="LinkedIn">
-        </a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
