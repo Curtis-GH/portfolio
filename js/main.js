@@ -24,10 +24,10 @@ function initLanguageToggle() {
  * @returns {void}
  */
 function initTestimonialCarousel() {
-  const slides = document.querySelectorAll('.testimonial__slide');
-  const dots = document.querySelectorAll('.testimonial__dot');
-  const arrows = document.querySelectorAll('.testimonial__arrow');
-  const avatar = document.querySelector('.testimonial__avatar');
+  const slides = document.querySelectorAll('.testimonial_slide');
+  const dots = document.querySelectorAll('.testimonial_dot');
+  const arrows = document.querySelectorAll('.testimonial_arrow');
+  const avatar = document.querySelector('.testimonial_avatar');
 
   if (slides.length === 0) return;
 
@@ -75,7 +75,7 @@ function initTestimonialCarousel() {
  */
 function validateField(field) {
   const group = field.closest('.form-group');
-  const error = group ? group.querySelector('.form-group__error') : null;
+  const error = group ? group.querySelector('.form-group_error') : null;
   let isValid = true;
 
   if (field.type === 'checkbox') {
@@ -129,8 +129,8 @@ function initContactForm() {
   if (!form) return;
 
   const fields = form.querySelectorAll('input, textarea');
-  const submitBtn = form.querySelector('.contact__submit');
-  const feedback = form.querySelector('.contact__feedback');
+  const submitBtn = form.querySelector('.contact_submit');
+  const feedback = form.querySelector('.contact_feedback');
 
   /**
    * Enables or disables the submit button based on overall form validity.
@@ -160,12 +160,12 @@ function initContactForm() {
 
     if (!allValid) {
       feedback.textContent = 'Please fix the highlighted fields.';
-      feedback.className = 'contact__feedback is-error';
+      feedback.className = 'contact_feedback is-error';
       return;
     }
 
     feedback.textContent = 'Thanks! Your message has been sent.';
-    feedback.className = 'contact__feedback is-success';
+    feedback.className = 'contact_feedback is-success';
     form.reset();
     refreshSubmitState();
   });
