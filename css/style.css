@@ -255,13 +255,15 @@
 .portfolio_blob--right {
   top: 0;
   right: 0;
-  width: 320px;
+  height: 100%;
+  width: auto;
 }
 
 .portfolio_blob--left {
   bottom: 0;
   left: 0;
-  width: 240px;
+  height: 100%;
+  width: auto;
 }
 
 .portfolio_heading-row {
