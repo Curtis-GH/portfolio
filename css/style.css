@@ -1,5 +1,9 @@
 /* ===== HEADER ===== */
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -418,22 +422,29 @@
 }
 
 .form-group_error {
-  display: none;
+  visibility: hidden;
   color: var(--color-error);
   font-size: var(--fs-small);
   margin-top: var(--space-xs);
+  min-height: 1.2em;
 }
 
 .form-group_error.is-visible {
-  display: block;
+  visibility: visible;
 }
 
 .form-group--checkbox {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: var(--space-xs);
-  font-size: var(--fs-small);
+  font-size: var(--fs-body);
 }
+.form-group--checkbox .form-group_error {
+  flex-basis: 100%;
+  margin-top: 0;
+}
+
 
 .form-group--checkbox input {
   width: auto;
@@ -447,15 +458,45 @@
   text-decoration: underline;
 }
 
-.form-group_error--submit {
-  margin-top: 0;
-  margin-bottom: var(--space-sm);
+.form-group--checkbox input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-accent-green);
+  border-radius: 4px;
+  background-color: transparent;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.form-group--checkbox input:checked {
+  background-color: var(--color-accent-green);
+}
+
+.form-group--checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 11px;
+  border: solid #06120a;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .contact_submit:disabled {
-  opacity: 0.5;
+  background-color: var(--color-border);
+  opacity: 1;
   cursor: not-allowed;
   transform: none;
+  cursor: pointer;
+}
+.contact_form {
+  padding-right: 75px;
 }
 
 .contact_feedback {
@@ -708,7 +749,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
   padding: var(--space-lg);
   padding-right: 0;
 }
@@ -727,32 +767,33 @@
   border-radius: 24px;
   padding: var(--space-lg) var(--space-lg) var(--space-lg) calc(var(--space-lg) * 2);
   min-height: 140px;
+  height: 180px;
   display: flex;
   align-items: center;
+  margin-right: var(--space-lg);
 }
 
 .testimonial_slides {
   position: relative;
   width: 100%;
+  display: grid;
 }
 
 .testimonial_slide {
-  display: none;
+  grid-area: 1 / 1;
+  visibility: hidden;
 }
 
 .testimonial_slide.is-active {
-  display: block;
+  visibility: visible;
 }
 
 .testimonial_author-row {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
   margin-top: var(--space-md);
 }
 
-
- 
  .testimonial_avatar-divider {
   display: inline-block;
   width: 80px;
@@ -761,9 +802,10 @@
 }
 
 .testimonial_author {
-  color: var(--color-text-muted);
-  font-size: var(--fs-body);
-  white-space: nowrap;
+    color: var(--color-text-muted);
+    font-size: var(--fs-body);
+    white-space: nowrap;
+    padding-left: 20px;
 }
 
 .testimonial_avatar {
@@ -785,6 +827,13 @@
   flex-grow: 1;
   height: 3px;
   background-color: var(--color-accent-green);
+}
+
+.testimonial_divider {
+  flex-grow: 1;
+  max-width: 240px;
+  height: 1px;
+  background-color: var(--color-accent-cyan);
 }
 
 .testimonial_nav {
@@ -846,12 +895,14 @@
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
+  padding-left: 30%;
 }
 
 .contact_divider {
   flex-grow: 1;
   height: 2px;
   background-color: var(--color-accent-green);
+  margin-top: 50px;
 }
 
 .contact_grid {
@@ -871,12 +922,17 @@
 
 .contact_intro-divider {
   width: 40px;
-  height: 2px;
+  height: 4px;
   background-color: var(--color-accent-cyan);
+}
+
+.contact_intro-heading h3 {
+  font-size: 40px;
 }
 
 .contact_intro p {
   color: var(--color-text-muted);
+  font-size: var(--fs-body);
   margin-bottom: var(--space-sm);
   max-width: 320px;
 }
@@ -887,13 +943,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
   margin-left: auto;
+  margin-right: var(--space-lg);
   margin-top: var(--space-md);
-  border: 1px solid var(--color-border);
+  margin-bottom: var(--space-lg);
+  border: 2px solid var(--color-border);
   border-radius: 50%;
   color: var(--color-text);
+  border-color: white;
 }
 
 /* ===== END CONTACT ===== */

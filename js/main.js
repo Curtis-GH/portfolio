@@ -142,13 +142,16 @@ function initContactForm() {
   }
 
   fields.forEach((field) => {
-    field.addEventListener('blur', () => {
-      validateField(field);
-      refreshSubmitState();
-    });
-    field.addEventListener('change', refreshSubmitState);
-    field.addEventListener('input', refreshSubmitState);
+  field.addEventListener('blur', () => {
+    validateField(field);
+    refreshSubmitState();
   });
+  field.addEventListener('change', () => {
+    validateField(field);
+    refreshSubmitState();
+  });
+  field.addEventListener('input', refreshSubmitState);
+});
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
