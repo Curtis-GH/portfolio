@@ -966,3 +966,72 @@
 }
 
 /* ===== END CONTACT ===== */
+
+/* ===== LEGAL PAGES (Legal Notice / Privacy Policy) ===== */
+.legal_title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  margin-inline: calc(var(--space-md) * -1);
+  text-align: center;
+}
+
+.legal_title {
+  color: var(--color-accent-green);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  margin-top:  50px;
+  white-space: nowrap;
+}
+
+.legal_divider {
+  flex-grow: 1;
+  height: 3px;
+  background-color: var(--color-accent-purple);
+  max-width: 400px;
+  margin-top: 30px;
+  
+}
+
+.legal_content {
+  max-width: 800px;
+  margin-inline: auto;
+  margin-bottom: 75px;
+}
+
+.legal_content h2 {
+  color: var(--color-accent-purple);
+  font-size: var(--fs-h3);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.legal_content p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.legal_content ul {
+  margin-bottom: var(--space-sm);
+  padding-left: var(--space-md);
+  list-style: disc;
+}
+
+.legal_content li {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.legal_content a {
+  color: var(--color-accent-purple);
+  text-decoration: underline;
+}
+
+.legal_placeholder {
+  color: var(--color-accent-cyan);
+  font-style: italic;
+}
+/* ===== END LEGAL PAGES ===== */
