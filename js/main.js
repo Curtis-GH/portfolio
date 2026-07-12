@@ -1,7 +1,37 @@
 /**
- * Initializes the language toggle buttons in the header.
- * Clicking a button marks it active and removes the active state from its sibling.
- * Does not yet translate content — that logic follows in a later phase.
+ * Applies the given language's translations to every element with a
+ * [data-i18n] attribute, every input with [data-i18n-placeholder], and
+ * remembers the choice in localStorage.
+ *
+ * @param {string} lang - Language code, "en" or "de".
+ * @returns {void}
+ */
+function applyLanguage(lang) {
+  const dict = translations[lang] || translations.en;
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.dataset.i18n;
+    if (dict[key] !== undefined) {
+      el.textContent = dict[key];
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.dataset.i18nPlaceholder;
+    if (dict[key] !== undefined) {
+      el.placeholder = dict[key];
+    }
+  });
+
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+}
+
+/**
+ * Initializes the language toggle buttons in the header. Clicking a button
+ * marks it active, removes the active state from its sibling, and applies
+ * that button's language (read from its data-lang attribute). Restores the
+ * last chosen language from localStorage on page load, if any.
  *
  * @returns {void}
  */
@@ -12,8 +42,18 @@ function initLanguageToggle() {
     button.addEventListener('click', () => {
       buttons.forEach((btn) => btn.classList.remove('lang-btn--active'));
       button.classList.add('lang-btn--active');
+      applyLanguage(button.dataset.lang);
     });
   });
+
+  const savedLang = localStorage.getItem('lang');
+  const activeBtn = document.querySelector('.lang-btn--active');
+  const initialLang = savedLang || activeBtn?.dataset.lang || 'en';
+
+  buttons.forEach((btn) => {
+    btn.classList.toggle('lang-btn--active', btn.dataset.lang === initialLang);
+  });
+  applyLanguage(initialLang);
 }
 
 /**
@@ -142,19 +182,22 @@ function initContactForm() {
   }
 
   fields.forEach((field) => {
-  field.addEventListener('blur', () => {
-    validateField(field);
-    refreshSubmitState();
+    field.addEventListener('blur', () => {
+      validateField(field);
+      refreshSubmitState();
+    });
+    field.addEventListener('change', () => {
+      validateField(field);
+      refreshSubmitState();
+    });
+    field.addEventListener('input', refreshSubmitState);
   });
-  field.addEventListener('change', () => {
-    validateField(field);
-    refreshSubmitState();
-  });
-  field.addEventListener('input', refreshSubmitState);
-});
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+
+    const lang = document.documentElement.lang || 'en';
+    const dict = translations[lang] || translations.en;
 
     let allValid = true;
     fields.forEach((field) => {
@@ -162,12 +205,12 @@ function initContactForm() {
     });
 
     if (!allValid) {
-      feedback.textContent = 'Please fix the highlighted fields.';
+      feedback.textContent = dict.feedback_error;
       feedback.className = 'contact_feedback is-error';
       return;
     }
 
-    feedback.textContent = 'Thanks! Your message has been sent.';
+    feedback.textContent = dict.feedback_success;
     feedback.className = 'contact_feedback is-success';
     form.reset();
     refreshSubmitState();

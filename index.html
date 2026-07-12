@@ -21,9 +21,9 @@
       <a href="#" class="header_logo">Curt<span class="accent">i</span>s</a>
       <nav class="header_nav">
         <ul>
-          <li><a href="#about">About me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about" data-i18n="nav_about">About me</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
         </ul>
       </nav>
       <div class="header_lang">
@@ -37,13 +37,13 @@
       <div class="hero_content">
         <div class="hero_text">
           <div class="hero_heading-row">
-            <span class="hero_eyebrow">I am</span>
+            <span class="hero_eyebrow" data-i18n="hero_eyebrow">I am</span>
             <div class="hero_name-block">
               <h1>Curtis Nguyen-Wellmann</h1>
-              <p class="hero_role">FRONTEND DEVELOPER</p>
+              <p class="hero_role" data-i18n="hero_role">FRONTEND DEVELOPER</p>
             </div>
           </div>
-          <a href="#contact" class="btn btn--primary">Let's talk!</a>
+          <a href="#contact" class="btn btn--primary" data-i18n="hero_cta">Let's talk!</a>
         </div>
       </div>
 
@@ -61,7 +61,7 @@
           </a>
         </div>
         <span class="hero_scroll"
-          >Scroll down <span class="hero_scroll-arrow">&darr;</span></span
+          ><span data-i18n="hero_scroll">Scroll down</span> <span class="hero_scroll-arrow">&darr;</span></span
         >
       </div>
     </section>
@@ -70,36 +70,36 @@
     <section id="about" class="section container about">
       <div class="about_grid">
         <div class="about_text">
-          <h2 class="section_title">About me</h2>
-          <p class="about_intro">
+          <h2 class="section_title" data-i18n="about_title">About me</h2>
+          <p class="about_intro" data-i18n="about_intro_1">
             Hey there, I'm Curtis! I build things for the web because I like
             watching an idea turn into something people can actually click on.
             Somewhere between debugging a stubborn CSS bug and shipping a
             feature that just works, I found the part of coding that keeps me
             hooked.
           </p>
-          <p class="about_intro">
+          <p class="about_intro" data-i18n="about_intro_2">
             Let's connect and create something amazing together!
           </p>
 
           <ul class="about_points">
             <li>
               <img src="icons/about me/location.png" alt="" />
-              <p>
+              <p data-i18n="about_point_1">
                 Based in Leipzig, Germany — open to remote work, hybrid setups,
                 or relocating for the right opportunity.
               </p>
             </li>
             <li>
               <img src="icons/about me/bulb.png" alt="" />
-              <p>
+              <p data-i18n="about_point_2">
                 Always curious, always learning. New frameworks and tools don't
                 scare me — they're just the next thing to figure out.
               </p>
             </li>
             <li>
               <img src="icons/about me/puzzle.svg" alt="" />
-              <p>
+              <p data-i18n="about_point_3">
                 I like breaking problems down into small, solvable pieces —
                 analytical thinking, a bit of creativity, and enough persistence
                 to see it through.
@@ -203,7 +203,7 @@
 
         <div class="skills_text">
           <div class="skills_heading-row">
-            <h2 class="section_title">Skills</h2>
+            <h2 class="section_title" data-i18n="skills_title">Skills</h2>
             <span class="skills_divider" aria-hidden="true"></span>
           </div>
           <p>
@@ -218,135 +218,139 @@
           </p>
 
           <h3 class="skills_question">
-            Looking for <span class="accent-purple">another skill</span>?
+            <span data-i18n="skills_question_lead">Looking for</span>
+            <span class="accent-purple" data-i18n="skills_question_highlight">another skill</span>?
           </h3>
           <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
 
-          <a href="#contact" class="btn btn--primary">Get in touch</a>
+          <a href="#contact" class="btn btn--primary" data-i18n="skills_cta">Get in touch</a>
         </div>
       </div>
     </section>
 
     <div class="page-bottom">
       <!-- Portfolio -->
-<section id="portfolio" class="section container portfolio">
-  <img
-    src="icons/decorative/portfolio-shadow-blue.png"
-    alt=""
-    class="portfolio_blob portfolio_blob--right"
-    aria-hidden="true"
-  />
-  <img
-    src="icons/decorative/portfolio-shadow-green.png"
-    alt=""
-    class="portfolio_blob portfolio_blob--left"
-    aria-hidden="true"
-  />
-  <div class="portfolio_heading-row">
-    <span class="portfolio_divider" aria-hidden="true"></span>
-    <h2 class="section_title">Portfolio</h2>
-  </div>
-  <p class="portfolio_subtitle">
-    Explore a selection of my work here – Interact with projects to see my
-    skills in action.
-  </p>
-
-  <div class="portfolio_grid">
-    <article class="project-card">
-      <div class="project-card_media">
+      <section id="portfolio" class="section container portfolio">
         <img
-          src="icons/projects/project-join.png"
-          alt="Join Preview"
-          class="project-card_preview"
+          src="icons/decorative/portfolio-shadow-blue.png"
+          alt=""
+          class="portfolio_blob portfolio_blob--right"
+          aria-hidden="true"
         />
-        <div class="project-card_links">
-          
-          <a  href="https://github.com/Curtis-GH/Join-Management"
-            class="btn btn--outline"
-            target="_blank"
-            rel="noopener"
-            >Github</a
-          >
-          <a href="#" class="btn btn--secondary" aria-disabled="true"
-            >Live test</a
-          >
-        </div>
-        <div class="project-card_info">
-          <h3>Join</h3>
-          <p>
-            Kanban task management app with drag &amp; drop, categories,
-            and contact management.
-          </p>
-          <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-card_media">
         <img
-          src="icons/projects/project-el-pollo-loco.png"
-          alt="El Pollo Loco Preview"
-          class="project-card_preview"
+          src="icons/decorative/portfolio-shadow-green.png"
+          alt=""
+          class="portfolio_blob portfolio_blob--left"
+          aria-hidden="true"
         />
-        <div class="project-card_links">
-          
-           <a href="https://github.com/Curtis-GH/El_Pollo_loco"
-            class="btn btn--outline"
-            target="_blank"
-            rel="noopener"
-            >Github</a
-          >
-          <a href="#" class="btn btn--secondary" aria-disabled="true"
-            >Live test</a
-          >
+        <div class="portfolio_heading-row">
+          <span class="portfolio_divider" aria-hidden="true"></span>
+          <h2 class="section_title" data-i18n="portfolio_title">Portfolio</h2>
         </div>
-        <div class="project-card_info">
-          <h3>El Pollo Loco</h3>
-          <p>
-            Jump, run and throw game based on an object-oriented approach.
-            Help Pepe find coins and tabasco salsa to fight the crazy hen.
-          </p>
-          <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>
-        </div>
-      </div>
-    </article>
+        <p class="portfolio_subtitle" data-i18n="portfolio_subtitle">
+          Explore a selection of my work here – Interact with projects to see my
+          skills in action.
+        </p>
 
-    <article class="project-card">
-      <div class="project-card_media">
-        <img
-          src="icons/projects/pokedex.png"
-          alt="Pokédex Preview"
-          class="project-card_preview"
-        />
-        <div class="project-card_links">
-          
-           <a href="https://github.com/Curtis-GH/pokedex"
-            class="btn btn--outline"
-            target="_blank"
-            rel="noopener"
-            >Github</a
-          >
-          <a href="#" class="btn btn--secondary" aria-disabled="true"
-            >Live test</a
-          >
+        <div class="portfolio_grid">
+          <article class="project-card">
+            <div class="project-card_media">
+              <img
+                src="icons/projects/project-join.png"
+                alt="Join Preview"
+                class="project-card_preview"
+              />
+              <div class="project-card_links">
+                
+                  href="https://github.com/Curtis-GH/Join-Management"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="project_link_github"
+                  >Github</a
+                >
+                <a href="#" class="btn btn--secondary" aria-disabled="true" data-i18n="project_link_live"
+                  >Live test</a
+                >
+              </div>
+              <div class="project-card_info">
+                <h3>Join</h3>
+                <p data-i18n="project_join_desc">
+                  Kanban task management app with drag &amp; drop, categories,
+                  and contact management.
+                </p>
+                <p class="tech-tags">JavaScript | HTML | CSS | Firebase</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card_media">
+              <img
+                src="icons/projects/project-el-pollo-loco.png"
+                alt="El Pollo Loco Preview"
+                class="project-card_preview"
+              />
+              <div class="project-card_links">
+                
+                  href="https://github.com/Curtis-GH/El_Pollo_loco"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="project_link_github"
+                  >Github</a
+                >
+                <a href="#" class="btn btn--secondary" aria-disabled="true" data-i18n="project_link_live"
+                  >Live test</a
+                >
+              </div>
+              <div class="project-card_info">
+                <h3>El Pollo Loco</h3>
+                <p data-i18n="project_pollo_desc">
+                  Jump, run and throw game based on an object-oriented approach.
+                  Help Pepe find coins and tabasco salsa to fight the crazy hen.
+                </p>
+                <p class="tech-tags">JavaScript | HTML5 Canvas | CSS</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card_media">
+              <img
+                src="icons/projects/pokedex.png"
+                alt="Pokédex Preview"
+                class="project-card_preview"
+              />
+              <div class="project-card_links">
+                
+                  href="https://github.com/Curtis-GH/pokedex"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="project_link_github"
+                  >Github</a
+                >
+                <a href="#" class="btn btn--secondary" aria-disabled="true" data-i18n="project_link_live"
+                  >Live test</a
+                >
+              </div>
+              <div class="project-card_info">
+                <h3>Pokédex</h3>
+                <p data-i18n="project_pokedex_desc">
+                  Based on the PokéAPI, a simple library that provides and
+                  catalogues pokemon information.
+                </p>
+                <p class="tech-tags">JavaScript | HTML | CSS | API</p>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="project-card_info">
-          <h3>Pokédex</h3>
-          <p>
-            Based on the PokéAPI, a simple library that provides and
-            catalogues pokemon information.
-          </p>
-          <p class="tech-tags">JavaScript | HTML | CSS | API</p>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
+      </section>
 
       <!-- References -->
       <section id="references" class="section container references">
-       
+        <h2 class="section_title" data-i18n="references_title"></h2>
 
         <div class="testimonial">
           <img
@@ -359,34 +363,34 @@
           <div class="testimonial_box">
             <div class="testimonial_slides">
               <div class="testimonial_slide is-active" data-initials="KM">
-                <p class="testimonial_text">
+                <p class="testimonial_text" data-i18n="testimonial_1">
                   Working with Curtis was a great experience — clear
                   communication and a real eye for detail on every task he took
                   on.
                 </p>
                 <div class="testimonial_author-row">
                   <span class="testimonial_divider" aria-hidden="true"></span>
-                  <span class="testimonial_author">K.M. - Team Partner</span>
+                  <span class="testimonial_author">K.M. - <span data-i18n="testimonial_role">Team Partner</span></span>
                 </div>
               </div>
               <div class="testimonial_slide" data-initials="AE">
-                <p class="testimonial_text">
+                <p class="testimonial_text" data-i18n="testimonial_2">
                   Curtis is reliable and easy to work with. He picks up new
                   tools quickly and always keeps the team in the loop.
                 </p>
                 <div class="testimonial_author-row">
                   <span class="testimonial_divider" aria-hidden="true"></span>
-                  <span class="testimonial_author">A.E. - Team Partner</span>
+                  <span class="testimonial_author">A.E. - <span data-i18n="testimonial_role">Team Partner</span></span>
                 </div>
               </div>
               <div class="testimonial_slide" data-initials="LW">
-                <p class="testimonial_text">
+                <p class="testimonial_text" data-i18n="testimonial_3">
                   A dependable developer with a good sense for clean structure.
                   Curtis was a pleasure to collaborate with.
                 </p>
                 <div class="testimonial_author-row">
                   <span class="testimonial_divider" aria-hidden="true"></span>
-                  <span class="testimonial_author">L.W. - Team Partner</span>
+                  <span class="testimonial_author">L.W. - <span data-i18n="testimonial_role">Team Partner</span></span>
                 </div>
               </div>
             </div>
@@ -446,7 +450,7 @@
         />
 
         <div class="contact_heading-row">
-          <h2 class="section_title">Contact</h2>
+          <h2 class="section_title" data-i18n="contact_title">Contact</h2>
           <span class="contact_divider" aria-hidden="true"></span>
         </div>
 
@@ -454,49 +458,52 @@
           <div class="contact_intro">
             <div class="contact_intro-heading">
               <span class="contact_intro-divider" aria-hidden="true"></span>
-              <h3>Got a problem to solve?</h3>
+              <h3 data-i18n="contact_heading">Got a problem to solve?</h3>
             </div>
             <p>
               Encourage people to contact you and describe what role you are
               interested in. Show that you will add value to their projects
               through your work.
             </p>
-            <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+            <p><span data-i18n="contact_closer">Need a Frontend developer?</span> <strong data-i18n="contact_closer_strong">Contact me!</strong></p>
           </div>
 
           <form id="contact-form" class="contact_form" novalidate>
             <div class="form-group">
-              <input type="text" name="name" placeholder="Your name" required />
-              <span class="form-group_error">Your name is required</span>
+              <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form_name_placeholder" required />
+              <span class="form-group_error" data-i18n="error_name">Your name is required</span>
             </div>
             <div class="form-group">
               <input
                 type="email"
                 name="email"
                 placeholder="Your email"
+                data-i18n-placeholder="form_email_placeholder"
                 required
               />
-              <span class="form-group_error">Please enter a valid email</span>
+              <span class="form-group_error" data-i18n="error_email">Please enter a valid email</span>
             </div>
             <div class="form-group">
               <textarea
                 name="message"
                 placeholder="Your message"
+                data-i18n-placeholder="form_message_placeholder"
                 required
               ></textarea>
-              <span class="form-group_error">Your message is empty</span>
+              <span class="form-group_error" data-i18n="error_message">Your message is empty</span>
             </div>
             <div class="form-group form-group--checkbox">
-  <input type="checkbox" id="privacy" name="privacy" required>
-  <label for="privacy">I've read the <a href="legal/privacy/privacy-policy.html" class="contact_policy-link">privacy policy</a> and agree to the processing of my data as outlined.</label>
-  <span class="form-group_error">Please accept the privacy policy</span>
-</div>
-            <p class="form-group_error form-group_error--submit">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy"><span data-i18n="form_privacy_label_pre">I've read the</span> <a href="legal/privacy/privacy-policy.html" class="contact_policy-link" data-i18n="form_privacy_link">privacy policy</a> <span data-i18n="form_privacy_label_post">and agree to the processing of my data as outlined.</span></label>
+              <span class="form-group_error" data-i18n="error_privacy">Please accept the privacy policy</span>
+            </div>
+            <p class="form-group_error form-group_error--submit" data-i18n="error_submit">
               Please fill in all fields correctly
             </p>
             <button
               type="submit"
               class="btn btn--primary contact_submit"
+              data-i18n="form_submit"
               disabled
             >
               Send message :)
@@ -513,8 +520,8 @@
       <!-- Footer -->
       <footer class="footer container">
         <div class="footer_brand">
-          <a href="#" class="header_logo">Curt<span class="accent">i</span>s</a>
-          <a href="legal/privacy/legal-notice.html" class="footer_legal-link"
+          <a href="#" class="footer_logo">Curt<span class="accent">i</span>s</a>
+          <a href="legal/privacy/legal-notice.html" class="footer_legal-link" data-i18n="footer_legal"
             >Legal notice</a
           >
         </div>
@@ -535,6 +542,7 @@
       </footer>
     </div>
 
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
