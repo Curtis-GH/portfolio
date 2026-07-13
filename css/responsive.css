@@ -55,7 +55,7 @@
   .hero {
     background-size: 320px, 180px;
   }
-  
+
   .hero_heading-row {
     flex-direction: row;
     align-items: center;
@@ -114,45 +114,39 @@
     flex-direction: column;
     margin-left: 0;
   }
+
   .skills_text {
-  display: contents;
-}
-
-.skills_text > p:nth-of-type(-n+2) {
-  order: -1;
-}
-.skills_text > p:nth-of-type(2) {
-  margin-top: -3.5rem; 
-}
-.skills_question + p {
-  margin-top: -2.5rem; 
-}
-
- .skills_icons {
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 0;
-}
-
-.skill-item:nth-child(10) { order: 1; }  /* Material Design */
-.skill-item:nth-child(13) { order: 2; }  /* Continually Learning */
-.skill-item:nth-child(11) { order: 3; }  /* leer */
-.skill-item:nth-child(12) { display: none; }
-  .skills_text {
-   
+    display: contents;
     max-width: none;
   }
 
-  .skills_heading-row {
-        position: relative;
-        z-index: 1;
-        margin-left: 10px;
-        
-    }
+  .skills_text > p:nth-of-type(-n+2) {
+    order: -1;
+  }
 
-  /* 
-    AB HIER WAR DEIN CODE AUSSERHALB. 
-    Er ist jetzt sauber IN die Media Query eingeschlossen.
-  */
+  .skills_text > p:nth-of-type(2) {
+    margin-top: -3.5rem;
+  }
+
+  .skills_question + p {
+    margin-top: -2.5rem;
+  }
+
+  .skills_icons {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0;
+  }
+
+  .skill-item:nth-child(10) { order: 1; }  /* Material Design */
+  .skill-item:nth-child(13) { order: 2; }  /* Continually Learning */
+  .skill-item:nth-child(11) { order: 3; }  /* leer */
+  .skill-item:nth-child(12) { display: none; }
+
+  .skills_heading-row {
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+  }
 
   .footer {
     flex-direction: column;
@@ -181,6 +175,7 @@
     height: 240px;
     width: auto;
   }
+
   .portfolio_grid {
     position: relative;
     z-index: 1;
@@ -188,7 +183,8 @@
     grid-template-columns: repeat(1, 1fr);
     gap: var(--space-lg);
     max-width: 1200px;
-    margin-inline: auto;}
+    margin-inline: auto;
+  }
 
   .testimonial {
     flex-direction: column;
@@ -216,19 +212,25 @@
 
   .testimonial_avatar-row {
     order: -1;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: var(--space-xs);
+    width: 100%;
+  }
+
+  .testimonial_avatar-row::before {
+    content: "";
   }
 
   .testimonial_avatar {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
   }
 
   .testimonial_avatar-divider {
+    grid-column: 3;
     display: block;
-    width: 60px;
   }
 
   .contact_shadow {
@@ -250,7 +252,6 @@
     flex-grow: 1;
     height: 2px;
     background-color: var(--color-accent-green);
-    margin-top: 7px; 
   }
 
   .contact_intro p {
@@ -262,12 +263,22 @@
   }
 
   .contact_form {
-    padding-right: 20px;
+    padding-right: 0;
   }
 
-  .contact_submit {
-    display: block;
+  .contact_form .contact_submit {
     margin-inline: auto;
+  }
+
+  .form-group--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .form-group--checkbox label {
+    flex: 1;
   }
 
   .contact_scroll-top {
@@ -280,7 +291,6 @@
   .btn--primary {
     background-color: var(--color-accent-green);
     color: #fff;
-    margin: 0;
   }
 
   footer {
@@ -312,10 +322,7 @@
     font-size: var(--fs-small);
     margin-top: 0;
   }
-} 
-
-
-
+}
 /* ===== END 768px ===== */
 
 /* ===== RESPONSIVE: 480px (large phone) ===== */
