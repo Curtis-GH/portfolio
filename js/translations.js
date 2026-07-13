@@ -77,12 +77,11 @@ const translations = {
     hero_scroll: "scroll weiter",
 
     about_title: "Das bin ich",
-    about_intro_1: "Hey, ich bin Curtis! Ich entwickle Dinge fürs Web, weil ich es liebe zu sehen, wie aus einer Idee etwas wird, das man tatsächlich anklicken kann. Irgendwo zwischen einem hartnäckigen CSS-Bug und einem Feature, das endlich funktioniert, hab ich den Teil am Programmieren gefunden, der mich nicht mehr loslässt.",
-    about_intro_2: "Lass uns in Kontakt treten und gemeinsam etwas Großartiges erschaffen!",
-    about_point_1: "Ansässig in Leipzig, Deutschland — offen für Remote-Arbeit, hybride Modelle oder einen Umzug für die richtige Gelegenheit.",
-    about_point_2: "Immer neugierig, immer am Lernen. Neue Frameworks und Tools schrecken mich nicht ab — sie sind einfach die nächste Sache, die es zu verstehen gilt.",
-    about_point_3: "Ich zerlege Probleme gerne in kleine, lösbare Teile — analytisches Denken, eine Prise Kreativität und genug Durchhaltevermögen, um es zu Ende zu bringen.",
-
+    about_intro_1: "Hey, ich bin Curtis! Ich baue Dinge fürs Web, weil ich gerne sehe, wie aus einer Idee etwas wird, das man wirklich anklicken kann. Zwischen einem hartnäckigen CSS-Bug und einem Feature, das endlich läuft, liegt der Teil am Programmieren, der mich nicht mehr loslässt.",
+    about_intro_2: "Lass uns etwas Großartiges erschaffen!",
+    about_point_1: "Ansässig in Leipzig — offen für Remote, Hybrid-Modelle.",
+    about_point_2: "Immer neugierig, immer am Lernen. Neue Frameworks schrecken mich nicht ab — sie sind die nächste Sache, die es zu verstehen gilt.",
+    about_point_3: "Ich zerlege Probleme gern in kleine, lösbare Teile — analytisches Denken, etwas Kreativität und Durchhaltevermögen.",
     skills_title: "Skills",
     skills_question_lead: "Auf der Suche nach",
     skills_question_highlight: "einem weiteren Skill",
