@@ -103,9 +103,11 @@
 
   .about_text {
   margin-left: 0;
+  z-index: 10;
+  margin-bottom: 180px;
 }
-.skills_wave {
-  top: 300px;
+ .skills_wave {
+  top: -1010px;
 }
 
 .skills_grid {
@@ -114,19 +116,15 @@
 }
 
 .skills_icons {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .skills_text {
   max-width: none;
 }
 .skills_heading-row {
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-.skills_divider {
-  margin-top: 2px;
+  position: relative;
+  z-index: 1;
 }
 
 .portfolio_grid {
@@ -246,7 +244,7 @@
 .btn--primary {
     background-color: var(--color-accent-green);
     color: #fff;
-    margin-top: 0px;
+    
 }
 footer {
   flex-direction: column;
@@ -299,9 +297,7 @@ footer {
   .hero_role {
     font-size: 30px;
   }
-  .skills_wave {
-  top: -900px;
-}
+ 
 
   .btn {
     font-size: 16px;

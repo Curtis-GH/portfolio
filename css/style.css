@@ -724,10 +724,13 @@ html[lang="de"] .section_title {
 }
 
 .skills_heading-row {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-md);
+  margin-left: 950px;
 }
 
 .skills_divider {
