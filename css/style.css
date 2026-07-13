@@ -2,7 +2,7 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 200;
   background-color: var(--color-bg);
   display: flex;
   align-items: center;
@@ -136,11 +136,15 @@
   font-weight: 600;
   color: #fff;
 }
+html[lang="de"] .hero_eyebrow {
+  font-size: 50px;
+}
 
 .hero_name-block {
   display: flex;
   flex-direction: column;
 }
+
 
 .hero_role {
   color: var(--color-accent-purple);
@@ -207,6 +211,10 @@
   font-size: 90px;
   line-height: 1;
   margin-bottom: var(--space-md);
+}
+
+html[lang="de"] .section_title {
+  font-size: 80px;
 }
 
 /* ===== END SECTION (SHARED) ===== */
@@ -1035,3 +1043,71 @@
   font-style: italic;
 }
 /* ===== END LEGAL PAGES ===== */
+.header_burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+}
+
+.header_burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: var(--color-bg-alt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--fs-h3);
+}
+
+.mobile-menu_lang {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.mobile-menu_lang-btn {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: var(--color-text-muted);
+  font-size: var(--fs-body);
+  font-weight: 600;
+}
+
+.mobile-menu_lang-btn.lang-btn--active {
+  background: transparent;
+  color: var(--color-accent-green);
+}

@@ -1,0 +1,216 @@
+/* ===== RESPONSIVE: 1024px (tablet landscape) ===== */
+@media (max-width: 1024px) {
+  .header_nav {
+    margin-left: 80px;
+  }
+
+  .header_nav ul {
+    gap: var(--space-sm);
+    font-size: 18px;
+  }
+
+  .hero_content {
+    margin: 40px;
+  }
+
+  .hero_eyebrow {
+    font-size: 48px;
+  }
+
+  .hero_text h1,
+  .hero_role {
+    font-size: 48px;
+  }
+
+  .hero_footer {
+    margin-top: 60px;
+  }
+
+  .about_grid {
+    gap: var(--space-lg);
+  }
+
+  .about_photo-wrap {
+    width: 380px;
+    margin-top: 0;
+  }
+}
+/* ===== END 1024px ===== */
+
+/* ===== RESPONSIVE: 768px (tablet portrait) — Nav → Hamburger, About stacks ===== */
+@media (max-width: 768px) {
+  .container {
+    padding-inline: var(--space-sm);
+  }
+
+  .header_nav,
+  .header_lang {
+    display: none;
+  }
+
+  .header_burger {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 100vh;
+    background-size: 320px, 180px;
+  }
+
+  .hero_content {
+    margin: var(--space-lg) 0;
+    flex-direction: column;
+  }
+
+  .hero_heading-row {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .hero_eyebrow {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 28px;
+  }
+
+  .hero_text h1,
+  .hero_role {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .hero_footer {
+    margin-top: var(--space-lg);
+  }
+
+  .hero_scroll {
+    display: none;
+  }
+
+  .about_grid {
+    flex-direction: column-reverse;
+    gap: var(--space-md);
+  }
+
+  .about_photo-wrap {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .about_text {
+  margin-left: 0;
+}
+
+.skills_grid {
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.skills_icons {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skills_text {
+  max-width: none;
+}
+/* in der 768px-Query ergänzen */
+.portfolio_grid {
+  grid-template-columns: 1fr;
+  max-width: 100%;
+}
+/* in der 768px-Query ergänzen */
+.footer {
+  flex-direction: column;
+  gap: var(--space-md);
+  text-align: center;
+}
+}
+
+/* ===== END 768px ===== */
+
+/* ===== RESPONSIVE: 480px (large phone) ===== */
+@media (max-width: 480px) {
+  .hero {
+    background-size: 220px, 120px;
+  }
+
+  .hero_eyebrow {
+    font-size: 22px;
+  }
+
+  .hero_text h1,
+  .hero_role {
+    font-size: 30px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 0.6rem 1.25rem;
+  }
+
+  .hero_socials {
+    gap: var(--space-sm);
+  }
+
+  .section_title {
+    font-size: 48px;
+  }
+
+  .about_photo-wrap {
+    max-width: 280px;
+  }
+
+  .about_points img {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* ===== END 480px ===== */
+
+/* ===== RESPONSIVE: 375px (standard phone) ===== */
+@media (max-width: 375px) {
+  .hero_text h1,
+  .hero_role {
+    font-size: 26px;
+  }
+
+  .section_title {
+    font-size: 36px;
+  }
+}
+/* ===== END 375px ===== */
+
+/* ===== RESPONSIVE: 320px (smallest phone) — matches Figma mobile frame ===== */
+@media (max-width: 320px) {
+  .hero_text h1,
+  .hero_role {
+    font-size: 22px;
+  }
+
+  .hero_eyebrow {
+    font-size: 18px;
+  }
+
+  .hero_content {
+    margin: var(--space-md) 0;
+  }
+
+  .about_photo-wrap {
+    max-width: 240px;
+  }
+
+  .section_title {
+    font-size: 32px;
+  }
+
+  .about_intro {
+    font-size: var(--fs-small);
+  }
+
+  .about_points p {
+    font-size: var(--fs-small);
+  }
+}
+/* ===== END 320px ===== */

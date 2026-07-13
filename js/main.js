@@ -40,9 +40,11 @@ function initLanguageToggle() {
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      buttons.forEach((btn) => btn.classList.remove('lang-btn--active'));
-      button.classList.add('lang-btn--active');
-      applyLanguage(button.dataset.lang);
+      const lang = button.dataset.lang;
+      buttons.forEach((btn) => {
+        btn.classList.toggle('lang-btn--active', btn.dataset.lang === lang);
+      });
+      applyLanguage(lang);
     });
   });
 
@@ -54,6 +56,29 @@ function initLanguageToggle() {
     btn.classList.toggle('lang-btn--active', btn.dataset.lang === initialLang);
   });
   applyLanguage(initialLang);
+}
+/**
+ * Initializes the mobile hamburger menu: toggles the fullscreen overlay
+ * open/closed and closes it again when a nav link inside is clicked.
+ *
+ * @returns {void}
+ */
+function initMobileMenu() {
+  const burger = document.getElementById('burger-btn');
+  const menu = document.getElementById('mobile-menu');
+  if (!burger || !menu) return;
+
+  burger.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
 
 /**
@@ -225,6 +250,7 @@ function initContactForm() {
  */
 function init() {
   initLanguageToggle();
+  initMobileMenu();
   initTestimonialCarousel();
   initContactForm();
 }

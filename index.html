@@ -14,23 +14,50 @@
     <link rel="stylesheet" href="css/variable.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header container">
-      <a href="#" class="header_logo">Curt<span class="accent">i</span>s</a>
-      <nav class="header_nav">
-        <ul>
-          <li><a href="#about" data-i18n="nav_about">About me</a></li>
-          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-          <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
-        </ul>
-      </nav>
-      <div class="header_lang">
-        <button class="lang-btn" data-lang="de">DE</button>
-        <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
-      </div>
-    </header>
+  <a href="#" class="header_logo">Curt<span class="accent">i</span>s</a>
+  <nav class="header_nav">
+    <ul>
+      <li><a href="#about" data-i18n="nav_about">About me</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+    </ul>
+  </nav>
+  <div class="header_lang">
+    <button class="lang-btn" data-lang="de">DE</button>
+    <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
+  </div>
+  <button
+    type="button"
+    class="header_burger"
+    id="burger-btn"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-menu_nav">
+    <a href="#about" data-i18n="nav_about">About me</a>
+    <a href="#skills" data-i18n="nav_skills">Skills</a>
+    <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+  </nav>
+  <div class="mobile-menu_lang">
+    <button class="lang-btn mobile-menu_lang-btn" data-lang="en">EN</button>
+    <span aria-hidden="true">/</span>
+    <button class="lang-btn mobile-menu_lang-btn" data-lang="de">DE</button>
+  </div>
+</div>
 
     <!-- Hero -->
     <section class="hero container">
@@ -206,22 +233,24 @@
             <h2 class="section_title" data-i18n="skills_title">Skills</h2>
             <span class="skills_divider" aria-hidden="true"></span>
           </div>
-          <p>
-            Highlight your experience of working on different projects using
-            different front-end technologies (such as HTML, CSS, JavaScript,
-            etc.) and emphasise your openness to learning and adapting to new
-            technologies.
+          <p data-i18n="skills_para_1">
+            From building interfaces with HTML, CSS, and JavaScript to
+            structuring larger apps in Angular and TypeScript, I enjoy
+            turning a design into something that actually works in the
+            browser. Git and Scrum keep every project organized, whether
+            I'm working solo or as part of a team.
           </p>
-          <p>
-            Mention the importance of continuing education to keep up with the
-            rapid changes in web development.
+          <p data-i18n="skills_para_2">
+            Coming from eight years in IT support, I'm used to picking up
+            new systems quickly — a mindset I've carried straight into
+            frontend development, where the tools change just as fast.
           </p>
 
           <h3 class="skills_question">
             <span data-i18n="skills_question_lead">Looking for</span>
             <span class="accent-purple" data-i18n="skills_question_highlight">another skill</span>?
           </h3>
-          <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
+          <p data-i18n="skills_frameworks">Right now that means React and Vue.js — both on my list to explore next, alongside deepening my backend skills for future AI-focused projects.</p>
 
           <a href="#contact" class="btn btn--primary" data-i18n="skills_cta">Get in touch</a>
         </div>
@@ -261,8 +290,7 @@
                 class="project-card_preview"
               />
               <div class="project-card_links">
-                
-                  href="https://github.com/Curtis-GH/Join-Management"
+                <a href="https://github.com/Curtis-GH/Join-Management"
                   class="btn btn--outline"
                   target="_blank"
                   rel="noopener"
@@ -292,8 +320,7 @@
                 class="project-card_preview"
               />
               <div class="project-card_links">
-                
-                  href="https://github.com/Curtis-GH/El_Pollo_loco"
+                <a href="https://github.com/Curtis-GH/El_Pollo_loco"
                   class="btn btn--outline"
                   target="_blank"
                   rel="noopener"
@@ -323,8 +350,7 @@
                 class="project-card_preview"
               />
               <div class="project-card_links">
-                
-                  href="https://github.com/Curtis-GH/pokedex"
+                <a href="https://github.com/Curtis-GH/pokedex"
                   class="btn btn--outline"
                   target="_blank"
                   rel="noopener"
@@ -350,7 +376,7 @@
 
       <!-- References -->
       <section id="references" class="section container references">
-        <h2 class="section_title" data-i18n="references_title"></h2>
+        
 
         <div class="testimonial">
           <img
@@ -460,10 +486,10 @@
               <span class="contact_intro-divider" aria-hidden="true"></span>
               <h3 data-i18n="contact_heading">Got a problem to solve?</h3>
             </div>
-            <p>
-              Encourage people to contact you and describe what role you are
-              interested in. Show that you will add value to their projects
-              through your work.
+            <p data-i18n="contact_para">
+              Have a project in mind, or need an extra pair of hands on your
+              frontend? I'm always happy to hear about new opportunities and
+              see where I can add value.
             </p>
             <p><span data-i18n="contact_closer">Need a Frontend developer?</span> <strong data-i18n="contact_closer_strong">Contact me!</strong></p>
           </div>
