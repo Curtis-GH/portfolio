@@ -125,6 +125,8 @@
 .skills_heading-row {
   position: relative;
   z-index: 1;
+   margin-left: 0;
+}
 }
 
 .portfolio_grid {
@@ -275,7 +277,7 @@ footer {
   font-size: var(--fs-small);
   margin-top: 0;
 }
-}
+
 
 /* ===== END 768px ===== */
 
