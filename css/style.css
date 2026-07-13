@@ -331,6 +331,7 @@ html[lang="de"] .section_title {
 
 .project-card_preview {
   width: 100%;
+  height: 50%;
   object-fit: cover;
   display: block;
 }
@@ -670,7 +671,7 @@ html[lang="de"] .section_title {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg) var(--space-md);
-  flex-shrink: 0;
+  margin-top: -300px;
 }
 
 .skill-item {
@@ -815,11 +816,11 @@ html[lang="de"] .section_title {
 }
 
  .testimonial_avatar-divider {
-  display: inline-block;
-  width: 80px;
-  height: 3px;
-  background-color: var(--color-accent-green);
-}
+    display: inline-block;
+    flex-grow: 1;
+    height: 3px;
+    background-color: var(--color-accent-green);
+    display: none;}
 
 .testimonial_author {
     color: var(--color-text-muted);
