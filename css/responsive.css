@@ -114,12 +114,31 @@
     flex-direction: column;
     margin-left: 0;
   }
-
-  .skills_icons {
-    grid-template-columns: repeat(5, 1fr); 
-  }
-
   .skills_text {
+  display: contents;
+}
+
+.skills_text > p:nth-of-type(-n+2) {
+  order: -1;
+}
+.skills_text > p:nth-of-type(2) {
+  margin-top: -3.5rem; 
+}
+.skills_question + p {
+  margin-top: -2.5rem; 
+}
+
+ .skills_icons {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 0;
+}
+
+.skill-item:nth-child(10) { order: 1; }  /* Material Design */
+.skill-item:nth-child(13) { order: 2; }  /* Continually Learning */
+.skill-item:nth-child(11) { order: 3; }  /* leer */
+.skill-item:nth-child(12) { display: none; }
+  .skills_text {
+   
     max-width: none;
   }
 
@@ -127,7 +146,7 @@
         position: relative;
         z-index: 1;
         margin-left: 10px;
-        margin-bottom: 350px;
+        
     }
 
   /* 
@@ -261,6 +280,7 @@
   .btn--primary {
     background-color: var(--color-accent-green);
     color: #fff;
+    margin: 0;
   }
 
   footer {
