@@ -448,6 +448,7 @@ html[lang="de"] .section_title {
   align-items: flex-start;
   gap: var(--space-xs);
   font-size: var(--fs-body);
+  padding-left: 50px;
 }
 .form-group--checkbox .form-group_error {
   flex-basis: 100%;
