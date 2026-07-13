@@ -268,6 +268,7 @@
 
   .contact_form .contact_submit {
     margin-inline: auto;
+    transform: translateX(7.5px);
   }
 
   .form-group--checkbox {
