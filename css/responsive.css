@@ -153,6 +153,7 @@
   .skills_heading-row {
   position: relative;
   z-index: 3;
+  margin: 0;
 }
 
 .skills_divider {
