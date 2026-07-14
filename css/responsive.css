@@ -39,6 +39,12 @@
 
 /* ===== RESPONSIVE: 768px (tablet portrait) — Nav → Hamburger, About stacks ===== */
 @media (max-width: 768px) {
+  
+  .section_title {
+
+    font-size: 80px;
+  }
+  
   .container {
     padding-inline: var(--space-sm);
   }
@@ -98,6 +104,8 @@
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    margin-top: 60px;
+    
   }
 
   .about_text {
@@ -106,8 +114,8 @@
     margin-bottom: 180px;
   }
 
-  .skills_wave {
-    top: -1010px;
+  .about_wave {
+    top: 357px;
   }
 
   .skills_grid {
@@ -143,10 +151,13 @@
   .skill-item:nth-child(12) { display: none; }
 
   .skills_heading-row {
-    position: relative;
-    z-index: 1;
-    margin-left: 10px;
-  }
+  position: relative;
+  z-index: 3;
+}
+
+.skills_divider {
+  order: 0;
+}
 
   .footer {
     flex-direction: column;
@@ -248,11 +259,14 @@
     font-weight: 400;
   }
 
-  .contact_divider {
-    flex-grow: 1;
-    height: 2px;
-    background-color: var(--color-accent-green);
-  }
+  .contact_heading-row {
+  padding-left: 0;
+  justify-content: center;
+}
+
+.contact_divider {
+  order: 0;
+}
 
   .contact_intro p {
     max-width: none;
@@ -363,6 +377,9 @@
   .about_photo-wrap {
     max-width: 280px;
   }
+  .about_wave {
+    top: 244px;
+  }
 
   .about_points img {
     width: 40px;
@@ -381,6 +398,15 @@
 .form-group--checkbox label {
   flex: 1;
 }
+.skills_divider{
+  margin: 0;
+}
+    .portfolio_divider{ 
+      margin: 0;
+    }
+        .contact_divider{
+          margin: 0;
+        }
 }
 /* ===== END 480px ===== */
 
@@ -429,6 +455,9 @@
 
   .about_photo-wrap {
     max-width: 240px;
+  }
+  .about_wave {
+    top: 211px;
   }
 
   .section_title {

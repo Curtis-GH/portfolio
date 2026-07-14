@@ -647,19 +647,18 @@ html[lang="de"] .section_title {
 
 }
 
-.skills_wave {
+.about_wave {
   position: absolute;
-  top: -180px;
+  top: calc(100% - 180px);
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
-  
 }
 
 .skills_grid {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -727,18 +726,37 @@ html[lang="de"] .section_title {
 
 .skills_heading-row {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-md);
-  margin-left: 950px;
+  
 }
 
 .skills_divider {
+  order: -1;
   flex-grow: 1;
   height: 3px;
   background-color: var(--color-accent-cyan);
+  margin-top: 50px;
+}
+
+.contact_heading-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  
+}
+
+.contact_divider {
+  order: -1;
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--color-accent-green);
   margin-top: 50px;
 }
 
