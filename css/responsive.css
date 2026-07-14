@@ -1,41 +1,4 @@
-/* ===== RESPONSIVE: 1024px (tablet landscape) ===== */
-@media (max-width: 1024px) {
-  .header_nav {
-    margin-left: 80px;
-  }
 
-  .header_nav ul {
-    gap: var(--space-sm);
-    font-size: 18px;
-  }
-
-  .hero_content {
-    margin: 40px;
-  }
-
-  .hero_eyebrow {
-    font-size: 48px;
-  }
-
-  .hero_text h1,
-  .hero_role {
-    font-size: 48px;
-  }
-
-  .hero_footer {
-    margin-top: 60px;
-  }
-
-  .about_grid {
-    gap: var(--space-lg);
-  }
-
-  .about_photo-wrap {
-    width: 380px;
-    margin-top: 0;
-  }
-}
-/* ===== END 1024px ===== */
 
 /* ===== RESPONSIVE: 768px (tablet portrait) — Nav → Hamburger, About stacks ===== */
 @media (max-width: 768px) {
