@@ -11,7 +11,8 @@
 }
 
 .header_nav {
-  margin-left: 600px;
+  margin-left: auto;
+  margin-right: clamp(24px, 6vw, 120px);
 }
 
 .header_nav ul {
@@ -101,7 +102,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-lg);
-  margin: 100px;
+  margin: clamp(24px, 6vw, 100px);
 }
 
 .hero_text {
@@ -118,7 +119,7 @@
 }
 
 .hero_text h1 {
-  font-size: 80px;
+  font-size: clamp(32px, 4.3vw, 62px);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -132,7 +133,7 @@
 .hero_eyebrow {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 75px;
+  font-size: 45px;
   font-weight: 600;
   color: #fff;
 }
@@ -148,7 +149,7 @@ html[lang="de"] .hero_eyebrow {
 
 .hero_role {
   color: var(--color-accent-purple);
-  font-size: 80px;
+  font-size: clamp(32px, 4.3vw, 62px);
   font-weight: 400;
   margin: 0;
 }
@@ -208,13 +209,13 @@ html[lang="de"] .hero_eyebrow {
 }
 
 .section_title {
-  font-size: 90px;
+  font-size: clamp(40px, 6vw, 90px);
   line-height: 1;
   margin-bottom: var(--space-md);
 }
 
 html[lang="de"] .section_title {
-  font-size: 80px;
+  font-size: clamp(36px, 5.4vw, 80px);
 }
 
 /* ===== END SECTION (SHARED) ===== */
@@ -232,7 +233,8 @@ html[lang="de"] .section_title {
 .btn--primary {
   background-color: var(--color-accent-green);
   color: #fff;
-  margin-top: 60px;
+  margin-top: 50px;
+  
 }
 
 .btn--primary:hover {
@@ -583,14 +585,15 @@ html[lang="de"] .section_title {
 .about_grid {
   display: flex;
   align-items: center;
-  gap: 135px;
+  gap: clamp(16px, 8vw, 135px);
 }
 
 .about_text {
   max-width: 560px;
   position: relative;
   z-index: 1;
-  margin-left:90px;
+  margin-left: clamp(0px, 5vw, 90px);
+  margin-bottom: 10px;
 }
 
 .about_intro {
@@ -620,7 +623,7 @@ html[lang="de"] .section_title {
 .about_photo-wrap {
   position: relative;
   flex-shrink: 0;
-  width: 750px;
+  width: min(750px, 42vw);
   max-width: none;
   margin-top: 200px;
 }
@@ -630,7 +633,7 @@ html[lang="de"] .section_title {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;
+  width: 100%;
   max-width: none;
   z-index: 0;
   pointer-events: none;
@@ -669,7 +672,7 @@ html[lang="de"] .section_title {
   justify-content: space-between;
   gap: var(--space-lg);
   padding-top: 0px;
-  margin-left:90px;
+  margin-left: clamp(0px, 6vw, 90px);
 }
 
 .skills_icons {
@@ -736,7 +739,7 @@ html[lang="de"] .section_title {
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-md);
-  margin-left: 950px;
+  margin-left: clamp(480px, calc(100vw - 560px), 950px);
 }
 
 .skills_divider {
@@ -1076,8 +1079,8 @@ html[lang="de"] .section_title {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   background: transparent;
 }
 
@@ -1113,7 +1116,7 @@ html[lang="de"] .section_title {
   flex-direction: column;
   align-items: center;
   gap: var(--space-md);
-  font-size: var(--fs-h3);
+  font-size: 30px;
 }
 
 .mobile-menu_lang {
@@ -1131,7 +1134,7 @@ html[lang="de"] .section_title {
   border-radius: 0;
   padding: 0;
   color: var(--color-text-muted);
-  font-size: var(--fs-body);
+  font-size: 30px;
   font-weight: 600;
 }
 
