@@ -57,17 +57,17 @@
   }
 
   .hero_heading-row {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-xs);
-  }
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
 
-  .hero_eyebrow {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: 20px;
-    display: none;
-  }
+.hero_eyebrow {
+  writing-mode: horizontal-tb;
+  transform: none;
+  font-size: 30px;
+  display: block;
+}
 
   .hero_text h1,
   .hero_role {
@@ -338,12 +338,12 @@
     z-index: 10;}
 
   .hero_eyebrow {
-    font-size: 22px;
-  }
+  display: none;
+}
 
   .hero_text h1,
   .hero_role {
-    font-size: 30px;
+    font-size: 25px;
   }
  
 
@@ -386,10 +386,13 @@
 
 /* ===== RESPONSIVE: 375px (standard phone) ===== */
 @media (max-width: 375px) {
-  .hero_text h1,
-  .hero_role {
-    font-size: 26px;
-  }
+ .hero_text h1 {
+  font-size: 20px;
+}
+
+.hero_role {
+  font-size: 18px;
+}
 
   .section_title {
     font-size: 36px;
