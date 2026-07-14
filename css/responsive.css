@@ -267,6 +267,7 @@
   }
 
   .contact_form .contact_submit {
+    display: block;
     margin-inline: auto;
     transform: translateX(7.5px);
   }
