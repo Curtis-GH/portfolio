@@ -346,6 +346,9 @@
   .hero {
     background-size: 220px, 120px;
   }
+  html[lang="de"] .section_title {
+  font-size: 43px;
+}
   .about_text {
     max-width: 560px;
     position: relative;
@@ -415,6 +418,9 @@
  .hero_text h1 {
   font-size: 20px;
 }
+html[lang="de"] .section_title {
+  font-size: 32px;
+}
 
 .hero_role {
   font-size: 18px;
@@ -435,6 +441,60 @@
   text-align: center;
   padding:0;
 }
+@media (max-width: 375px) {
+  .project-card_media {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card_links {
+    position: static;
+    order: 2;
+    opacity: 1;
+    transform: none;
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 0 var(--space-md);
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+    
+  }
+
+  .project-card_info {
+    position: static;
+    order: 1;
+    opacity: 1;
+    transform: none;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+
+  .project-card:hover .project-card_info,
+  .project-card:hover .project-card_links {
+    max-height: 400px;
+    
+  }
+
+  .project-card:hover .project-card_links {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+  }
+
+  .project-card:hover .project-card_info {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-sm);
+  }
+
+  .project-card_links .btn--outline {
+    border-color: var(--color-accent-green);
+    color: var(--color-accent-green);
+  }
+  
+}
 }
 /* ===== END 375px ===== */
 
@@ -444,6 +504,9 @@
   .hero_role {
     font-size: 22px;
   }
+  html[lang="de"] .section_title {
+  font-size: 28px;
+}
 
   .hero_eyebrow {
     font-size: 18px;
@@ -471,5 +534,6 @@
   .about_points p {
     font-size: var(--fs-small);
   }
+  
 }
 /* ===== END 320px ===== */

@@ -385,6 +385,11 @@ html[lang="de"] .section_title {
 .project-card_info h3 {
   color: var(--color-accent-purple);
   margin-bottom: var(--space-xs);
+  font-size: clamp(14px, 4vw, 24px);
+}
+
+.project-card_info p {
+  font-size: clamp(12px, 3vw, 16px);
 }
 
 .tech-tags {
