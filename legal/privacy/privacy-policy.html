@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../css/variable.css">
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
 </head>
 <body>
 
@@ -19,47 +20,73 @@
     <a href="../../index.html" class="header_logo">Curt<span class="accent">i</span>s</a>
     <nav class="header_nav">
       <ul>
-        <li><a href="../../index.html#about">About me</a></li>
-        <li><a href="../../index.html#skills">Skills</a></li>
-        <li><a href="../../index.html#portfolio">Portfolio</a></li>
+        <li><a href="../../index.html#about" data-i18n="nav_about">About me</a></li>
+        <li><a href="../../index.html#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="../../index.html#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
       </ul>
     </nav>
     <div class="header_lang">
       <button class="lang-btn" data-lang="de">DE</button>
       <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
     </div>
+    <button
+      type="button"
+      class="header_burger"
+      id="burger-btn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu_nav">
+      <a href="../../index.html#about" data-i18n="nav_about">About me</a>
+      <a href="../../index.html#skills" data-i18n="nav_skills">Skills</a>
+      <a href="../../index.html#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+      <a href="../../index.html#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="mobile-menu_lang">
+      <button class="lang-btn mobile-menu_lang-btn" data-lang="en">EN</button>
+      <span aria-hidden="true">/</span>
+      <button class="lang-btn mobile-menu_lang-btn" data-lang="de">DE</button>
+    </div>
+  </div>
 
   <!-- Privacy Policy content -->
   <section class="section container">
     <div class="legal_title-row">
       <span class="legal_divider" aria-hidden="true"></span>
-      <h1 class="section_title legal_title">Privacy Policy</h1>
+      <h1 class="section_title legal_title" data-i18n="pp_page_title">Privacy Policy</h1>
       <span class="legal_divider" aria-hidden="true"></span>
     </div>
 
     <div class="legal_content">
-      <h2>1. Controller</h2>
+      <h2 data-i18n="pp_h_controller">1. Controller</h2>
       <p>
         Dinh Duy Curtis Nguyen-Wellmann<br>
         Am Brösen 2<br>
         04435 Schkeuditz<br>
         Germany<br>
-        Email: <a href="mailto:duycurtis1997@gmail.com">duycurtis1997@gmail.com</a>
+        <span data-i18n="pp_email_label">Email:</span> <a href="mailto:duycurtis1997@gmail.com">duycurtis1997@gmail.com</a>
       </p>
 
-      <h2>2. Overview of data processing</h2>
-      <p>
+      <h2 data-i18n="pp_h_overview">2. Overview of data processing</h2>
+      <p data-i18n="pp_overview_body">
         This website processes personal data only to the extent necessary for
         its operation and for the contact form. No data is sold or shared
         with third parties beyond what is described below.
       </p>
 
-      <h2>3. Hosting</h2>
-      <p class="legal_placeholder">
+      <h2 data-i18n="pp_h_hosting">3. Hosting</h2>
+      <p class="legal_placeholder" data-i18n="pp_hosting_placeholder">
         [Placeholder: hosting provider not yet finalized]
       </p>
-      <p>
+      <p data-i18n="pp_hosting_body">
         When you visit this site, the hosting provider automatically collects
         information in server log files, such as your IP address, browser
         type, referring page, and date/time of access. This data is used
@@ -67,8 +94,8 @@
         merged with other data sources.
       </p>
 
-      <h2>4. Contact form</h2>
-      <p>
+      <h2 data-i18n="pp_h_contact_form">4. Contact form</h2>
+      <p data-i18n="pp_contact_form_body">
         If you use the contact form, the data you provide (name, email
         address, message) is stored and used exclusively to process your
         inquiry. The legal basis is Art. 6(1)(b) GDPR (pre-contractual
@@ -78,53 +105,53 @@
         apply.
       </p>
 
-      <h2>5. Cookies</h2>
-      <p class="legal_placeholder">
+      <h2 data-i18n="pp_h_cookies">5. Cookies</h2>
+      <p class="legal_placeholder" data-i18n="pp_cookies_placeholder">
         [Placeholder: this site does not currently set its own cookies; this
         section will be updated if that changes, e.g. through analytics
         tools.]
       </p>
 
-      <h2>6. Third-party services</h2>
-      <p>
+      <h2 data-i18n="pp_h_third_party">6. Third-party services</h2>
+      <p data-i18n="pp_third_party_body">
         This site loads the font "Poppins" directly from Google Fonts
         (fonts.googleapis.com). When the page loads, your browser establishes
         a connection to Google's servers, which may transmit your IP address
         to Google. Google may process this data in accordance with its own
         privacy policy.
       </p>
-      <p class="legal_placeholder">
+      <p class="legal_placeholder" data-i18n="pp_third_party_placeholder">
         [Placeholder: hosting Google Fonts locally instead, to remove this
         third-party connection, is planned as a later improvement.]
       </p>
 
-      <h2>7. Your rights</h2>
-      <p>Under GDPR, you have the right to:</p>
+      <h2 data-i18n="pp_h_rights">7. Your rights</h2>
+      <p data-i18n="pp_rights_intro">Under GDPR, you have the right to:</p>
       <ul>
-        <li>request access to your personal data (Art. 15 GDPR)</li>
-        <li>request correction of inaccurate data (Art. 16 GDPR)</li>
-        <li>request deletion of your data (Art. 17 GDPR)</li>
-        <li>request restriction of processing (Art. 18 GDPR)</li>
-        <li>data portability (Art. 20 GDPR)</li>
-        <li>object to processing (Art. 21 GDPR)</li>
-        <li>withdraw consent at any time, without affecting the lawfulness of processing carried out before the withdrawal</li>
+        <li data-i18n="pp_rights_li1">request access to your personal data (Art. 15 GDPR)</li>
+        <li data-i18n="pp_rights_li2">request correction of inaccurate data (Art. 16 GDPR)</li>
+        <li data-i18n="pp_rights_li3">request deletion of your data (Art. 17 GDPR)</li>
+        <li data-i18n="pp_rights_li4">request restriction of processing (Art. 18 GDPR)</li>
+        <li data-i18n="pp_rights_li5">data portability (Art. 20 GDPR)</li>
+        <li data-i18n="pp_rights_li6">object to processing (Art. 21 GDPR)</li>
+        <li data-i18n="pp_rights_li7">withdraw consent at any time, without affecting the lawfulness of processing carried out before the withdrawal</li>
       </ul>
 
-      <h2>8. Right to complain</h2>
-      <p>
+      <h2 data-i18n="pp_h_complaint">8. Right to complain</h2>
+      <p data-i18n="pp_complaint_body">
         You have the right to lodge a complaint with a data protection
         supervisory authority. The competent authority for Saxony is the
         Sächsischer Datenschutzbeauftragter.
       </p>
 
-      <h2>9. SSL/TLS encryption</h2>
-      <p class="legal_placeholder">
+      <h2 data-i18n="pp_h_ssl">9. SSL/TLS encryption</h2>
+      <p class="legal_placeholder" data-i18n="pp_ssl_placeholder">
         [Placeholder: SSL certificate not yet set up. Once active, this
         section will confirm that all data transmitted between your browser
         and this server is encrypted.]
       </p>
 
-      <p>Last updated: July 2026</p>
+      <p data-i18n="pp_updated">Last updated: July 2026</p>
     </div>
   </section>
 
@@ -132,7 +159,7 @@
   <footer class="footer container">
     <div class="footer_brand">
       <a href="../../index.html" class="footer_logo">Curt<span class="accent">i</span>s</a>
-      <a href="legal-notice.html" class="footer_legal-link">Legal notice</a>
+      <a href="legal-notice.html" class="footer_legal-link" data-i18n="footer_legal">Legal notice</a>
     </div>
 
     <p class="footer_copy">&copy; Curtis Nguyen-Wellmann 2026</p>
@@ -150,6 +177,7 @@
     </div>
   </footer>
 
+  <script src="../../js/translations.js"></script>
   <script src="../../js/main.js"></script>
 </body>
 </html>

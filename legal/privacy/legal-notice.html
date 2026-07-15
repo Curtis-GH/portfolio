@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../css/variable.css">
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
 </head>
 <body>
 
@@ -19,44 +20,70 @@
     <a href="../../index.html" class="header_logo">Curt<span class="accent">i</span>s</a>
     <nav class="header_nav">
       <ul>
-        <li><a href="../../index.html#about">About me</a></li>
-        <li><a href="../../index.html#skills">Skills</a></li>
-        <li><a href="../../index.html#portfolio">Portfolio</a></li>
+        <li><a href="../../index.html#about" data-i18n="nav_about">About me</a></li>
+        <li><a href="../../index.html#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="../../index.html#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
       </ul>
     </nav>
     <div class="header_lang">
       <button class="lang-btn" data-lang="de">DE</button>
       <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
     </div>
+    <button
+      type="button"
+      class="header_burger"
+      id="burger-btn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu_nav">
+      <a href="../../index.html#about" data-i18n="nav_about">About me</a>
+      <a href="../../index.html#skills" data-i18n="nav_skills">Skills</a>
+      <a href="../../index.html#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+      <a href="../../index.html#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="mobile-menu_lang">
+      <button class="lang-btn mobile-menu_lang-btn" data-lang="en">EN</button>
+      <span aria-hidden="true">/</span>
+      <button class="lang-btn mobile-menu_lang-btn" data-lang="de">DE</button>
+    </div>
+  </div>
 
   <!-- Legal Notice content -->
   <section class="section container">
     <div class="legal_title-row">
       <span class="legal_divider" aria-hidden="true"></span>
-      <h1 class="section_title legal_title">Legal Notice</h1>
+      <h1 class="section_title legal_title" data-i18n="ln_page_title">Legal Notice</h1>
       <span class="legal_divider" aria-hidden="true"></span>
     </div>
 
     <div class="legal_content">
-      <h2>Imprint</h2>
+      <h2 data-i18n="ln_h_imprint">Imprint</h2>
       <p>
         Dinh Duy Curtis Nguyen-Wellmann<br>
         Am Brösen 2<br>
         04435 Schkeuditz<br>
         Germany
       </p>
-      <p>Email: <a href="mailto:duycurtis1997@gmail.com">duycurtis1997@gmail.com</a></p>
+      <p><span data-i18n="pp_email_label">Email:</span> <a href="mailto:duycurtis1997@gmail.com">duycurtis1997@gmail.com</a></p>
 
-      <h2>Acceptance of terms</h2>
-      <p>
+      <h2 data-i18n="ln_h_acceptance">Acceptance of terms</h2>
+      <p data-i18n="ln_acceptance_body">
         By accessing and using this portfolio website ("the Site"), you agree
         to the following terms. I may update these terms from time to time
         without prior notice.
       </p>
 
-      <h2>Scope and purpose of the site</h2>
-      <p>
+      <h2 data-i18n="ln_h_scope">Scope and purpose of the site</h2>
+      <p data-i18n="ln_scope_body">
         This site was developed as part of my personal portfolio during my
         training as a Full-Stack Developer. It serves to showcase my work and
         skills and is not intended for commercial use. I cannot guarantee
@@ -64,22 +91,22 @@
         presented.
       </p>
 
-      <h2>Proprietary rights</h2>
-      <p>
+      <h2 data-i18n="ln_h_rights">Proprietary rights</h2>
+      <p data-i18n="ln_rights_body">
         Unless otherwise stated, the content, design, and structure of this
         website are my own work and may not be copied, distributed, or
         modified without my permission.
       </p>
 
-      <h2>Use of the site</h2>
-      <p>
+      <h2 data-i18n="ln_h_use">Use of the site</h2>
+      <p data-i18n="ln_use_body">
         This site may be used for lawful purposes only. Any use for illegal
         activities, harassment, or attempts to disrupt or exploit its
         functionality is strictly prohibited.
       </p>
 
-      <h2>Disclaimer of warranties and limitation of liability</h2>
-      <p>
+      <h2 data-i18n="ln_h_disclaimer">Disclaimer of warranties and limitation of liability</h2>
+      <p data-i18n="ln_disclaimer_body">
         This website is provided "as is" without warranty of any kind, express
         or implied, including but not limited to implied warranties of
         merchantability, fitness for a particular purpose, or
@@ -88,20 +115,20 @@
         site, to the extent permitted by law.
       </p>
 
-      <h2>External links</h2>
-      <p>
+      <h2 data-i18n="ln_h_links">External links</h2>
+      <p data-i18n="ln_links_body">
         This site contains links to external services (e.g. GitHub,
         LinkedIn). I am not responsible for the content or privacy practices
         of these third-party sites.
       </p>
 
-      <h2>Questions</h2>
-      <p>
+      <h2 data-i18n="ln_h_questions">Questions</h2>
+      <p data-i18n="ln_questions_body">
         For any questions regarding this Legal Notice, please contact me at
         the email address above.
       </p>
 
-      <p>Last updated: July 2026</p>
+      <p data-i18n="ln_updated">Last updated: July 2026</p>
     </div>
   </section>
 
@@ -109,7 +136,7 @@
   <footer class="footer container">
     <div class="footer_brand">
       <a href="../../index.html" class="footer_logo">Curt<span class="accent">i</span>s</a>
-      <a href="legal-notice.html" class="footer_legal-link">Legal notice</a>
+      <a href="legal-notice.html" class="footer_legal-link" data-i18n="footer_legal">Legal notice</a>
     </div>
 
     <p class="footer_copy">&copy; Curtis Nguyen-Wellmann 2026</p>
@@ -127,6 +154,7 @@
     </div>
   </footer>
 
+  <script src="../../js/translations.js"></script>
   <script src="../../js/main.js"></script>
 </body>
 </html>
