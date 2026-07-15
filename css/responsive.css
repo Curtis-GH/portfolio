@@ -203,11 +203,11 @@
 
 
 /* =====================================================================
-   MOBILE ONLY: ≤768px — genuine deltas vs. Tablet, plus Mobile-exclusive
+   MOBILE ONLY: ≤769px — genuine deltas vs. Tablet, plus Mobile-exclusive
    sections (Footer, Portfolio) that Tablet intentionally leaves on the
    Desktop layout.
    ===================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
   .hero_eyebrow {
     writing-mode: horizontal-tb;
@@ -316,14 +316,14 @@
     margin-top: 0;
   }
 }
-/* ===== END 768px ===== */
+/* ===== END 769px ===== */
 
 
 /* =====================================================================
-   TABLET ONLY: 769–1150px — genuine deltas vs. Mobile (by design: e.g.
+   TABLET ONLY: 770–1150px — genuine deltas vs. Mobile (by design: e.g.
    4-column Skills grid instead of 3, different Hero/About spacing).
    ===================================================================== */
-@media (min-width: 769px) and (max-width: 1150px) {
+@media (min-width: 770px) and (max-width: 1150px) {
 
   .hero_eyebrow {
     writing-mode: horizontal-tb;
@@ -383,7 +383,7 @@
     font-size: 20px;
   }
 }
-/* ===== END 769-1150px ===== */
+/* ===== END 770-1150px ===== */
 
 
 /* ===== RESPONSIVE: 480px (large phone) ===== */
