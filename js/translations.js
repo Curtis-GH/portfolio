@@ -38,9 +38,9 @@ const translations = {
     project_link_live: "Live test",
 
     references_title: "References",
-    testimonial_1: "Working with Curtis was a great experience — clear communication and a real eye for detail on every task he took on.",
-    testimonial_2: "Curtis is reliable and easy to work with. He picks up new tools quickly and always keeps the team in the loop.",
-    testimonial_3: "A dependable developer with a good sense for clean structure. Curtis was a pleasure to collaborate with.",
+    testimonial_1: "Curtis's helpful, open nature contributed enormously to our positive team dynamic — he was always there when support was needed. As an extremely motivated team player, he consistently took feedback constructively and delivered strong results.",
+    testimonial_2: "Curtis was a fantastic teammate. With his sociable nature, willingness to help, and positive energy, he brought the team together and enriched our collaboration.",
+    testimonial_3: "Curtis was a huge asset to our team and played a key role in the project's success. His structured approach and clever problem-solving kept pushing our development forward. Working with him was completely reliable and genuinely fun.",
     testimonial_role: "Team Partner",
 
     contact_title: "Contact",
@@ -100,9 +100,9 @@ const translations = {
     project_link_live: "Live-Test",
 
     references_title: "Referenzen",
-    testimonial_1: "Die Zusammenarbeit mit Curtis war eine großartige Erfahrung — klare Kommunikation und ein echtes Gespür für Details bei jeder Aufgabe, die er übernommen hat.",
-    testimonial_2: "Curtis ist zuverlässig und einfach in der Zusammenarbeit. Er lernt sich schnell in neue Tools ein und hält das Team stets auf dem Laufenden.",
-    testimonial_3: "Ein verlässlicher Entwickler mit einem guten Gespür für saubere Struktur. Die Zusammenarbeit mit Curtis war ein Vergnügen.",
+    testimonial_1: "Curtis hat durch seine hilfsbereite und offene Art maßgeblich zu unserer positiven Gruppendynamik beigetragen — er war immer zur Stelle, wenn Unterstützung gebraucht wurde. Als extrem motivierter Teamplayer nahm er Feedback stets konstruktiv auf und lieferte durchweg starke Ergebnisse.",
+    testimonial_2: "Curtis war ein großartiger Teamkollege. Mit seiner sozialen Art, seiner Hilfsbereitschaft und seiner positiven Energie hat er das Team zusammengehalten und die Zusammenarbeit bereichert.",
+    testimonial_3: "Curtis war für unser Team eine Riesenunterstützung und hat maßgeblich zum Erfolg des Projekts beigetragen. Mit seiner strukturierten Arbeitsweise und cleveren Lösungen hat er uns beim Programmieren immer wieder vorangebracht. Die Zusammenarbeit mit ihm war absolut verlässlich und hat großen Spaß gemacht!",
     testimonial_role: "Teampartner",
 
     contact_title: "Kontakt",
