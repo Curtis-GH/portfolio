@@ -586,3 +586,34 @@ html[lang="de"] .section_title {
   
 }
 /* ===== END 320px ===== */
+
+/* =====================================================================
+   WIDESCREEN: >1440px — Hero background (glows) bleeds to true screen
+   edges per Figma "Version1.2_WidescreenDesign" spec. Content itself
+   (name, role, button, socials, scroll-down) stays capped at 1440px and
+   centered, same as normal desktop. Scoped strictly to this breakpoint
+   so it cannot affect ≤1440px behavior at all.
+   ===================================================================== */
+@media (min-width: 1441px) {
+  .hero {
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .hero_content {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+
+  .hero_footer {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: clamp(24px, 6vw, 100px);
+    box-sizing: border-box;
+  }
+}
+/* ===== END WIDESCREEN ===== */
