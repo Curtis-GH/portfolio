@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  margin: 0;
   font-family: var(--font-main);
   background-color: #141d2f;
   color: var(--color-text);

@@ -92,7 +92,7 @@ const translations = {
     pp_h_overview: "2. Overview of data processing",
     pp_overview_body: "This website processes personal data only to the extent necessary for its operation and for the contact form. No data is sold or shared with third parties beyond what is described below.",
     pp_h_hosting: "3. Hosting",
-    pp_hosting_placeholder: "[Placeholder: hosting provider not yet finalized]",
+    pp_hosting_placeholder: "This site is hosted by ALL-INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Germany.",
     pp_hosting_body: "When you visit this site, the hosting provider automatically collects information in server log files, such as your IP address, browser type, referring page, and date/time of access. This data is used solely to ensure secure and reliable operation of the site and is not merged with other data sources.",
     pp_h_contact_form: "4. Contact form",
     pp_contact_form_body: "If you use the contact form, the data you provide (name, email address, message) is stored and used exclusively to process your inquiry. The legal basis is Art. 6(1)(b) GDPR (pre-contractual measures) or Art. 6(1)(f) GDPR (legitimate interest in responding to inquiries). Data from the contact form is deleted once your request has been fully processed, unless statutory retention obligations apply.",
@@ -113,7 +113,7 @@ const translations = {
     pp_h_complaint: "8. Right to complain",
     pp_complaint_body: "You have the right to lodge a complaint with a data protection supervisory authority. The competent authority for Saxony is the Sächsischer Datenschutzbeauftragter.",
     pp_h_ssl: "9. SSL/TLS encryption",
-    pp_ssl_placeholder: "[Placeholder: SSL certificate not yet set up. Once active, this section will confirm that all data transmitted between your browser and this server is encrypted.]",
+    pp_ssl_placeholder: "This site uses SSL/TLS encryption (Let's Encrypt). All data transmitted between your browser and this server is encrypted; you can verify this by the padlock icon and \"https://\" in your browser's address bar.",
     pp_updated: "Last updated: July 2026"
   },
 
@@ -205,7 +205,7 @@ const translations = {
     pp_h_overview: "2. Übersicht der Datenverarbeitung",
     pp_overview_body: "Diese Website verarbeitet personenbezogene Daten nur in dem Umfang, der für ihren Betrieb und das Kontaktformular erforderlich ist. Es werden keine Daten verkauft oder über das unten Beschriebene hinaus an Dritte weitergegeben.",
     pp_h_hosting: "3. Hosting",
-    pp_hosting_placeholder: "[Platzhalter: Hosting-Anbieter steht noch nicht fest]",
+    pp_hosting_placeholder: "Diese Website wird gehostet bei ALL-INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf.",
     pp_hosting_body: "Beim Besuch dieser Website erfasst der Hosting-Anbieter automatisch Informationen in Server-Logdateien, wie Ihre IP-Adresse, Browsertyp, verweisende Seite und Datum/Uhrzeit des Zugriffs. Diese Daten dienen ausschließlich der Sicherstellung eines sicheren und zuverlässigen Betriebs der Website und werden nicht mit anderen Datenquellen zusammengeführt.",
     pp_h_contact_form: "4. Kontaktformular",
     pp_contact_form_body: "Wenn Sie das Kontaktformular nutzen, werden die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, Nachricht) gespeichert und ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten aus dem Kontaktformular werden gelöscht, sobald Ihre Anfrage vollständig bearbeitet wurde, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
@@ -226,7 +226,7 @@ const translations = {
     pp_h_complaint: "8. Beschwerderecht",
     pp_complaint_body: "Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständige Behörde für Sachsen ist der Sächsische Datenschutzbeauftragte.",
     pp_h_ssl: "9. SSL-/TLS-Verschlüsselung",
-    pp_ssl_placeholder: "[Platzhalter: SSL-Zertifikat ist noch nicht eingerichtet. Sobald es aktiv ist, bestätigt dieser Abschnitt, dass alle zwischen Ihrem Browser und diesem Server übertragenen Daten verschlüsselt sind.]",
+    pp_ssl_placeholder: "Diese Website nutzt eine SSL-/TLS-Verschlüsselung (Let's Encrypt). Alle zwischen Ihrem Browser und diesem Server übertragenen Daten sind verschlüsselt; erkennbar am Schloss-Symbol und „https://\u201C in der Adresszeile Ihres Browsers.",
     pp_updated: "Stand: Juli 2026"
   }
 };

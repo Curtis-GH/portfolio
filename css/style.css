@@ -78,7 +78,8 @@
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 60vh;
+  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1148,4 +1149,13 @@ html[lang="de"] .legal_title.section_title {
 .mobile-menu_lang-btn.lang-btn--active {
   background: transparent;
   color: var(--color-accent-green);
+}
+
+/* Compensate for sticky header (max 109px) when jumping to a section via
+   anchor link, so the heading isn't hidden behind the header. */
+#about,
+#skills,
+#portfolio,
+#contact {
+  scroll-margin-top: 120px;
 }
