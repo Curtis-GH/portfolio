@@ -18,6 +18,10 @@
     padding-inline: var(--space-sm);
   }
 
+  .legal_title-row {
+    margin-inline: calc(var(--space-sm) * -1);
+  }
+
   .header_nav,
   .header_lang {
     display: none;
