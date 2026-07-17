@@ -32,7 +32,8 @@
   }
 
   .hero {
-    background-size: 320px, 180px;
+    background-size: 480px, 420px;
+    background-position: -240px top, calc(100% + 210px) 70%;
   }
 
   .hero_heading-row {
@@ -393,7 +394,8 @@
 /* ===== RESPONSIVE: 480px (large phone) ===== */
 @media (max-width: 480px) {
   .hero {
-    background-size: 220px, 120px;
+    background-size: 320px, 280px;
+    background-position: -160px top, calc(100% + 140px) 70%;
   }
   html[lang="de"] .section_title {
   font-size: 43px;
@@ -588,17 +590,18 @@ html[lang="de"] .section_title {
 /* ===== END 320px ===== */
 
 /* =====================================================================
-   WIDESCREEN: >1440px — Hero background (glows) bleeds to true screen
-   edges per Figma "Version1.2_WidescreenDesign" spec. Content itself
-   (name, role, button, socials, scroll-down) stays capped at 1440px and
-   centered, same as normal desktop. Scoped strictly to this breakpoint
-   so it cannot affect ≤1440px behavior at all.
+   WIDESCREEN: >1440px — Hero background (glows) bleed to true screen
+   edges and scale with viewport width, per Figma "Version1.2_Widescreen"
+   reference. Content (name/role/button) stays capped+centered at 1440px.
+   The hero divider (green line before social icons) extends to the true
+   left edge, matching the Figma reference.
    ===================================================================== */
 @media (min-width: 1441px) {
   .hero {
     max-width: none;
     margin-inline: 0;
     padding-inline: 0;
+    background-size: 42vw, 30vw;
   }
 
   .hero_content {
@@ -609,11 +612,19 @@ html[lang="de"] .section_title {
   }
 
   .hero_footer {
+    position: relative;
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
-    padding-inline: clamp(24px, 6vw, 100px);
+    padding-inline: 100px;
     box-sizing: border-box;
+  }
+
+  .hero_divider {
+    position: absolute;
+    left: calc(-1 * (100vw - 1440px) / 2);
+    width: calc(((100vw - 1440px) / 2) + 100px);
+    height: 3px;
   }
 }
 /* ===== END WIDESCREEN ===== */
