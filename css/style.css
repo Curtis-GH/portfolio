@@ -134,12 +134,12 @@
 .hero_eyebrow {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 45px;
+  font-size: 60px;
   font-weight: 600;
   color: #fff;
 }
 html[lang="de"] .hero_eyebrow {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .hero_name-block {
@@ -168,6 +168,7 @@ html[lang="de"] .hero_eyebrow {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-left: 20px;
 }
 
 .hero_socials img {
