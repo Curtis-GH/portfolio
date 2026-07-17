@@ -243,6 +243,33 @@ function initContactForm() {
 }
 
 /**
+ * Initializes tap-to-toggle behavior for project cards on touch screens
+ * (Mobile ≤768px + Tablet 769–1150px), where the reveal can't rely on CSS
+ * :hover (touch devices "stick" a hover state instead of toggling it).
+ * Tapping anywhere on the card except the Github/Live-test links toggles
+ * an "is-expanded" class, which mirrors the desktop hover overlay look
+ * (style.css) across the whole ≤1150px range. Only active while the
+ * ≤1150px media query matches, so desktop (mouse) hover above that is
+ * untouched.
+ *
+ * @returns {void}
+ */
+function initProjectCardToggle() {
+  const cards = document.querySelectorAll('.project-card');
+  const touchQuery = window.matchMedia('(max-width: 1150px)');
+
+  cards.forEach((card) => {
+    card.addEventListener('click', (event) => {
+      if (!touchQuery.matches) return;
+      if (event.target.closest('.project-card_links')) return;
+
+      const isExpanded = card.classList.toggle('is-expanded');
+      card.setAttribute('aria-expanded', String(isExpanded));
+    });
+  });
+}
+
+/**
  * Main entry point for the portfolio site.
  * Further logic will be added in later phases.
  *
@@ -253,6 +280,7 @@ function init() {
   initMobileMenu();
   initTestimonialCarousel();
   initContactForm();
+  initProjectCardToggle();
 }
 
 init();
