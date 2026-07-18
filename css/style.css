@@ -768,7 +768,7 @@ html[lang="de"] .section_title {
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-md);
-  margin-left: clamp(480px, calc(100vw - 560px), 950px);
+  margin-left: clamp(480px, calc(100vw - 500px), 950px);
 }
 
 .skills_divider {
