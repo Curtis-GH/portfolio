@@ -63,6 +63,7 @@ const translations = {
     error_submit: "Please fill in all fields correctly",
     feedback_error: "Please fix the highlighted fields.",
     feedback_success: "Thanks! Your message has been sent.",
+    feedback_server_error: "Something went wrong while sending. Please try again later or email me directly.",
 
     footer_legal: "Legal notice",
 
@@ -126,12 +127,12 @@ const translations = {
     hero_eyebrow: "Ich bin",
     hero_role: "FRONTEND-ENTWICKLER",
     hero_cta: "Lass uns reden!",
-    hero_scroll: "scroll weiter",
+    hero_scroll: "Scroll weiter",
 
     about_title: "Das bin ich",
     about_intro_1: "Hey, ich bin Curtis! Ich baue Dinge fürs Web, weil ich gerne sehe, wie aus einer Idee etwas wird, das man wirklich anklicken kann. Zwischen einem hartnäckigen CSS-Bug und einem Feature, das endlich läuft, liegt der Teil am Programmieren, der mich nicht mehr loslässt.",
     about_intro_2: "Lass uns etwas Großartiges erschaffen!",
-    about_point_1: "Ansässig in Leipzig — offen für Remote, Hybrid-Modelle.",
+    about_point_1: "Ansässig in Leipzig — offen für Remote, Hybrid-Modelle oder einen Umzug für die richtige Gelegenheit.",
     about_point_2: "Immer neugierig, immer am Lernen. Neue Frameworks schrecken mich nicht ab — sie sind die nächste Sache, die es zu verstehen gilt.",
     about_point_3: "Ich zerlege Probleme gern in kleine, lösbare Teile — analytisches Denken, etwas Kreativität und Durchhaltevermögen.",
     skills_title: "Skills",
@@ -176,6 +177,7 @@ const translations = {
     error_submit: "Bitte fülle alle Felder korrekt aus",
     feedback_error: "Bitte korrigiere die markierten Felder.",
     feedback_success: "Danke! Deine Nachricht wurde gesendet.",
+    feedback_server_error: "Beim Senden ist etwas schiefgelaufen. Bitte versuch es später erneut oder schreib mir direkt per E-Mail.",
 
     footer_legal: "Impressum",
 

@@ -533,6 +533,18 @@ html[lang="de"] .section_title {
   padding-right: 75px;
 }
 
+/* Honeypot anti-spam field: invisible to real users (off-screen, not
+   display:none — some bots skip display:none fields), but present in
+   the DOM for bots to fill. If filled on submit, contact.php silently
+   discards the message instead of sending it. */
+.hp-field {
+  position: absolute;
+  left: -5000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact_feedback {
   margin-top: var(--space-sm);
   font-weight: 600;
@@ -796,13 +808,6 @@ html[lang="de"] .section_title {
 }
 
 /* ===== END SKILLS ===== */
-
-/* Background color spanning Skills section through page end */
-.page-bottom {
-  background-color: #141d2f;
-  margin-inline: auto;
-  padding-inline: var(--space-md);
-}
 
 /* ===== REFERENCES / TESTIMONIALS ===== */
 .references {

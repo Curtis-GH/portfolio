@@ -193,7 +193,10 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  const fields = form.querySelectorAll('input, textarea');
+  // Excludes the honeypot field (.hp-field input): it's not a real user
+  // field and must stay empty, so the generic "non-empty" validation
+  // below would otherwise wrongly flag it as invalid.
+  const fields = form.querySelectorAll('.form-group input, .form-group textarea');
   const submitBtn = form.querySelector('.contact_submit');
   const feedback = form.querySelector('.contact_feedback');
 
@@ -235,10 +238,30 @@ function initContactForm() {
       return;
     }
 
-    feedback.textContent = dict.feedback_success;
-    feedback.className = 'contact_feedback is-success';
-    form.reset();
-    refreshSubmitState();
+    submitBtn.disabled = true;
+
+    fetch('contact.php', {
+      method: 'POST',
+      body: new FormData(form),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          feedback.textContent = dict.feedback_success;
+          feedback.className = 'contact_feedback is-success';
+          form.reset();
+        } else {
+          feedback.textContent = dict.feedback_server_error;
+          feedback.className = 'contact_feedback is-error';
+        }
+      })
+      .catch(() => {
+        feedback.textContent = dict.feedback_server_error;
+        feedback.className = 'contact_feedback is-error';
+      })
+      .finally(() => {
+        refreshSubmitState();
+      });
   });
 }
 

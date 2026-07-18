@@ -50,12 +50,6 @@
     display: none;
   }
 
-  .page-bottom {
-    background-color: #141d2f;
-    margin-inline: auto;
-    padding: 0;
-  }
-
   .about_grid {
     flex-direction: column-reverse;
     gap: var(--space-md);
