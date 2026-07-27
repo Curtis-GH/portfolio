@@ -577,9 +577,12 @@ html[lang="de"] .section_title {
     width: 100vw;
     max-width: none;
   }
-    .skills_divider,
+   .skills_divider {
+    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
+  }
+
   .contact_divider {
-    margin-right: min(0px, calc(-1 * (100vw - 1440px) / 2 - 8px));
+    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 - 32px));
   }
   .testimonial_avatar-divider {
     margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
@@ -595,7 +598,7 @@ html[lang="de"] .section_title {
     content: "";
     position: absolute;
     top: -4px;
-    left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
+    left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
     width: var(--real-vw);
     height: 4px;
     background-color: var(--color-accent-green);
