@@ -197,6 +197,18 @@
     background-color: var(--color-accent-green);
     color: #fff;
   }
+
+  /* Touch screens: disable the :hover trigger for the skill tooltip
+     entirely (touch devices simulate a "sticky" hover that doesn't
+     reliably clear). Tap-toggle via .is-expanded (see main.js) is the
+     only trigger in this range, same approach as the project cards. */
+  .skill-item--tooltip:hover .skill-item_tooltip {
+    opacity: 0;
+  }
+
+  .skill-item--tooltip.is-expanded .skill-item_tooltip {
+    opacity: 1;
+  }
 }
 /* ===== END SHARED ≤1150px ===== */
 

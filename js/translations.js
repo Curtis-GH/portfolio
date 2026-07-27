@@ -27,6 +27,7 @@ const translations = {
     skills_cta: "Get in touch",
     skills_tooltip: "I have a special interest in learning",
     skills_para_1: "From building interfaces with HTML, CSS, and JavaScript to structuring larger apps in Angular and TypeScript, I enjoy turning a design into something that actually works in the browser. Git and Scrum keep every project organized, whether I'm working solo or as part of a team.",
+    skill_tooltip_learning: "I have a special interest in learning: Python, AI",
     skills_para_2: "Coming from eight years in IT support, I'm used to picking up new systems quickly — a mindset I've carried straight into frontend development, where the tools change just as fast.",
     skills_frameworks: "Right now that means Python and full-stack development, with a growing focus on AI-driven projects.",
 
@@ -34,7 +35,6 @@ const translations = {
     portfolio_subtitle: "Explore a selection of my work here – Interact with projects to see my skills in action.",
     project_join_desc: "Kanban task management app with drag & drop, categories, and contact management.",
     project_pollo_desc: "Jump, run and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight the crazy hen.",
-    project_pokedex_desc: "Based on the PokéAPI, a simple library that provides and catalogues pokemon information.",
     project_link_github: "Github",
     project_link_live: "Live test",
 
@@ -141,6 +141,7 @@ const translations = {
     skills_cta: "Kontakt aufnehmen",
     skills_tooltip: "Ich habe besonderes Interesse daran zu lernen",
     skills_para_1: "Von Interfaces mit HTML, CSS und JavaScript bis zu größeren Anwendungen mit Angular und TypeScript – ich mag es, aus einem Design etwas zu machen, das im Browser tatsächlich funktioniert. Git und Scrum sorgen dabei für Struktur, egal ob ich allein oder im Team arbeite.",
+    skill_tooltip_learning: "Ich habe besonderes Interesse daran, Python und KI zu lernen",
     skills_para_2: "Aus acht Jahren IT-Support bringe ich die Gewohnheit mit, mich schnell in neue Systeme einzuarbeiten — eine Denkweise, die ich direkt in die Frontend-Entwicklung mitgenommen habe, wo sich die Tools genauso schnell verändern.",
     skills_frameworks: "Aktuell heißt das Python und Full-Stack-Entwicklung, mit wachsendem Fokus auf KI-Projekte.",
 
@@ -148,7 +149,6 @@ const translations = {
     portfolio_subtitle: "Entdecke hier eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Skills in Aktion zu sehen.",
     project_join_desc: "Kanban-Task-Management-App mit Drag & Drop, Kategorien und Kontaktverwaltung.",
     project_pollo_desc: "Jump-'n'-Run-Spiel nach objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Soße zu finden, um gegen das verrückte Huhn zu kämpfen.",
-    project_pokedex_desc: "Basiert auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
     project_link_github: "Github",
     project_link_live: "Live-Test",
 

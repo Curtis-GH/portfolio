@@ -293,6 +293,26 @@ function initProjectCardToggle() {
 }
 
 /**
+ * Initializes tap-to-toggle behavior for the "Continually learning"
+ * skill tooltip on touch screens, where :hover can't be relied on.
+ * Tapping the icon toggles an "is-expanded" class that reveals the
+ * tooltip the same way :hover does on desktop.
+ *
+ * @returns {void}
+ */
+function initSkillTooltipToggle() {
+  const items = document.querySelectorAll('.skill-item--tooltip');
+  const touchQuery = window.matchMedia('(max-width: 1150px)');
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (!touchQuery.matches) return;
+      item.classList.toggle('is-expanded');
+    });
+  });
+}
+
+/**
  * Main entry point for the portfolio site.
  * Further logic will be added in later phases.
  *
@@ -304,6 +324,7 @@ function init() {
   initTestimonialCarousel();
   initContactForm();
   initProjectCardToggle();
+  initSkillTooltipToggle();
 }
 
 init();
