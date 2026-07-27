@@ -312,12 +312,21 @@ function initSkillTooltipToggle() {
   });
 }
 
+
 /**
- * Main entry point for the portfolio site.
- * Further logic will be added in later phases.
+ * Sets a CSS custom property (--real-vw) to the real, accurate visible
+ * viewport width (window.innerWidth), for use in calc() formulas
+ * instead of the CSS unit 100vw.
  *
  * @returns {void}
  */
+function initRealViewportWidth() {
+  function update() {
+    document.documentElement.style.setProperty('--real-vw', window.innerWidth + 'px');
+  }
+  update();
+  window.addEventListener('resize', update);
+}
 function init() {
   initLanguageToggle();
   initMobileMenu();
@@ -325,6 +334,7 @@ function init() {
   initContactForm();
   initProjectCardToggle();
   initSkillTooltipToggle();
+  initRealViewportWidth();
 }
 
 init();
