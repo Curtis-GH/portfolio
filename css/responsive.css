@@ -136,6 +136,7 @@
   .testimonial_avatar-divider {
     grid-column: 3;
     display: block;
+    min-width: 0;
   }
 
   .contact {
@@ -538,13 +539,8 @@ html[lang="de"] .section_title {
 }
 /* ===== END 320px ===== */
 
-/* =====================================================================
-   WIDESCREEN: >1440px — Hero background (glows) bleed to true screen
-   edges and scale with viewport width, per Figma "Version1.2_Widescreen"
-   reference. Content (name/role/button) stays capped+centered at 1440px.
-   The hero divider (green line before social icons) extends to the true
-   left edge, matching the Figma reference.
-   ===================================================================== */
+/*Widescreen*/
+
 @media (min-width: 1441px) {
   .hero {
     max-width: none;
@@ -576,8 +572,6 @@ html[lang="de"] .section_title {
     height: 3px;
   }
 
-  /* About/Skills transition wave: bleed to both true screen edges
-     without affecting the spacing to the photo/icons beneath it. */
   .about_wave {
     left: min(0px, calc(-1 * (100vw - 1440px) / 2 + 32px));
     width: 100vw;
@@ -586,6 +580,9 @@ html[lang="de"] .section_title {
     .skills_divider,
   .contact_divider {
     margin-right: min(0px, calc(-1 * (100vw - 1440px) / 2 - 8px));
+  }
+  .testimonial_avatar-divider {
+    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
   }
 
 
@@ -604,12 +601,6 @@ html[lang="de"] .section_title {
     background-color: var(--color-accent-green);
   }
 
-  /* Portfolio + Contact: same full-bleed technique as Hero above. The
-     section itself goes edge-to-edge (so its background-image blobs
-     naturally reach the true screen edges with plain "top right" /
-     "bottom left" positioning — no calc() needed), while an inner
-     wrapper restores the original 1440px-capped, padded content area
-     for the heading/grid/form. */
   .portfolio,
   .contact {
     max-width: none;
@@ -625,7 +616,33 @@ html[lang="de"] .section_title {
     padding-inline: var(--space-md);
     box-sizing: border-box;
   }
+.portfolio_divider {
+    position: absolute;
+    left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 - 32px));
+    width: calc((var(--real-vw) - 1440px) / 2 + 142px);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 25px;
+  }
 
+  .portfolio_heading-row h2 {
+    margin-left: calc(80px + var(--space-sm));
+  }
+  .contact_intro-heading {
+    position: relative;
+  }
+
+  .contact_intro-divider {
+    position: absolute;
+    left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 - 32px));
+    width: calc((var(--real-vw) - 1440px) / 2 + 72px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .contact_intro-heading h3 {
+    margin-left: calc(40px + var(--space-sm));
+  }
 }
   
 

@@ -863,12 +863,20 @@ html[lang="de"] .section_title {
   margin-top: var(--space-md);
 }
 
- .testimonial_avatar-divider {
-    display: inline-block;
-    flex-grow: 1;
-    height: 3px;
-    background-color: var(--color-accent-green);
-    display: none;}
+ .testimonial_avatar-row {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: var(--space-sm);
+}
+
+.testimonial_avatar-divider {
+  display: inline-block;
+  flex-grow: 1;
+  min-width: 100px;
+  height: 3px;
+  background-color: var(--color-accent-green);
+}
 
 .testimonial_author {
     color: var(--color-text-muted);
@@ -889,13 +897,6 @@ html[lang="de"] .section_title {
   font-weight: 700;
   font-size: var(--fs-h3);
   background-color: var(--color-bg-alt);
-}
-
-.testimonial_avatar-divider {
-  display: inline-block;
-  flex-grow: 1;
-  height: 3px;
-  background-color: var(--color-accent-green);
 }
 
 .testimonial_divider {
