@@ -15,6 +15,8 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
     <link rel="stylesheet" href="css/variable.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -67,7 +69,7 @@
 
     <!-- Hero -->
     <section class="hero container">
-      <div class="hero_content">
+      <div class="hero_content" data-aos="fade-up" data-aos-duration="800">
         <div class="hero_text">
           <div class="hero_heading-row">
             <span class="hero_eyebrow" data-i18n="hero_eyebrow">I am</span>
@@ -80,7 +82,7 @@
         </div>
       </div>
 
-      <div class="hero_footer">
+      <div class="hero_footer" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
         <div class="hero_socials">
           <span class="hero_divider" aria-hidden="true"></span>
           <a href="https://github.com/Curtis-GH" target="_blank" rel="noopener">
@@ -102,7 +104,7 @@
     <!-- About me -->
     <section id="about" class="section container about">
       <div class="about_grid">
-        <div class="about_text">
+        <div class="about_text" data-aos="fade-up">
           <h2 class="section_title" data-i18n="about_title">About me</h2>
           <p class="about_intro" data-i18n="about_intro_1">
             Hey there, I'm Curtis! I build things for the web because I like
@@ -140,7 +142,7 @@
             </li>
           </ul>
         </div>
-        <div class="about_photo-wrap">
+        <div class="about_photo-wrap" data-aos="fade-up" data-aos-delay="150">
           <img
             src="images/decorative/bg-hero-2.png"
             alt=""
@@ -164,13 +166,13 @@
 
    <!-- Skills -->
 <section id="skills" class="section container skills">
-  <div class="skills_heading-row">
+  <div class="skills_heading-row" data-aos="fade-up">
     <h2 class="section_title" data-i18n="skills_title">Skills</h2>
     <span class="skills_divider" aria-hidden="true"></span>
   </div>
 
   <div class="skills_grid">
-    <div class="skills_icons">
+    <div class="skills_icons" data-aos="fade-up" data-aos-delay="100">
       <div class="skill-item">
         <img src="images/skills-frontend/skill-html.png" alt="HTML" />
         <span>HTML</span>
@@ -237,7 +239,7 @@
       </div>
     </div>
 
-    <div class="skills_text">
+    <div class="skills_text" data-aos="fade-up" data-aos-delay="150">
       <p data-i18n="skills_para_1">
         From building interfaces with HTML, CSS, and JavaScript to
         structuring larger apps in Angular and TypeScript, I enjoy
@@ -264,17 +266,17 @@
       <!-- Portfolio -->
       <section id="portfolio" class="section container portfolio">
         <div class="portfolio_inner">
-        <div class="portfolio_heading-row">
+        <div class="portfolio_heading-row" data-aos="fade-up">
           <span class="portfolio_divider" aria-hidden="true"></span>
           <h2 class="section_title" data-i18n="portfolio_title">Portfolio</h2>
         </div>
-        <p class="portfolio_subtitle" data-i18n="portfolio_subtitle">
+        <p class="portfolio_subtitle" data-aos="fade-up" data-i18n="portfolio_subtitle">
           Explore a selection of my work here – Interact with projects to see my
           skills in action.
         </p>
 
         <div class="portfolio_grid">
-          <article class="project-card">
+          <article class="project-card" data-aos="fade-up">
             <div class="project-card_media">
               <img
                 src="images/projects/project-join.png"
@@ -308,7 +310,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-aos="fade-up" data-aos-delay="150">
             <div class="project-card_media">
               <img
                 src="images/projects/project-el-pollo-loco.png"
@@ -347,7 +349,7 @@
 
       <!-- References -->
       <section id="references" class="section container references">
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up">
           <img
             src="images/decorative/testimonial-icon.png"
             alt=""
@@ -446,13 +448,13 @@
       <!-- Contact -->
       <section id="contact" class="section container contact">
         <div class="contact_inner">
-        <div class="contact_heading-row">
+        <div class="contact_heading-row" data-aos="fade-up">
           <h2 class="section_title" data-i18n="contact_title">Contact</h2>
           <span class="contact_divider" aria-hidden="true"></span>
         </div>
 
         <div class="contact_grid">
-          <div class="contact_intro">
+          <div class="contact_intro" data-aos="fade-up">
             <div class="contact_intro-heading">
               <span class="contact_intro-divider" aria-hidden="true"></span>
               <h3 data-i18n="contact_heading">Got a problem to solve?</h3>
@@ -543,6 +545,7 @@
         </div>
       </footer>
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
   </body>

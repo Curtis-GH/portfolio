@@ -359,6 +359,21 @@ function initRealViewportWidth() {
   update();
   window.addEventListener('resize', update);
 }
+/**
+ * Initializes the AOS (Animate On Scroll) library, if loaded.
+ *
+ * @returns {void}
+ */
+function initScrollAnimations() {
+  if (typeof AOS === 'undefined') return;
+  AOS.init({
+    duration: 700,
+    easing: 'ease-out',
+    once: true,
+    offset: 80,
+  });
+}
+
 function init() {
   initLanguageToggle();
   initMobileMenu();
@@ -367,6 +382,7 @@ function init() {
   initProjectCardToggle();
   initSkillTooltipToggle();
   initRealViewportWidth();
+  initScrollAnimations();
 }
 
 init();
