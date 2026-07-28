@@ -360,16 +360,20 @@ function initRealViewportWidth() {
   window.addEventListener('resize', update);
 }
 /**
- * Sets a CSS custom property (--photo-wrap-left) to the real distance
- * between .about_photo-wrap's left edge and the true left edge of the
- * viewport. The about_wave shape (nested inside .about_photo-wrap for
- * vertical anchoring against the photo) needs to bleed to both true
- * screen edges horizontally, but its distance from the photo isn't a
- * fixed formula — it depends on how much space the flexible about_text
- * column takes up, which shifts with text wrapping and viewport width.
- * Combined with --real-vw (full viewport width) for the wave's width,
- * this lets left:calc(-1 * var(--photo-wrap-left)) + width:var(--real-vw)
- * span the true edge-to-edge width regardless of where the photo sits.
+ * Sets CSS custom properties describing .about_photo-wrap's real
+ * position relative to the true viewport edges:
+ *  --photo-wrap-left  distance to the left edge (used by the ::before
+ *                      fill — see style.css — to bleed all the way to
+ *                      the true left edge, and by .about_wave's own
+ *                      capped right-side stretch below)
+ *  --photo-wrap-right-gap  distance from the photo-wrap's right edge to
+ *                      the true right edge. .about_wave stretches into
+ *                      part of this gap (capped, so it can't outgrow
+ *                      the photo at extreme zoom — see style.css), and
+ *                      the ::before fill covers whatever's left.
+ * Neither distance is a fixed formula — both depend on how much space
+ * the flexible about_text column takes up, which shifts with text
+ * wrapping and viewport width.
  *
  * @returns {void}
  */
@@ -377,10 +381,19 @@ function initAboutWaveGeometry() {
   const photoWrap = document.querySelector('.about_photo-wrap');
   if (!photoWrap) return;
   function update() {
-    document.documentElement.style.setProperty('--photo-wrap-left', photoWrap.getBoundingClientRect().left + 'px');
+    const rect = photoWrap.getBoundingClientRect();
+    document.documentElement.style.setProperty('--photo-wrap-left', rect.left + 'px');
+    document.documentElement.style.setProperty('--photo-wrap-right-gap', (window.innerWidth - rect.right) + 'px');
   }
   update();
   window.addEventListener('resize', update);
+  // Re-measure once the web font (Poppins) has actually finished loading —
+  // it swaps in after the initial layout with a fallback font, which can
+  // shift about_text's wrapping and therefore the photo's X position,
+  // leaving the first measurement stale.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(update);
+  }
 }
 
 /**

@@ -725,13 +725,26 @@ html[lang="de"] .section_title {
      behind it. */
   z-index: 4;
   pointer-events: none;
-  /* top/left/width all calibrated relative to .about_photo-wrap so the
-     wave's position AND scale stay tied to the photo at every width —
-     it deliberately does NOT reach the true screen edges on its own
-     (see .about_photo-wrap::before above for that part). */
+  /* top calibrated relative to .about_photo-wrap so the wave's vertical
+     position stays tied to the photo at every width. left/width extend
+     the same photo-proportional base (-128.83% / 235.62%) by up to
+     500px on EACH side toward the real gap to the true edge — close
+     enough to visually reach it on most normal/large screens, but
+     capped so it can never outgrow the photo at extreme zoom-out the
+     way an uncapped var(--real-vw) width did. Widening by the same
+     amount subtracted from left keeps the right edge exactly where the
+     right-side extension alone would put it (left and right extend
+     independently of each other). Whatever gap the caps don't close,
+     the ::before fill above (which bleeds to the true edge
+     unconditionally) covers seamlessly. */
   top: 56.13%;
-  left: -128.83%;
-  width: 235.62%;
+  left: calc(-128.83% - min(var(--photo-wrap-left, 0px), 500px));
+  /* The pure 235.62% base already extends ~51px past photo-wrap's own
+     right edge on its own (baked into that calibrated ratio) — so the
+     right-side gap-closing term needs that much subtracted first,
+     otherwise it overshoots the true edge by the same ~51px and causes
+     a real horizontal scrollbar. */
+  width: calc(235.62% + min(max(0px, var(--photo-wrap-right-gap, 0px) - 51px), 500px) + min(var(--photo-wrap-left, 0px), 500px));
   max-width: none;
 }
 

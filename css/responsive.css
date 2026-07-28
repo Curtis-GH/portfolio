@@ -420,14 +420,23 @@
 
   .about_wave {
     top: 63.68%;
-    left: -60.62%;
-    /* photo-wrap is pinned at a constant 400px throughout this whole
-       range (already capped), but its own X position still shifts with
-       viewport width — so the 221.25% ratio alone can push the wave past
-       the true right edge at the narrow end. Clamp against --real-vw as
-       a safety ceiling (the fill behind it reaches the true edge anyway,
-       so this cap costs nothing visually). */
-    width: min(221.25%, calc(var(--real-vw) - 20px));
+    /* Same capped gap-closing extension as the desktop rule (see
+       style.css): stretches toward the true edge on each side, capped
+       at 500px so it can't run away, minus the ~242.5px the pure
+       221.25% ratio already extends past photo-wrap's own edge on its
+       own (photo-wrap is pinned at a constant 400px throughout this
+       whole range, so that overshoot is a fixed amount here too).
+       The pure 221.25% ratio alone can *already* overshoot the true
+       right edge at the narrow end of this range (photo-wrap's X
+       position shifts even though its width stays constant at 400px) —
+       the outer min() against --real-vw is a final safety ceiling
+       against that, independent of whatever the gap-extension terms
+       above computed. */
+    left: calc(-60.62% - min(var(--photo-wrap-left, 0px), 500px));
+    width: min(
+      calc(221.25% + min(max(0px, var(--photo-wrap-right-gap, 0px) - 242.5px), 500px) + min(var(--photo-wrap-left, 0px), 500px)),
+      calc(var(--real-vw) - 20px)
+    );
   }
 
   .skills_text > p:nth-of-type(-n+2) {
