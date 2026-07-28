@@ -53,7 +53,7 @@ $email = str_replace(["\r", "\n"], '', $email);
 // Mirrors the client-side checks in main.js — never trust the client alone.
 $errors = [];
 
-if ($name === '') {
+if ($name === '' || mb_strlen($name) < 2) {
     $errors[] = 'name';
 }
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

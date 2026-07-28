@@ -146,8 +146,13 @@ function validateField(field) {
   if (field.type === 'checkbox') {
     isValid = field.checked;
   } else if (field.type === 'email') {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Rejects consecutive/leading/trailing dots in either the local or
+    // domain part (e.g. "a..b@test.com" or "a@test..com"), which the
+    // simpler pattern used to silently accept as valid.
+    const emailPattern = /^[^\s@.]+(\.[^\s@.]+)*@[^\s@.]+(\.[^\s@.]+)+$/;
     isValid = emailPattern.test(field.value.trim());
+  } else if (field.name === 'name') {
+    isValid = field.value.trim().length >= 2;
   } else {
     isValid = field.value.trim() !== '';
   }
@@ -172,10 +177,10 @@ function isFormValid(form) {
   const email = form.querySelector('[name="email"]');
   const message = form.querySelector('[name="message"]');
   const privacy = form.querySelector('[name="privacy"]');
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^[^\s@.]+(\.[^\s@.]+)*@[^\s@.]+(\.[^\s@.]+)+$/;
 
   return (
-    name.value.trim() !== '' &&
+    name.value.trim().length >= 2 &&
     emailPattern.test(email.value.trim()) &&
     message.value.trim() !== '' &&
     privacy.checked
@@ -206,6 +211,25 @@ function initContactForm() {
    * @returns {void}
    */
   function refreshSubmitState() {
+    const name = form.querySelector('[name="name"]');
+    const email = form.querySelector('[name="email"]');
+    const message = form.querySelector('[name="message"]');
+    const privacy = form.querySelector('[name="privacy"]');
+    const emailPattern = /^[^\s@.]+(\.[^\s@.]+)*@[^\s@.]+(\.[^\s@.]+)+$/;
+
+    const otherFieldsValid =
+      name.value.trim().length >= 2 &&
+      emailPattern.test(email.value.trim()) &&
+      message.value.trim() !== '';
+
+    if (otherFieldsValid) {
+      const privacyGroup = privacy.closest('.form-group');
+      const privacyError = privacyGroup ? privacyGroup.querySelector('.form-group_error') : null;
+      if (privacyError) {
+        privacyError.classList.toggle('is-visible', !privacy.checked);
+      }
+    }
+
     submitBtn.disabled = !isFormValid(form);
   }
 
@@ -254,10 +278,18 @@ function initContactForm() {
           feedback.textContent = dict.feedback_server_error;
           feedback.className = 'contact_feedback is-error';
         }
+        setTimeout(() => {
+          feedback.textContent = '';
+          feedback.className = 'contact_feedback';
+        }, 6000);
       })
       .catch(() => {
         feedback.textContent = dict.feedback_server_error;
         feedback.className = 'contact_feedback is-error';
+        setTimeout(() => {
+          feedback.textContent = '';
+          feedback.className = 'contact_feedback';
+        }, 6000);
       })
       .finally(() => {
         refreshSubmitState();

@@ -89,6 +89,7 @@
 
   .skills_divider {
     order: 0;
+    margin-right: -16px;
   }
 
   .testimonial {
@@ -137,6 +138,7 @@
     grid-column: 3;
     display: block;
     min-width: 0;
+    margin-right: -48px;
   }
 
   .contact {
@@ -155,6 +157,7 @@
 
   .contact_divider {
     order: 0;
+    margin-right: -16px;
   }
 
   .contact_intro p {
@@ -458,12 +461,14 @@
 }
 .skills_divider{
   margin: 0;
+  margin-right: -16px;
 }
     .portfolio_divider{ 
       margin: 0;
     }
         .contact_divider{
           margin: 0;
+          margin-right: -16px;
         }
 }
 /* ===== END 480px ===== */
@@ -539,9 +544,26 @@ html[lang="de"] .section_title {
 }
 /* ===== END 320px ===== */
 
-/*Widescreen*/
-
+/* =====================================================================
+   WIDESCREEN: >1440px — Hero background (glows) bleed to true screen
+   edges and scale with viewport width, per Figma "Version1.2_Widescreen"
+   reference. Content (name/role/button) stays capped+centered at 1440px.
+   The hero divider (green line before social icons) extends to the true
+   left edge, matching the Figma reference.
+   ===================================================================== */
 @media (min-width: 1441px) {
+  .legal_divider {
+    max-width: none;
+  }
+
+  .legal_divider:first-of-type {
+    margin-left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
+  }
+
+  .legal_divider:last-of-type {
+    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
+  }
+
   .hero {
     max-width: none;
     margin-inline: 0;
@@ -572,32 +594,25 @@ html[lang="de"] .section_title {
     height: 3px;
   }
 
+  /* About/Skills transition wave: bleed to both true screen edges
+     without affecting the spacing to the photo/icons beneath it. */
   .about_wave {
     left: min(0px, calc(-1 * (100vw - 1440px) / 2 + 32px));
     width: 100vw;
     max-width: none;
   }
-   .skills_divider {
+    .skills_divider {
     margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
   }
 
   .contact_divider {
     margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 - 32px));
   }
+
   .testimonial_avatar-divider {
     margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
   }
-.legal_divider {
-    max-width: none;
-  }
 
-  .legal_divider:first-of-type {
-    margin-left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
-  }
-
-  .legal_divider:last-of-type {
-    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
-  }
 
   .footer {
     position: relative;
@@ -614,6 +629,12 @@ html[lang="de"] .section_title {
     background-color: var(--color-accent-green);
   }
 
+  /* Portfolio + Contact: same full-bleed technique as Hero above. The
+     section itself goes edge-to-edge (so its background-image blobs
+     naturally reach the true screen edges with plain "top right" /
+     "bottom left" positioning — no calc() needed), while an inner
+     wrapper restores the original 1440px-capped, padded content area
+     for the heading/grid/form. */
   .portfolio,
   .contact {
     max-width: none;
@@ -629,18 +650,24 @@ html[lang="de"] .section_title {
     padding-inline: var(--space-md);
     box-sizing: border-box;
   }
-.portfolio_divider {
+
+  /* Portfolio + "Problem to solve" dividers: position:absolute (like
+     hero_divider) instead of margin-based, so bleeding them to the true
+     left edge can never drag the heading text next to them along. The
+     heading itself gets a matching margin-left to keep it exactly where
+     it was (compensating for the divider's width + row gap, which it
+     no longer needs to "make room for" once taken out of flex flow). */
+  .portfolio_divider {
     position: absolute;
     left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 - 32px));
     width: calc((var(--real-vw) - 1440px) / 2 + 142px);
-    top: 50%;
-    transform: translateY(-50%);
     margin-top: 25px;
   }
 
   .portfolio_heading-row h2 {
     margin-left: calc(80px + var(--space-sm));
   }
+
   .contact_intro-heading {
     position: relative;
   }
@@ -656,6 +683,7 @@ html[lang="de"] .section_title {
   .contact_intro-heading h3 {
     margin-left: calc(40px + var(--space-sm));
   }
+
 }
   
 
