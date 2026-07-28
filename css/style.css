@@ -554,6 +554,7 @@ html[lang="de"] .section_title {
 
 /* ===== FOOTER ===== */
 .footer {
+  margin-top: auto;
   padding-block: var(--space-lg);
   border-top: 4px solid var(--color-accent-green);
   display: flex;
