@@ -360,6 +360,30 @@ function initRealViewportWidth() {
   window.addEventListener('resize', update);
 }
 /**
+ * Sets a CSS custom property (--photo-wrap-left) to the real distance
+ * between .about_photo-wrap's left edge and the true left edge of the
+ * viewport. The about_wave shape (nested inside .about_photo-wrap for
+ * vertical anchoring against the photo) needs to bleed to both true
+ * screen edges horizontally, but its distance from the photo isn't a
+ * fixed formula — it depends on how much space the flexible about_text
+ * column takes up, which shifts with text wrapping and viewport width.
+ * Combined with --real-vw (full viewport width) for the wave's width,
+ * this lets left:calc(-1 * var(--photo-wrap-left)) + width:var(--real-vw)
+ * span the true edge-to-edge width regardless of where the photo sits.
+ *
+ * @returns {void}
+ */
+function initAboutWaveGeometry() {
+  const photoWrap = document.querySelector('.about_photo-wrap');
+  if (!photoWrap) return;
+  function update() {
+    document.documentElement.style.setProperty('--photo-wrap-left', photoWrap.getBoundingClientRect().left + 'px');
+  }
+  update();
+  window.addEventListener('resize', update);
+}
+
+/**
  * Initializes the AOS (Animate On Scroll) library, if loaded.
  *
  * @returns {void}
@@ -382,6 +406,7 @@ function init() {
   initProjectCardToggle();
   initSkillTooltipToggle();
   initRealViewportWidth();
+  initAboutWaveGeometry();
   initScrollAnimations();
 }
 

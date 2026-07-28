@@ -15,18 +15,7 @@
   }
 
   .container {
-    width: calc(100% - (var(--space-sm) * 2));
     padding-inline: var(--space-sm);
-  }
-
-  /* Mobile/tablet header is only 92px tall (vs. 109px on desktop) — the
-     base 120px scroll-margin-top left an extra ~28px of unnecessary
-     space above a section after jumping to it via the burger menu. */
-  #about,
-  #skills,
-  #portfolio,
-  #contact {
-    scroll-margin-top: 100px;
   }
 
   .legal_title-row {
@@ -109,7 +98,7 @@
 
   .skills_heading-row {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     margin: 0;
   }
 
@@ -279,9 +268,7 @@
   }
 
   .about_wave {
-    top: 69.74%;
-    left: calc(-1 * var(--photo-wrap-left, 0px));
-    width: var(--real-vw, 100vw);
+    top: 357px;
   }
 
   .skills_text > p:nth-of-type(-n+2) {
@@ -405,9 +392,7 @@
   }
 
   .about_wave {
-    top: 63.68%;
-    left: calc(-1 * var(--photo-wrap-left, 0px));
-    width: var(--real-vw, 100vw);
+    top: 300px;
   }
 
   .skills_text > p:nth-of-type(-n+2) {
@@ -493,6 +478,9 @@
   .about_photo-wrap {
     max-width: 280px;
   }
+  .about_wave {
+    top: 244px;
+  }
 
   .about_points img {
     width: 40px;
@@ -577,6 +565,9 @@ html[lang="de"] .section_title {
   .about_photo-wrap {
     max-width: 240px;
   }
+  .about_wave {
+    top: 211px;
+  }
 
   .section_title {
     font-size: 32px;
@@ -652,15 +643,14 @@ html[lang="de"] .section_title {
   }
 
   .legal_divider:first-of-type {
-    margin-left: min(0px, calc(-1 * (var(--real-vw) - 1504px) / 2));
+    margin-left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
   }
 
   .legal_divider:last-of-type {
-    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1504px) / 2));
+    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
   }
 
   .hero {
-    width: 100%;
     max-width: none;
     margin-inline: 0;
     padding-inline: 0;
@@ -690,6 +680,13 @@ html[lang="de"] .section_title {
     height: 3px;
   }
 
+  /* About/Skills transition wave: bleed to both true screen edges
+     without affecting the spacing to the photo/icons beneath it. */
+  .about_wave {
+    left: min(0px, calc(-1 * (100vw - 1440px) / 2 + 32px));
+    width: 100vw;
+    max-width: none;
+  }
     .skills_divider {
     margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
   }
@@ -712,7 +709,7 @@ html[lang="de"] .section_title {
     content: "";
     position: absolute;
     top: -4px;
-    left: min(0px, calc(-1 * (var(--real-vw) - 1504px) / 2));
+    left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
     width: var(--real-vw);
     height: 4px;
     background-color: var(--color-accent-green);
@@ -726,7 +723,6 @@ html[lang="de"] .section_title {
      for the heading/grid/form. */
   .portfolio,
   .contact {
-    width: 100%;
     max-width: none;
     margin-inline: 0;
     padding-inline: 0;
