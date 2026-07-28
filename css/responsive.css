@@ -18,6 +18,16 @@
     padding-inline: var(--space-sm);
   }
 
+  /* Mobile/tablet header is only 92px tall (vs. 109px on desktop) — the
+     base 120px scroll-margin-top left an extra ~28px of unnecessary
+     space above a section after jumping to it via the burger menu. */
+  #about,
+  #skills,
+  #portfolio,
+  #contact {
+    scroll-margin-top: 100px;
+  }
+
   .legal_title-row {
     margin-inline: calc(var(--space-sm) * -1);
   }

@@ -214,9 +214,6 @@ html[lang="de"] .hero_eyebrow {
 /* ===== END HERO ===== */
 
 /* ===== SECTION (SHARED) ===== */
-.section {
-  padding-block: var(--space-xl);
-}
 
 .section_title {
   font-size: clamp(40px, 6vw, 90px);
