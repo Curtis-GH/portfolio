@@ -268,7 +268,9 @@
   }
 
   .about_wave {
-    top: 357px;
+    top: 69.74%;
+    left: -16.96%;
+    width: 133.93%;
   }
 
   .skills_text > p:nth-of-type(-n+2) {
@@ -392,7 +394,14 @@
   }
 
   .about_wave {
-    top: 300px;
+    top: 63.68%;
+    left: -60.62%;
+    /* photo-wrap is pinned at a constant 400px throughout this whole
+       range (already capped), but its own X position still shifts with
+       viewport width — so the 221.25% ratio alone can push the wave past
+       the true right edge at the narrow end. Clamp against --real-vw as
+       a safety ceiling. */
+    width: min(221.25%, calc(var(--real-vw) - 20px));
   }
 
   .skills_text > p:nth-of-type(-n+2) {
@@ -478,9 +487,6 @@
   .about_photo-wrap {
     max-width: 280px;
   }
-  .about_wave {
-    top: 244px;
-  }
 
   .about_points img {
     width: 40px;
@@ -564,9 +570,6 @@ html[lang="de"] .section_title {
 
   .about_photo-wrap {
     max-width: 240px;
-  }
-  .about_wave {
-    top: 211px;
   }
 
   .section_title {
@@ -680,13 +683,6 @@ html[lang="de"] .section_title {
     height: 3px;
   }
 
-  /* About/Skills transition wave: bleed to both true screen edges
-     without affecting the spacing to the photo/icons beneath it. */
-  .about_wave {
-    left: min(0px, calc(-1 * (100vw - 1440px) / 2 + 32px));
-    width: 100vw;
-    max-width: none;
-  }
     .skills_divider {
     margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
   }
