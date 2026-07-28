@@ -4,10 +4,13 @@
   top: 0;
   z-index: 200;
   background-color: #141d2f;
+  padding-block: var(--space-sm);
+}
+
+.header_inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: var(--space-sm);
 }
 
 .header_nav {
@@ -174,6 +177,11 @@ html[lang="de"] .hero_eyebrow {
 .hero_socials img {
   width: 32px;
   height: 32px;
+  transition: transform 0.5s ease;
+}
+
+.hero_socials img:hover {
+  transform: translateY(-10px);
 }
 
 .hero_email {

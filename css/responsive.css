@@ -587,7 +587,17 @@ html[lang="de"] .section_title {
   .testimonial_avatar-divider {
     margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2));
   }
+.legal_divider {
+    max-width: none;
+  }
 
+  .legal_divider:first-of-type {
+    margin-left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
+  }
+
+  .legal_divider:last-of-type {
+    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
+  }
 
   .footer {
     position: relative;
