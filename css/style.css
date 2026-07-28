@@ -688,25 +688,50 @@ html[lang="de"] .section_title {
 }
 
 
+/* Solid-color fill, same tone as the page background, sitting directly
+   behind .about_wave. The wave PNG itself stays sized proportionally to
+   the photo (see below) so its internal curve never drifts out of
+   alignment with the photo, at any zoom level — but that means the PNG
+   alone can't reliably reach the true screen edges once the photo hits
+   its own 750px cap (viewport ≥1786px), since the PNG then stops
+   growing while the viewport keeps growing. This fill is what actually
+   reaches the true edges (JS-measured, same technique as the wave used
+   to use directly) — since it's a flat, unpatterned color match, no
+   seam is visible where the PNG's own edge ends and the fill takes
+   over, so both requirements (edge-to-edge AND photo-anchored) hold at
+   once without compromise. */
+.about_photo-wrap::before {
+  content: "";
+  position: absolute;
+  /* Behind the photo (z-index:0), not in front — this is a solid
+     rectangle (unlike the wave PNG, which is mostly transparent outside
+     its curve), so at any z-index ≥0 it would opaquely block out the
+     photo's lower portion instead of just extending the background
+     color around it. */
+  z-index: -1;
+  pointer-events: none;
+  background-color: #141d2f;
+  top: 56.13%;
+  left: calc(-1 * var(--photo-wrap-left, 0px));
+  width: var(--real-vw, 100vw);
+  height: 152.86%;
+}
+
 .about_wave {
   position: absolute;
-  /* Higher than .skills_grid/.skills_heading-row (z-index:3) — the wave
+  /* Higher than .skills_grid/.skills_heading-row (z-index:1) — the wave
      is meant to sit in FRONT of the Skills content it overlaps into,
      covering it cleanly like the front layer of the About section, not
      behind it. */
   z-index: 4;
   pointer-events: none;
-  /* top calibrated per breakpoint in responsive.css, relative to
-     .about_photo-wrap (its positioning context) so the wave's vertical
-     position stays anchored to the photo at every width instead of
-     drifting away from it. left/width span the true edge-to-edge
-     viewport width regardless of where the photo sits — --photo-wrap-left
-     is JS-measured (see initAboutWaveGeometry in main.js), since that
-     distance isn't a fixed formula, it depends on how much space the
-     flexible about_text column takes up. */
+  /* top/left/width all calibrated relative to .about_photo-wrap so the
+     wave's position AND scale stay tied to the photo at every width —
+     it deliberately does NOT reach the true screen edges on its own
+     (see .about_photo-wrap::before above for that part). */
   top: 56.13%;
-  left: calc(-1 * var(--photo-wrap-left, 0px));
-  width: var(--real-vw, 100vw);
+  left: -128.83%;
+  width: 235.62%;
   max-width: none;
 }
 
