@@ -15,6 +15,7 @@
   }
 
   .container {
+    width: calc(100% - (var(--space-sm) * 2));
     padding-inline: var(--space-sm);
   }
 
@@ -656,14 +657,15 @@ html[lang="de"] .section_title {
   }
 
   .legal_divider:first-of-type {
-    margin-left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
+    margin-left: min(0px, calc(-1 * (var(--real-vw) - 1504px) / 2));
   }
 
   .legal_divider:last-of-type {
-    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
+    margin-right: min(0px, calc(-1 * (var(--real-vw) - 1504px) / 2));
   }
 
   .hero {
+    width: 100%;
     max-width: none;
     margin-inline: 0;
     padding-inline: 0;
@@ -715,7 +717,7 @@ html[lang="de"] .section_title {
     content: "";
     position: absolute;
     top: -4px;
-    left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 + 32px));
+    left: min(0px, calc(-1 * (var(--real-vw) - 1504px) / 2));
     width: var(--real-vw);
     height: 4px;
     background-color: var(--color-accent-green);
@@ -729,6 +731,7 @@ html[lang="de"] .section_title {
      for the heading/grid/form. */
   .portfolio,
   .contact {
+    width: 100%;
     max-width: none;
     margin-inline: 0;
     padding-inline: 0;

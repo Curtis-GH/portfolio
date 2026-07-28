@@ -72,6 +72,19 @@
 
 /* Shared layout container, used by every section */
 .container {
+  /* Explicit width, not just relying on default block "fill available
+     space": since body became a flex column (sticky-footer fix), any
+     flex item with auto inline margins loses the default stretch
+     sizing and shrinks to fit its content instead. A plain width:100%
+     doesn't work here either — this stays content-box, so padding-inline
+     gets added ON TOP of that 100%, overshooting the viewport by 64px.
+     Subtracting the padding explicitly reproduces what width:auto does
+     automatically for a normal (non-flex-item) block.
+     Net effect: max-width:1440px still caps the CONTENT area only, so
+     the true total width when uncapped is 1440 + 32*2 = 1504px — that's
+     the number any widescreen calc() bleeding off this class needs to
+     center against, not 1440. */
+  width: calc(100% - (var(--space-md) * 2));
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: var(--space-md);
