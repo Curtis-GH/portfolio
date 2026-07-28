@@ -287,8 +287,19 @@
 
   .about_wave {
     top: 69.74%;
-    left: -16.96%;
-    width: 133.93%;
+    /* Same capped gap-closing extension as desktop/tablet (see
+       style.css): stretches toward the true edge on each side, capped
+       at 500px so it can't run away, minus the ~68px the pure 133.93%
+       ratio already extends past photo-wrap's own edge on its own
+       (calculated at photo-wrap's 400px cap; slightly conservative
+       below that, which is safe — just means a touch less reach on
+       very small phones, never overflow). Outer min() against
+       --real-vw is a final safety ceiling, same reasoning as tablet. */
+    left: calc(-16.96% - min(var(--photo-wrap-left, 0px), 500px));
+    width: min(
+      calc(133.93% + min(max(0px, var(--photo-wrap-right-gap, 0px) - 68px), 500px) + min(var(--photo-wrap-left, 0px), 500px)),
+      calc(var(--real-vw) - 20px)
+    );
   }
 
   .skills_text > p:nth-of-type(-n+2) {
