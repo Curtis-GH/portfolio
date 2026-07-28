@@ -31,6 +31,21 @@
     display: flex;
   }
 
+  .hero_footer {
+    position: relative;
+  }
+
+  .hero_divider {
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero_socials {
+    margin-left: 114px;
+  }
+
   .hero {
     background-size: 480px, 420px;
     background-position: -240px top, calc(100% + 210px) 70%;
@@ -150,7 +165,17 @@
     justify-content: center;
   }
 
+  .contact_intro-heading {
+    position: relative;
+  }
+
+  .contact_intro-divider {
+    position: absolute;
+    left: -16px;
+  }
+
   .contact_intro-heading h3 {
+    margin-left: 40px;
     font-size: 20px;
     font-weight: 400;
   }
@@ -276,7 +301,13 @@
   }
 
   .portfolio_divider {
+    position: absolute;
+    left: -16px;
     width: 40px;
+  }
+
+  .portfolio_heading-row h2 {
+    margin-left: 40px;
   }
 
   .portfolio_subtitle {
@@ -393,6 +424,15 @@
     max-width: 500px;
     padding-left: 120px;
     font-size: 20px;
+  }
+
+  .portfolio_divider {
+    position: absolute;
+    left: -16px;
+  }
+
+  .portfolio_heading-row h2 {
+    margin-left: 50px;
   }
 }
 /* ===== END 770-1150px ===== */
@@ -543,6 +583,52 @@ html[lang="de"] .section_title {
   
 }
 /* ===== END 320px ===== */
+
+/* =====================================================================
+   DESKTOP GAP: 1151–1440px — between the Tablet range (≤1150, container
+   padding var(--space-sm)=16px) and Widescreen (≥1441, container padding
+   var(--space-md)=32px scales via --real-vw). In this range the container
+   is unmodified base CSS: fixed 32px padding-inline, never auto-margined
+   (max-width:1440px only kicks in centering beyond 1441px). So a fixed
+   -32px offset (not a --real-vw calc) is enough — no viewport scaling
+   needed since the gap-to-close never changes within this range. Same
+   position:absolute + compensating-margin technique as the ≤1150 block.
+   ===================================================================== */
+@media (min-width: 1151px) and (max-width: 1440px) {
+  .hero_divider {
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero_socials {
+    margin-left: 98px;
+  }
+
+  .portfolio_divider {
+    position: absolute;
+    left: -32px;
+  }
+
+  .portfolio_heading-row h2 {
+    margin-left: 34px;
+  }
+
+  .contact_intro-heading {
+    position: relative;
+  }
+
+  .contact_intro-divider {
+    position: absolute;
+    left: -32px;
+  }
+
+  .contact_intro-heading h3 {
+    margin-left: 24px;
+  }
+}
+/* ===== END DESKTOP GAP 1151-1440px ===== */
 
 /* =====================================================================
    WIDESCREEN: >1440px — Hero background (glows) bleed to true screen
