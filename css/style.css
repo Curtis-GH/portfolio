@@ -672,7 +672,7 @@ html[lang="de"] .section_title {
   pointer-events: none;
   top: 65.13%;
   left: -148.15%;
-  width: 270.96%;
+  width: min(270.96%, calc(100vw - 20px));
   max-width: none;
   mask-image: linear-gradient(
     to right,
