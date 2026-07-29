@@ -682,10 +682,24 @@ html[lang="de"] .section_title {
   position: absolute;
   z-index: 4;
   pointer-events: none;
-  top: 56.13%;
+  top: 50.13%;
   left: calc(-128.83% - min(var(--photo-wrap-left, 0px), 500px));
   width: calc(235.62% + min(max(0px, var(--photo-wrap-right-gap, 0px) - 51px), 500px) + min(var(--photo-wrap-left, 0px), 500px));
   max-width: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 40%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 40%,
+    black 90%,
+    transparent 100%
+  );
 }
 
 .skills_grid {
