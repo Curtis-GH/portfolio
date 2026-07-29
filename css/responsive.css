@@ -80,6 +80,23 @@
     margin-top: 60px;
   }
 
+  .about_wave {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 90%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 90%,
+      transparent 100%
+    );
+  }
+
   .skills_grid {
     flex-direction: column;
     margin-left: 0;
