@@ -633,7 +633,7 @@ html[lang="de"] .section_title {
 .about_photo-wrap {
   position: relative;
   flex-shrink: 0;
-  width: min(750px, 42vw);
+  width: min(750px, 30vw);
   max-width: none;
   margin-top: 200px;
 }
@@ -672,20 +672,20 @@ html[lang="de"] .section_title {
   pointer-events: none;
   top: 65.13%;
   left: -148.15%;
-  width: min(270.96%, calc(100vw - 20px));
+  width: min(263%, calc(100vw - 20px));
   max-width: none;
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 40%,
+    black 15%,
     black 90%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 60%,
-    black 89%,
+    black 15%,
+    black 90%,
     transparent 100%
   );
 }
