@@ -654,6 +654,7 @@ html[lang="de"] .section_title {
   z-index: 0;
   width: 100%;
   object-fit: contain;
+
 }
 
 /* ===== END ABOUT ===== */
@@ -685,7 +686,7 @@ html[lang="de"] .section_title {
     to right,
     transparent 0%,
     black 15%,
-    black 90%,
+    black 95%,
     transparent 100%
   );
 }
