@@ -42,7 +42,6 @@
   color: var(--color-accent-green);
 }
 
-/* Language toggle buttons */
 .header_lang {
   display: flex;
   gap: var(--space-xs);
@@ -70,20 +69,7 @@
   text-shadow: 0 0 8px var(--color-accent-purple);
 }
 
-/* Shared layout container, used by every section */
 .container {
-  /* Explicit width, not just relying on default block "fill available
-     space": since body became a flex column (sticky-footer fix), any
-     flex item with auto inline margins loses the default stretch
-     sizing and shrinks to fit its content instead. A plain width:100%
-     doesn't work here either — this stays content-box, so padding-inline
-     gets added ON TOP of that 100%, overshooting the viewport by 64px.
-     Subtracting the padding explicitly reproduces what width:auto does
-     automatically for a normal (non-flex-item) block.
-     Net effect: max-width:1440px still caps the CONTENT area only, so
-     the true total width when uncapped is 1440 + 32*2 = 1504px — that's
-     the number any widescreen calc() bleeding off this class needs to
-     center against, not 1440. */
   width: calc(100% - (var(--space-md) * 2));
   max-width: 1440px;
   margin-inline: auto;
@@ -362,9 +348,6 @@ html[lang="de"] .section_title {
   transform: translateY(0);
 }
 
-/* Tap-triggered equivalent of the hover reveal above, for touch screens
-   (tablet) where :hover can't be relied on. Toggled via JS
-   (.is-expanded class), see initProjectCardToggle() in main.js. */
 .project-card.is-expanded .project-card_links {
   opacity: 1;
   transform: translateY(0);
@@ -441,7 +424,6 @@ html[lang="de"] .section_title {
   resize: vertical;
 }
 
-/* Webkit autofill fix: keep dark background and light text */
 .form-group input:-webkit-autofill,
 .form-group input:-webkit-autofill:hover,
 .form-group input:-webkit-autofill:focus {
@@ -535,10 +517,6 @@ html[lang="de"] .section_title {
   padding-right: 75px;
 }
 
-/* Honeypot anti-spam field: invisible to real users (off-screen, not
-   display:none — some bots skip display:none fields), but present in
-   the DOM for bots to fill. If filled on submit, contact.php silently
-   discards the message instead of sending it. */
 .hp-field {
   position: absolute;
   left: -5000px;
@@ -688,26 +666,9 @@ html[lang="de"] .section_title {
 }
 
 
-/* Solid-color fill, same tone as the page background, sitting directly
-   behind .about_wave. The wave PNG itself stays sized proportionally to
-   the photo (see below) so its internal curve never drifts out of
-   alignment with the photo, at any zoom level — but that means the PNG
-   alone can't reliably reach the true screen edges once the photo hits
-   its own 750px cap (viewport ≥1786px), since the PNG then stops
-   growing while the viewport keeps growing. This fill is what actually
-   reaches the true edges (JS-measured, same technique as the wave used
-   to use directly) — since it's a flat, unpatterned color match, no
-   seam is visible where the PNG's own edge ends and the fill takes
-   over, so both requirements (edge-to-edge AND photo-anchored) hold at
-   once without compromise. */
 .about_photo-wrap::before {
   content: "";
   position: absolute;
-  /* Behind the photo (z-index:0), not in front — this is a solid
-     rectangle (unlike the wave PNG, which is mostly transparent outside
-     its curve), so at any z-index ≥0 it would opaquely block out the
-     photo's lower portion instead of just extending the background
-     color around it. */
   z-index: -1;
   pointer-events: none;
   background-color: #141d2f;
@@ -719,31 +680,10 @@ html[lang="de"] .section_title {
 
 .about_wave {
   position: absolute;
-  /* Higher than .skills_grid/.skills_heading-row (z-index:1) — the wave
-     is meant to sit in FRONT of the Skills content it overlaps into,
-     covering it cleanly like the front layer of the About section, not
-     behind it. */
   z-index: 4;
   pointer-events: none;
-  /* top calibrated relative to .about_photo-wrap so the wave's vertical
-     position stays tied to the photo at every width. left/width extend
-     the same photo-proportional base (-128.83% / 235.62%) by up to
-     500px on EACH side toward the real gap to the true edge — close
-     enough to visually reach it on most normal/large screens, but
-     capped so it can never outgrow the photo at extreme zoom-out the
-     way an uncapped var(--real-vw) width did. Widening by the same
-     amount subtracted from left keeps the right edge exactly where the
-     right-side extension alone would put it (left and right extend
-     independently of each other). Whatever gap the caps don't close,
-     the ::before fill above (which bleeds to the true edge
-     unconditionally) covers seamlessly. */
   top: 56.13%;
   left: calc(-128.83% - min(var(--photo-wrap-left, 0px), 500px));
-  /* The pure 235.62% base already extends ~51px past photo-wrap's own
-     right edge on its own (baked into that calibrated ratio) — so the
-     right-side gap-closing term needs that much subtracted first,
-     otherwise it overshoots the true edge by the same ~51px and causes
-     a real horizontal scrollbar. */
   width: calc(235.62% + min(max(0px, var(--photo-wrap-right-gap, 0px) - 51px), 500px) + min(var(--photo-wrap-left, 0px), 500px));
   max-width: none;
 }
@@ -1232,8 +1172,6 @@ html[lang="de"] .legal_title.section_title {
   color: var(--color-accent-green);
 }
 
-/* Compensate for sticky header (max 109px) when jumping to a section via
-   anchor link, so the heading isn't hidden behind the header. */
 #about,
 #skills,
 #portfolio,

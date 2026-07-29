@@ -1,9 +1,4 @@
-/* =====================================================================
-   SHARED: ≤1150px — rules identical for both Mobile (≤768) and Tablet
-   (769–1150). Consolidated here once instead of being duplicated in
-   both range-specific blocks below. Any selector that needs a DIFFERENT
-   value per range lives in the Mobile-only or Tablet-only block instead.
-   ===================================================================== */
+/* ===== SHARED ≤1150px ===== */
 @media (max-width: 1150px) {
 
   .section_title {
@@ -19,9 +14,6 @@
     padding-inline: var(--space-sm);
   }
 
-  /* Mobile/tablet header is only 92px tall (vs. 109px on desktop) — the
-     base 120px scroll-margin-top left an extra ~28px of unnecessary
-     space above a section after jumping to it via the burger menu. */
   #about,
   #skills,
   #portfolio,
@@ -237,10 +229,6 @@
     color: #fff;
   }
 
-  /* Touch screens: disable the :hover trigger for the skill tooltip
-     entirely (touch devices simulate a "sticky" hover that doesn't
-     reliably clear). Tap-toggle via .is-expanded (see main.js) is the
-     only trigger in this range, same approach as the project cards. */
   .skill-item--tooltip:hover .skill-item_tooltip {
     opacity: 0;
   }
@@ -252,11 +240,7 @@
 /* ===== END SHARED ≤1150px ===== */
 
 
-/* =====================================================================
-   MOBILE ONLY: ≤769px — genuine deltas vs. Tablet, plus Mobile-exclusive
-   sections (Footer, Portfolio) that Tablet intentionally leaves on the
-   Desktop layout.
-   ===================================================================== */
+/* ===== MOBILE ONLY ≤769px ===== */
 @media (max-width: 769px) {
 
   .hero_eyebrow {
@@ -287,19 +271,6 @@
 
   .about_wave {
     top: 69.74%;
-    /* Uncapped gap-closing extension (unlike desktop/tablet — see
-       style.css): the 500px cap there exists specifically to stop the
-       wave from outgrowing the photo when a desktop browser is zoomed
-       out to an extreme effective viewport width. Mobile "zoom" is a
-       visual pinch-zoom that doesn't change the CSS layout viewport the
-       same way, so within this whole range (320-769px) that scenario
-       can't happen — safe to just fully close the gap on both sides.
-       Still subtracts the ~68px the pure 133.93% ratio already extends
-       past photo-wrap's own edge on its own (calculated at photo-wrap's
-       400px cap; slightly conservative below that, which is safe — a
-       touch less reach on very small phones, never overflow). No outer
-       --real-vw safety ceiling needed here (unlike tablet) — verified
-       empirically across 320-769px with no overflow. */
     left: calc(-16.96% - var(--photo-wrap-left, 0px));
     width: calc(133.93% + max(0px, var(--photo-wrap-right-gap, 0px) - 68px) + var(--photo-wrap-left, 0px));
   }
@@ -317,9 +288,6 @@
     margin-top: 0;
   }
 
-  /* Portfolio & Footer: Mobile-exclusive stacked layout.
-     Tablet (769–1150) intentionally keeps the Desktop layout for these
-     two sections — confirmed looks correct there, no override needed. */
   .footer {
     flex-direction: column;
     gap: var(--space-md);
@@ -395,10 +363,7 @@
 /* ===== END 769px ===== */
 
 
-/* =====================================================================
-   TABLET ONLY: 770–1150px — genuine deltas vs. Mobile (by design: e.g.
-   4-column Skills grid instead of 3, different Hero/About spacing).
-   ===================================================================== */
+/* ===== TABLET ONLY 770-1150px ===== */
 @media (min-width: 770px) and (max-width: 1150px) {
 
   .hero_eyebrow {
@@ -433,18 +398,6 @@
 
   .about_wave {
     top: 63.68%;
-    /* Same capped gap-closing extension as the desktop rule (see
-       style.css): stretches toward the true edge on each side, capped
-       at 500px so it can't run away, minus the ~242.5px the pure
-       221.25% ratio already extends past photo-wrap's own edge on its
-       own (photo-wrap is pinned at a constant 400px throughout this
-       whole range, so that overshoot is a fixed amount here too).
-       The pure 221.25% ratio alone can *already* overshoot the true
-       right edge at the narrow end of this range (photo-wrap's X
-       position shifts even though its width stays constant at 400px) —
-       the outer min() against --real-vw is a final safety ceiling
-       against that, independent of whatever the gap-extension terms
-       above computed. */
     left: calc(-60.62% - min(var(--photo-wrap-left, 0px), 500px));
     width: min(
       calc(221.25% + min(max(0px, var(--photo-wrap-right-gap, 0px) - 242.5px), 500px) + min(var(--photo-wrap-left, 0px), 500px)),
@@ -635,16 +588,7 @@ html[lang="de"] .section_title {
 }
 /* ===== END 320px ===== */
 
-/* =====================================================================
-   DESKTOP GAP: 1151–1440px — between the Tablet range (≤1150, container
-   padding var(--space-sm)=16px) and Widescreen (≥1441, container padding
-   var(--space-md)=32px scales via --real-vw). In this range the container
-   is unmodified base CSS: fixed 32px padding-inline, never auto-margined
-   (max-width:1440px only kicks in centering beyond 1441px). So a fixed
-   -32px offset (not a --real-vw calc) is enough — no viewport scaling
-   needed since the gap-to-close never changes within this range. Same
-   position:absolute + compensating-margin technique as the ≤1150 block.
-   ===================================================================== */
+/* ===== DESKTOP GAP 1151-1440px ===== */
 @media (min-width: 1151px) and (max-width: 1440px) {
   .hero_divider {
     position: absolute;
@@ -681,13 +625,7 @@ html[lang="de"] .section_title {
 }
 /* ===== END DESKTOP GAP 1151-1440px ===== */
 
-/* =====================================================================
-   WIDESCREEN: >1440px — Hero background (glows) bleed to true screen
-   edges and scale with viewport width, per Figma "Version1.2_Widescreen"
-   reference. Content (name/role/button) stays capped+centered at 1440px.
-   The hero divider (green line before social icons) extends to the true
-   left edge, matching the Figma reference.
-   ===================================================================== */
+/* ===== WIDESCREEN ≥1441px ===== */
 @media (min-width: 1441px) {
   .legal_divider {
     max-width: none;
@@ -706,7 +644,7 @@ html[lang="de"] .section_title {
     max-width: none;
     margin-inline: 0;
     padding-inline: 0;
-    background-size: 42vw, 30vw;
+    background-size: 30vw, 30vw;
   }
 
   .hero_content {
@@ -760,12 +698,7 @@ html[lang="de"] .section_title {
     background-color: var(--color-accent-green);
   }
 
-  /* Portfolio + Contact: same full-bleed technique as Hero above. The
-     section itself goes edge-to-edge (so its background-image blobs
-     naturally reach the true screen edges with plain "top right" /
-     "bottom left" positioning — no calc() needed), while an inner
-     wrapper restores the original 1440px-capped, padded content area
-     for the heading/grid/form. */
+  
   .portfolio,
   .contact {
     width: 100%;
@@ -783,12 +716,7 @@ html[lang="de"] .section_title {
     box-sizing: border-box;
   }
 
-  /* Portfolio + "Problem to solve" dividers: position:absolute (like
-     hero_divider) instead of margin-based, so bleeding them to the true
-     left edge can never drag the heading text next to them along. The
-     heading itself gets a matching margin-left to keep it exactly where
-     it was (compensating for the divider's width + row gap, which it
-     no longer needs to "make room for" once taken out of flex flow). */
+  
   .portfolio_divider {
     position: absolute;
     left: min(0px, calc(-1 * (var(--real-vw) - 1440px) / 2 - 32px));
