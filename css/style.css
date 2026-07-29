@@ -666,25 +666,13 @@ html[lang="de"] .section_title {
 }
 
 
-.about_photo-wrap::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-  background-color: #141d2f;
-  top: 56.13%;
-  left: calc(-1 * var(--photo-wrap-left, 0px));
-  width: var(--real-vw, 100vw);
-  height: 152.86%;
-}
-
 .about_wave {
   position: absolute;
   z-index: 4;
   pointer-events: none;
-  top: 50.13%;
-  left: calc(-128.83% - min(var(--photo-wrap-left, 0px), 500px));
-  width: calc(235.62% + min(max(0px, var(--photo-wrap-right-gap, 0px) - 51px), 500px) + min(var(--photo-wrap-left, 0px), 500px));
+  top: 65.13%;
+  left: -148.15%;
+  width: 270.96%;
   max-width: none;
   mask-image: linear-gradient(
     to right,
@@ -696,8 +684,8 @@ html[lang="de"] .section_title {
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 40%,
-    black 90%,
+    black 60%,
+    black 89%,
     transparent 100%
   );
 }
